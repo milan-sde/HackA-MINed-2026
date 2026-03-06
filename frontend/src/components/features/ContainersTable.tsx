@@ -1,10 +1,11 @@
 import { useState, useMemo } from "react";
-import { ChevronUp, ChevronDown, ChevronsUpDown, Search, Filter, AlertCircle, Eye, Flag, BrainCircuit } from "lucide-react";
+import { ChevronUp, ChevronDown, ChevronsUpDown, Search, Filter, AlertCircle, Eye, Flag, BrainCircuit, Scale, Clock, DollarSign, UserX, CheckCircle2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Progress } from "@/components/ui/progress";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuCheckboxItem,
   DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
@@ -13,7 +14,15 @@ import { cn, RISK_COLORS } from "@/lib/utils";
 import type { Container, RiskLevel } from "@/types";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { toast } from "sonner";
-import { flagContainer as apiFlagContainer } from "@/services/api";
+import { flagContainer as apiFlagContainer, getAnomalyType, getRecommendedAction, ANOMALY_TYPE_META, type AnomalyType } from "@/services/api";
+
+const ANOMALY_ICONS: Record<AnomalyType, typeof Scale> = {
+  weight_mismatch: Scale,
+  dwell_time: Clock,
+  value_anomaly: DollarSign,
+  exporter_risk: UserX,
+  normal: CheckCircle2,
+};
 
 interface ContainersTableProps {
   containers: Container[];
@@ -175,12 +184,8 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                     </button>
                   </th>
                 ))}
-                <th className={thCls}>
-                  <span className="flex items-center gap-1">
-                    <BrainCircuit className="h-3 w-3" />
-                    AI Explanation
-                  </span>
-                </th>
+                <th className={thCls}>Anomaly</th>
+                <th className={thCls}>Recommended Action</th>
                 <th className={thCls}>Actions</th>
               </tr>
             </thead>
@@ -188,14 +193,14 @@ export default function ContainersTable({ containers, loading }: ContainersTable
               {loading ? (
                 Array.from({ length: 8 }).map((_, i) => (
                   <tr key={i} className="border-b border-border">
-                    {Array.from({ length: 8 }).map((_, j) => (
+                    {Array.from({ length: 10 }).map((_, j) => (
                       <td key={j} className={tdCls}><div className="skeleton h-4 rounded w-20" /></td>
                     ))}
                   </tr>
                 ))
               ) : paginated.length === 0 ? (
                 <tr>
-                  <td colSpan={8} className="text-center py-12 text-muted-foreground text-sm">
+                  <td colSpan={10} className="text-center py-12 text-muted-foreground text-sm">
                     No containers match your filters
                   </td>
                 </tr>
@@ -206,7 +211,8 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                     onClick={() => openModal(container)}
                     className={cn(
                       "border-b border-border cursor-pointer transition-colors hover:bg-accent/50",
-                      container.riskLevel === "Critical" && "hover:bg-red-500/10"
+                      container.riskLevel === "Critical" && "bg-red-500/[0.06] hover:bg-red-500/15 border-l-2 border-l-red-500",
+                      container.riskLevel === "Low Risk" && container.anomalyFlag && "border-l-2 border-l-amber-500/50"
                     )}
                   >
                     <td className={tdCls}>
@@ -253,26 +259,38 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                         {container.weightDiscrepancyPct > 0 ? "+" : ""}{container.weightDiscrepancyPct.toFixed(1)}%
                       </span>
                     </td>
+                    {/* Anomaly type icon */}
                     <td className={tdCls}>
-                      <div className="max-w-[260px]">
-                        <p className="text-xs text-muted-foreground leading-snug line-clamp-1">
-                          {container.explanation}
-                        </p>
-                        <div className="flex flex-wrap gap-1 mt-1">
-                          {container.keyRiskFactors.slice(0, 2).map((f) => (
-                            <span key={f} className={cn(
-                              "inline-flex items-center gap-0.5 rounded px-1.5 py-0.5 text-[10px] font-medium",
-                              container.riskLevel === "Critical"
-                                ? "bg-red-500/15 text-red-400"
-                                : container.riskLevel === "Low Risk"
-                                  ? "bg-amber-500/15 text-amber-400"
-                                  : "bg-secondary text-secondary-foreground"
-                            )}>
-                              <span className="font-bold">+</span> {f}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
+                      {(() => {
+                        const aType = getAnomalyType(container);
+                        const meta = ANOMALY_TYPE_META[aType];
+                        const AIcon = ANOMALY_ICONS[aType];
+                        return (
+                          <Tooltip delayDuration={200}>
+                            <TooltipTrigger asChild>
+                              <span
+                                className="inline-flex items-center gap-1.5 rounded-full px-2 py-1 text-[10px] font-medium"
+                                style={{ background: `${meta.color}18`, color: meta.color }}
+                              >
+                                <AIcon className="h-3 w-3" />
+                                {meta.label}
+                              </span>
+                            </TooltipTrigger>
+                            <TooltipContent side="top" className="text-xs">
+                              Primary anomaly: {meta.label}
+                            </TooltipContent>
+                          </Tooltip>
+                        );
+                      })()}
+                    </td>
+                    {/* Recommended action */}
+                    <td className={tdCls}>
+                      <span className={cn(
+                        "text-[11px] font-medium leading-snug line-clamp-2 max-w-[200px] block",
+                        container.riskLevel === "Critical" ? "text-red-400" : container.riskLevel === "Low Risk" ? "text-amber-400" : "text-muted-foreground"
+                      )}>
+                        {getRecommendedAction(container)}
+                      </span>
                     </td>
                     <td className={tdCls} onClick={(e) => e.stopPropagation()}>
                       <div className="flex items-center gap-1">

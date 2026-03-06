@@ -344,11 +344,14 @@ export function deriveKPIs(containers: Container[]): KPIData {
   if (total === 0) {
     return {
       totalContainers: 0, criticalCount: 0, criticalPct: 0,
+      lowRiskCount: 0, lowRiskPct: 0, clearCount: 0, clearPct: 0,
       anomalyCount: 0, anomalyRate: 0, avgRiskScore: 0,
       trend: { total: 0, critical: 0, anomaly: 0, avgScore: 0 },
     };
   }
   const criticalCount = containers.filter((c) => c.riskLevel === "Critical").length;
+  const lowRiskCount = containers.filter((c) => c.riskLevel === "Low Risk").length;
+  const clearCount = containers.filter((c) => c.riskLevel === "Clear").length;
   const anomalyCount = containers.filter((c) => c.anomalyFlag).length;
   const avgRiskScore =
     containers.reduce((s, c) => s + c.riskScore, 0) / total;
@@ -357,6 +360,10 @@ export function deriveKPIs(containers: Container[]): KPIData {
     totalContainers: total,
     criticalCount,
     criticalPct: parseFloat(((criticalCount / total) * 100).toFixed(1)),
+    lowRiskCount,
+    lowRiskPct: parseFloat(((lowRiskCount / total) * 100).toFixed(1)),
+    clearCount,
+    clearPct: parseFloat(((clearCount / total) * 100).toFixed(1)),
     anomalyCount,
     anomalyRate: parseFloat(((anomalyCount / total) * 100).toFixed(1)),
     avgRiskScore: parseFloat(avgRiskScore.toFixed(1)),
@@ -495,6 +502,82 @@ export function deriveEntityRisk(
     }))
     .sort((a, b) => b.riskScore - a.riskScore)
     .slice(0, 10);
+}
+
+// ── Anomaly type classification ──────────────────────────────────────────
+
+export type AnomalyType =
+  | "weight_mismatch"
+  | "dwell_time"
+  | "value_anomaly"
+  | "exporter_risk"
+  | "normal";
+
+export const ANOMALY_TYPE_META: Record<
+  AnomalyType,
+  { label: string; color: string; icon: string }
+> = {
+  weight_mismatch: { label: "Weight Mismatch", color: "#EF4444", icon: "Scale" },
+  dwell_time: { label: "Dwell Time", color: "#F59E0B", icon: "Clock" },
+  value_anomaly: { label: "Value Anomaly", color: "#8B5CF6", icon: "DollarSign" },
+  exporter_risk: { label: "Exporter Risk", color: "#F97316", icon: "UserX" },
+  normal: { label: "Normal", color: "#10B981", icon: "CheckCircle" },
+};
+
+export function getAnomalyType(c: Container): AnomalyType {
+  if (c.weightDiscrepancyPct > 20) return "weight_mismatch";
+  if (c.dwellTimeHours > 80) return "dwell_time";
+  if (c.featureScores.valueRatio > 0.7) return "value_anomaly";
+  if (
+    HIGH_RISK_ORIGINS.has(c.originCountry.toUpperCase()) &&
+    c.featureScores.routeRisk > 0.5
+  )
+    return "exporter_risk";
+  return "normal";
+}
+
+export function getRecommendedAction(c: Container): string {
+  if (c.riskLevel === "Critical") {
+    if (c.weightDiscrepancyPct > 30) return "Physical inspection — weigh & X-ray scan";
+    if (c.dwellTimeHours > 100) return "Priority release review — check holds";
+    if (c.featureScores.valueRatio > 0.8) return "Value verification — request invoices";
+    return "Full inspection — document & physical check";
+  }
+  if (c.riskLevel === "Low Risk") {
+    if (c.weightDiscrepancyPct > 15) return "Spot-check weight verification";
+    if (c.anomalyFlag) return "Document review — verify declarations";
+    return "Monitor — routine screening";
+  }
+  return "Auto-release — no action required";
+}
+
+export interface AnomalyDistribution {
+  type: AnomalyType;
+  label: string;
+  count: number;
+  color: string;
+}
+
+export function deriveAnomalyDistribution(
+  containers: Container[],
+): AnomalyDistribution[] {
+  const counts = new Map<AnomalyType, number>();
+  for (const c of containers) {
+    const t = getAnomalyType(c);
+    if (t === "normal") continue;
+    counts.set(t, (counts.get(t) ?? 0) + 1);
+  }
+
+  return (
+    ["weight_mismatch", "dwell_time", "value_anomaly", "exporter_risk"] as AnomalyType[]
+  )
+    .map((type) => ({
+      type,
+      label: ANOMALY_TYPE_META[type].label,
+      count: counts.get(type) ?? 0,
+      color: ANOMALY_TYPE_META[type].color,
+    }))
+    .filter((d) => d.count > 0);
 }
 
 

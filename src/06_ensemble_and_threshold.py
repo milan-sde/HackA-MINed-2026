@@ -1,10 +1,17 @@
 """
 06 - Ensemble & Threshold Tuning
 SmartContainer Risk Engine – Phase 2, Step 6
+
+Hybrid anomaly detection:
+  anomaly_score = 0.6 * xgboost_probability
+                + 0.2 * isolation_forest_score
+                + 0.2 * rule_based_score
 """
 import pandas as pd
 import numpy as np
 import joblib
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from sklearn.metrics import f1_score, recall_score, precision_score
 import warnings
@@ -34,8 +41,17 @@ iso_val_scores_norm = 1 - (iso_val_scores - iso_val_scores.min()) / (iso_val_sco
 
 
 def get_rule_flags(X_df):
+    """Rule-based anomaly detection.
+
+    Checks:
+      - Large weight discrepancy  (|weight_diff_pct| > 0.30)
+      - Extreme value_per_kg      (> 99th percentile)
+      - Abnormal dwell_time       (dwell_flag_120)
+      - High exporter_risk_score  (> 0.05)
+    Returns a 0–1 score per row (clipped).
+    """
     flags = np.zeros(len(X_df))
-    if 'weight_diff_pct'      in X_df.columns: flags += (X_df['weight_diff_pct'] > 30).astype(int)
+    if 'weight_diff_pct'      in X_df.columns: flags += (X_df['weight_diff_pct'].abs() > 0.30).astype(int)
     if 'dwell_flag_120'       in X_df.columns: flags += X_df['dwell_flag_120'].values
     if 'is_high_risk_origin'  in X_df.columns: flags += X_df['is_high_risk_origin'].values
     if 'value_per_kg'         in X_df.columns:
@@ -46,6 +62,9 @@ def get_rule_flags(X_df):
 
 
 rule_flags = get_rule_flags(X_val_df)
+
+# Hybrid anomaly score:
+# anomaly_score = 0.6 * xgboost_probability + 0.2 * isolation_forest_score + 0.2 * rule_based_score
 ensemble_scores = (0.6 * xgb_val_proba + 0.2 * iso_val_scores_norm + 0.2 * rule_flags) * 100
 
 actual_critical = (y_val == 1).astype(int)
@@ -91,7 +110,7 @@ axes[1].legend(); axes[1].grid(alpha=0.3)
 
 plt.tight_layout()
 plt.savefig(config.THRESHOLD_OPTIMIZATION, dpi=150, bbox_inches='tight')
-plt.show()
+plt.close()
 
 # Final performance
 final_pred      = (ensemble_scores >= best_threshold).astype(int)

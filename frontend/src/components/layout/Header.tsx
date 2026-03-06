@@ -20,6 +20,7 @@ import {
   fetchUnreadCount,
   type Notification,
 } from "@/services/api";
+import { NavbarUploadButton } from "@/components/features/CSVUploader";
 
 /* ---- helpers ---- */
 
@@ -146,6 +147,9 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
         </TooltipTrigger>
         <TooltipContent>Refresh data</TooltipContent>
       </Tooltip>
+
+      {/* Upload CSV */}
+      <NavbarUploadButton />
 
       {/* Export */}
       <DropdownMenu>

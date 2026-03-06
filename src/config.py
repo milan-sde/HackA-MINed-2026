@@ -38,3 +38,5 @@ ENSEMBLE_INFO    = os.path.join(MODELS_DIR, "ensemble_info.pkl")
 # ── Output files ──────────────────────────────────────────
 CONFUSION_MATRIX       = os.path.join(OUTPUTS_DIR, "confusion_matrix.png")
 THRESHOLD_OPTIMIZATION = os.path.join(OUTPUTS_DIR, "threshold_optimization.png")
+MODEL_METRICS          = os.path.join(OUTPUTS_DIR, "model_metrics.json")
+FULL_PREDICTIONS       = os.path.join(PROCESSED_DATA_DIR, "full_predictions.csv")

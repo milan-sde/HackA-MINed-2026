@@ -36,6 +36,10 @@ export interface KPIData {
   totalContainers: number;
   criticalCount: number;
   criticalPct: number;
+  lowRiskCount: number;
+  lowRiskPct: number;
+  clearCount: number;
+  clearPct: number;
   anomalyCount: number;
   anomalyRate: number;
   avgRiskScore: number;

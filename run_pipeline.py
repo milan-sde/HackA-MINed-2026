@@ -8,13 +8,13 @@ import sys
 import os
 
 STEPS = [
-    ("Step 1 – Load & Explore",        "src/01_load_and_explore.py"),
-    ("Step 2 – Feature Engineering",   "src/02_feature_engineering.py"),
-    ("Step 3 – Prepare for Modeling",  "src/03_prepare_for_modeling.py"),
-    ("Step 4 – Train XGBoost",         "src/04_train_xgboost.py"),
-    ("Step 5 – Train Isolation Forest","src/05_train_isolation_forest.py"),
-    ("Step 6 – Ensemble & Threshold",  "src/06_ensemble_and_threshold.py"),
-    ("Step 7 – Generate Predictions",  "src/07_generate_predictions.py"),
+    ("Step 1 - Load & Explore",        "src/01_load_and_explore.py"),
+    ("Step 2 - Feature Engineering",   "src/02_feature_engineering.py"),
+    ("Step 3 - Prepare for Modeling",  "src/03_prepare_for_modeling.py"),
+    ("Step 4 - Train XGBoost",         "src/04_train_xgboost.py"),
+    ("Step 5 - Train Isolation Forest","src/05_train_isolation_forest.py"),
+    ("Step 6 - Ensemble & Threshold",  "src/06_ensemble_and_threshold.py"),
+    ("Step 7 - Generate Predictions",  "src/07_generate_predictions.py"),
 ]
 
 

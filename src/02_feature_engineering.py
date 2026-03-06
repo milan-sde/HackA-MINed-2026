@@ -23,7 +23,8 @@ def engineer_features(df, is_training=True):
     # 1. WEIGHT DISCREPANCY
     print("   - Weight discrepancy features")
     df['weight_diff'] = df['Measured_Weight'] - df['Declared_Weight']
-    df['weight_diff_pct'] = (abs(df['weight_diff']) / (df['Declared_Weight'] + 0.001)) * 100
+    # weight_diff_pct = (measured_weight - declared_weight) / declared_weight
+    df['weight_diff_pct'] = (df['Measured_Weight'] - df['Declared_Weight']) / (df['Declared_Weight'] + 0.001)
     df['weight_underreported'] = (df['Measured_Weight'] > df['Declared_Weight'] * 1.2).astype(int)
     df['weight_overreported']  = (df['Declared_Weight'] > df['Measured_Weight'] * 1.2).astype(int)
 
@@ -34,6 +35,8 @@ def engineer_features(df, is_training=True):
 
     # 3. DWELL TIME FLAGS
     print("   - Dwell time features")
+    # dwell_time = dwell_time_hours (raw dwell time feature)
+    df['dwell_time'] = df['Dwell_Time_Hours']
     df['dwell_flag_80']  = (df['Dwell_Time_Hours'] > 80).astype(int)
     df['dwell_flag_120'] = (df['Dwell_Time_Hours'] > 120).astype(int)
 
@@ -79,6 +82,8 @@ def engineer_features(df, is_training=True):
         df['exporter_risk_score'] = df['Exporter_ID'].map(exp_risk).fillna(0)
         df['importer_risk_score'] = df['Importer_ID'].map(imp_risk).fillna(0)
         df['hs_chapter_risk']     = df['hs_chapter'].map(hs_risk).fillna(0)
+        # hs_code_risk = historical risk level of shipments with same HS code
+        df['hs_code_risk']        = df['hs_chapter_risk']
 
         joblib.dump({'exporter_risk': exp_risk, 'importer_risk': imp_risk, 'hs_chapter_risk': hs_risk},
                     config.RISK_MAPPINGS)
@@ -88,11 +93,14 @@ def engineer_features(df, is_training=True):
             df['exporter_risk_score'] = df['Exporter_ID'].map(risk_mappings['exporter_risk']).fillna(0)
             df['importer_risk_score'] = df['Importer_ID'].map(risk_mappings['importer_risk']).fillna(0)
             df['hs_chapter_risk']     = df['hs_chapter'].map(risk_mappings['hs_chapter_risk']).fillna(0)
+            # hs_code_risk = historical risk level of shipments with same HS code
+            df['hs_code_risk']        = df['hs_chapter_risk']
         except FileNotFoundError:
             print("   ⚠️ Warning: Risk mappings not found, using zeros")
             df['exporter_risk_score'] = 0
             df['importer_risk_score'] = 0
             df['hs_chapter_risk']     = 0
+            df['hs_code_risk']        = 0
 
     # 9. INTERACTION FEATURES
     print("   - Interaction features")
@@ -124,7 +132,7 @@ print("\n💾 Saved engineered datasets!")
 
 # Verify
 test_load = pd.read_csv(config.HISTORICAL_ENGINEERED)
-for feat in ['exporter_risk_score', 'importer_risk_score', 'hs_chapter_risk']:
+for feat in ['weight_diff_pct', 'value_per_kg', 'dwell_time', 'exporter_risk_score', 'importer_risk_score', 'hs_code_risk']:
     status = "✅" if feat in test_load.columns else "❌"
     print(f"   {status} {feat}")
 

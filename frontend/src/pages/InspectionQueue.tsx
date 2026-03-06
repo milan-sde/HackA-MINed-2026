@@ -1,6 +1,6 @@
 import { useEffect, useState, useCallback } from "react";
 import {
-  ShieldAlert, RefreshCw, Clock, MapPin,
+  ShieldAlert, RefreshCw, Clock,
   AlertTriangle, Eye, Loader2,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -10,6 +10,7 @@ import { useDashboardStore } from "@/store/dashboardStore";
 import { fetchFlaggedContainers, type FlaggedContainer } from "@/services/api";
 import { cn, formatNumber } from "@/lib/utils";
 import { toast } from "sonner";
+import ContainerDetailModal from "@/components/features/ContainerDetailModal";
 
 function riskBadge(score: number | null) {
   if (score === null) return <Badge variant="outline">N/A</Badge>;
@@ -54,7 +55,43 @@ export default function InspectionQueue() {
     if (container) {
       openModal(container);
     } else {
-      toast.info(`Container ${fc.container_id} not in current dataset`);
+      // Container not in store (e.g. flagged before this session loaded) —
+      // build a minimal stub so the modal can still open.
+      openModal({
+        id: String(fc.container_id),
+        riskScore: fc.risk_score ?? 0,
+        riskLevel:
+          (fc.risk_score ?? 0) >= 70
+            ? "Critical"
+            : (fc.risk_score ?? 0) >= 30
+              ? "Low Risk"
+              : "Clear",
+        anomalyFlag: false,
+        originCountry: "",
+        originFlag: "",
+        destinationCountry: "",
+        destinationPort: "",
+        hsCode: "",
+        hsChapter: 0,
+        declaredValue: 0,
+        declaredWeight: 0,
+        measuredWeight: 0,
+        weightDiscrepancyPct: 0,
+        dwellTimeHours: 0,
+        importerId: "",
+        exporterId: "",
+        declarationDate: new Date().toISOString().split("T")[0],
+        tradeRegime: "Import",
+        explanation: fc.note || "No explanation available.",
+        keyRiskFactors: [],
+        featureScores: {
+          weightDiscrepancy: 0,
+          valueRatio: 0,
+          dwellTime: 0,
+          routeRisk: 0,
+          entityHistory: 0,
+        },
+      });
     }
   }
 
@@ -212,6 +249,7 @@ export default function InspectionQueue() {
           )}
         </CardContent>
       </Card>
+      <ContainerDetailModal />
     </div>
   );
 }

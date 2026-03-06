@@ -259,7 +259,7 @@ export default function ContainerDetailModal() {
   const { selectedContainer: container, closeModal } = useDashboardStore();
   const flaggedIds = useDashboardStore((s) => s.flaggedIds);
   const containerNotesMap = useDashboardStore((s) => s.containerNotes);
-  const addFlaggedId = useDashboardStore((s) => s.addFlaggedId);
+  const addFlaggedContainer = useDashboardStore((s) => s.addFlaggedContainer);
   const setNotesForContainer = useDashboardStore((s) => s.setNotesForContainer);
   const appendNote = useDashboardStore((s) => s.appendNote);
 
@@ -297,8 +297,8 @@ export default function ContainerDetailModal() {
     if (!container || isFlagged) return;
     setFlagLoading(true);
     try {
-      await apiFlagContainer(container.id, `Flagged from dashboard — Risk Score ${container.riskScore}`);
-      addFlaggedId(container.id);
+      const result = await apiFlagContainer(container.id, `Flagged from dashboard — Risk Score ${container.riskScore}`);
+      addFlaggedContainer(result);
       toast.success(`Container ${container.id} flagged for inspection`);
     } catch (e) {
       toast.error("Failed to flag container", {

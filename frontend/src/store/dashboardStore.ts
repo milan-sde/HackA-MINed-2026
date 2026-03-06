@@ -72,6 +72,7 @@ interface DashboardState {
   containerNotes: Record<string, ContainerNote[]>;
   setFlaggedContainers: (list: FlaggedContainer[]) => void;
   addFlaggedId: (id: string) => void;
+  addFlaggedContainer: (entry: FlaggedContainer) => void;
   setNotesForContainer: (id: string, notes: ContainerNote[]) => void;
   appendNote: (id: string, note: ContainerNote) => void;
 
@@ -192,6 +193,16 @@ export const useDashboardStore = create<DashboardState>()(
             ? {}
             : { flaggedIds: [...s.flaggedIds, id] },
         ),
+
+      addFlaggedContainer: (entry) =>
+        set((s) => {
+          const cid = String(entry.container_id);
+          if (s.flaggedIds.includes(cid)) return {};
+          return {
+            flaggedIds: [...s.flaggedIds, cid],
+            flaggedContainers: [entry, ...s.flaggedContainers],
+          };
+        }),
 
       setNotesForContainer: (id, notes) =>
         set((s) => ({

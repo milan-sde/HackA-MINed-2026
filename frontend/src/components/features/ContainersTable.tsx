@@ -13,6 +13,7 @@ import { cn, RISK_COLORS } from "@/lib/utils";
 import type { Container, RiskLevel } from "@/types";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { toast } from "sonner";
+import { flagContainer as apiFlagContainer } from "@/services/api";
 
 interface ContainersTableProps {
   containers: Container[];
@@ -32,13 +33,15 @@ const RISK_VARIANTS: Record<RiskLevel, "critical" | "lowrisk" | "clear"> = {
 
 export default function ContainersTable({ containers, loading }: ContainersTableProps) {
   const { openModal } = useDashboardStore();
+  const flaggedIds = useDashboardStore((s) => s.flaggedIds);
+  const addFlaggedContainer = useDashboardStore((s) => s.addFlaggedContainer);
+  const [flagging, setFlagging] = useState<Set<string>>(new Set());
   const [search, setSearch] = useState("");
   const [sortField, setSortField] = useState<SortField>("riskScore");
   const [sortDir, setSortDir] = useState<SortDir>("desc");
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(10);
   const [riskFilter, setRiskFilter] = useState<RiskLevel[]>([]);
-  const [flagged, setFlagged] = useState<Set<string>>(new Set());
 
   function toggleSort(field: SortField) {
     if (sortField === field) setSortDir((d) => (d === "asc" ? "desc" : "asc"));
@@ -52,14 +55,21 @@ export default function ContainersTable({ containers, loading }: ContainersTable
     setPage(1);
   }
 
-  function toggleFlag(id: string, e: React.MouseEvent) {
+  async function handleTableFlag(id: string, e: React.MouseEvent) {
     e.stopPropagation();
-    setFlagged((prev) => {
-      const next = new Set(prev);
-      if (next.has(id)) { next.delete(id); toast.info("Flag removed"); }
-      else { next.add(id); toast.warning("Container flagged for inspection"); }
-      return next;
-    });
+    if (flaggedIds.includes(id) || flagging.has(id)) return;
+    setFlagging((prev) => new Set(prev).add(id));
+    try {
+      const result = await apiFlagContainer(id, `Flagged from containers table`);
+      addFlaggedContainer(result);
+      toast.warning(`Container ${id} flagged for inspection`);
+    } catch (err) {
+      toast.error("Failed to flag container", {
+        description: err instanceof Error ? err.message : "Unknown error",
+      });
+    } finally {
+      setFlagging((prev) => { const n = new Set(prev); n.delete(id); return n; });
+    }
   }
 
   const filtered = useMemo(() => {
@@ -204,7 +214,7 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                         {container.anomalyFlag && (
                           <AlertCircle className="h-3.5 w-3.5 text-orange-400 shrink-0" />
                         )}
-                        {flagged.has(container.id) && (
+                        {flaggedIds.includes(container.id) && (
                           <Flag className="h-3.5 w-3.5 text-red-400 fill-current shrink-0" />
                         )}
                         <span className="font-mono text-xs font-medium">{container.id}</span>
@@ -272,10 +282,11 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                         <Button
                           variant="ghost"
                           size="icon"
-                          className={cn("h-7 w-7", flagged.has(container.id) && "text-red-400")}
-                          onClick={(e) => toggleFlag(container.id, e)}
+                          className={cn("h-7 w-7", flaggedIds.includes(container.id) && "text-red-400")}
+                          onClick={(e) => handleTableFlag(container.id, e)}
+                          disabled={flaggedIds.includes(container.id) || flagging.has(container.id)}
                         >
-                          <Flag className={cn("h-3.5 w-3.5", flagged.has(container.id) && "fill-current")} />
+                          <Flag className={cn("h-3.5 w-3.5", flaggedIds.includes(container.id) && "fill-current")} />
                         </Button>
                       </div>
                     </td>

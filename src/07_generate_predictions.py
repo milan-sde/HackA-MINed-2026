@@ -7,7 +7,13 @@ import numpy as np
 import joblib
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
+
+# Make the backend package importable so we can use the shared database layer
+_BACKEND_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "backend")
+sys.path.insert(0, _BACKEND_DIR)
+
 import config
+import database as db
 
 print("=" * 60)
 print("PHASE 3 - STEP 7: GENERATE PREDICTIONS")
@@ -101,6 +107,23 @@ for level in ['Critical', 'Low Risk', 'Clear']:
 
 output_df.to_csv(config.PREDICTIONS, index=False)
 print(f"\n💾 Predictions saved to '{config.PREDICTIONS}'")
+
+# ---------------------------------------------------------------------------
+# Persist predictions to SQLite database
+# ---------------------------------------------------------------------------
+db.init_db()
+db_rows = [
+    {
+        "container_id": str(row["Container_ID"]),
+        "risk_score":   float(row["Risk_Score"]),
+        "risk_level":   str(row["Risk_Level"]),
+        "anomaly_flag": int(row["Anomaly_Flag"]),
+        "explanation":  str(row["Explanation_Summary"]),
+    }
+    for _, row in output_df.iterrows()
+]
+n_inserted = db.bulk_upsert_containers(db_rows)
+print(f"💾 {n_inserted} predictions upserted into database.db")
 
 print("\n🔍 Top 10 Highest Risk Containers:")
 print(output_df.sort_values('Risk_Score', ascending=False).head(10).to_string(index=False))

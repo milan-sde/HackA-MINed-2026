@@ -9,7 +9,7 @@ Start the server:
 Endpoints:
     POST /predict            — score a single container shipment
     POST /predict-batch      — score a CSV of containers (up to 10k rows)
-    GET  /containers         — return cached predictions from data/processed/predictions.csv
+    GET  /containers         — return container predictions from SQLite database
     POST /flag-container     — flag a container for inspection
     GET  /flagged-containers — list all flagged containers
     POST /container-note     — attach a note to a container
@@ -21,17 +21,17 @@ Endpoints:
 import io
 import json
 import logging
-import os
+import sqlite3
 from contextlib import asynccontextmanager
 from datetime import datetime
 from pathlib import Path
-from typing import Annotated
 
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile, status
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field, field_validator
 
+import database as db
 from model_loader import ModelBundle, load_models
 from predict_service import (
     ContainerInput,
@@ -41,24 +41,12 @@ from predict_service import (
 )
 
 # ---------------------------------------------------------------------------
-# Persistent JSON storage paths
+# Paths
 # ---------------------------------------------------------------------------
 DATA_DIR = Path(__file__).resolve().parent.parent / "data" / "processed"
-FLAGGED_PATH = Path(__file__).resolve().parent / "flagged_containers.json"
-NOTES_PATH = Path(__file__).resolve().parent / "container_notes.json"
-
-
-def _load_json(path: Path) -> list:
-    if path.exists():
-        try:
-            return json.loads(path.read_text(encoding="utf-8"))
-        except (json.JSONDecodeError, OSError):
-            return []
-    return []
-
-
-def _save_json(path: Path, data: list) -> None:
-    path.write_text(json.dumps(data, indent=2, default=str), encoding="utf-8")
+# Legacy JSON paths — used only during one-time migration at startup
+_FLAGGED_JSON = Path(__file__).resolve().parent / "flagged_containers.json"
+_NOTES_JSON   = Path(__file__).resolve().parent / "container_notes.json"
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -77,9 +65,109 @@ logger = logging.getLogger(__name__)
 _bundle: ModelBundle | None = None
 
 
+def _migrate_json_to_db() -> None:
+    """
+    One-time migration: import any existing flagged_containers.json and
+    container_notes.json into the database, then leave the JSON files in
+    place as an archive (they are no longer read by the API).
+    """
+    # --- flagged containers ---
+    if _FLAGGED_JSON.exists():
+        try:
+            records = json.loads(_FLAGGED_JSON.read_text(encoding="utf-8"))
+            migrated = 0
+            for r in records:
+                cid = str(r.get("container_id", ""))
+                if not cid:
+                    continue
+                try:
+                    ts_raw = r.get("timestamp", datetime.utcnow().isoformat())
+                    ts = datetime.fromisoformat(ts_raw) if isinstance(ts_raw, str) else ts_raw
+                    db.insert_flagged(
+                        container_id=cid,
+                        risk_score=r.get("risk_score"),
+                        note=r.get("note", ""),
+                        timestamp=ts,
+                    )
+                    migrated += 1
+                except sqlite3.IntegrityError:
+                    pass  # already in DB
+            if migrated:
+                logger.info("Migrated %d flagged container(s) from JSON → DB", migrated)
+        except Exception as exc:
+            logger.warning("Could not migrate flagged_containers.json: %s", exc)
+
+    # --- container notes ---
+    if _NOTES_JSON.exists():
+        try:
+            records = json.loads(_NOTES_JSON.read_text(encoding="utf-8"))
+            migrated = 0
+            for r in records:
+                cid = str(r.get("container_id", ""))
+                note = r.get("note", "").strip()
+                if not cid or not note:
+                    continue
+                try:
+                    ts_raw = r.get("timestamp", datetime.utcnow().isoformat())
+                    ts = datetime.fromisoformat(ts_raw) if isinstance(ts_raw, str) else ts_raw
+                    db.insert_note(container_id=cid, note=note, created_at=ts)
+                    migrated += 1
+                except Exception:
+                    pass
+            if migrated:
+                logger.info("Migrated %d note(s) from JSON → DB", migrated)
+        except Exception as exc:
+            logger.warning("Could not migrate container_notes.json: %s", exc)
+
+
+def _seed_containers_from_csv() -> None:
+    """
+    Populate the containers table from full_predictions.csv if the table is
+    currently empty.  This runs once on startup so the API is immediately
+    useful without requiring a fresh /predict-batch call.
+    """
+    if db.count_containers() > 0:
+        return
+
+    full_path = DATA_DIR / "full_predictions.csv"
+    if not full_path.exists():
+        logger.info("No full_predictions.csv found — containers table starts empty.")
+        return
+
+    try:
+        df = pd.read_csv(full_path)
+        col_map = {
+            "Container_ID":        "container_id",
+            "Risk_Score":          "risk_score",
+            "Risk_Level":          "risk_level",
+            "Anomaly_Flag":        "anomaly_flag",
+            "Explanation_Summary": "explanation",
+        }
+        required = set(col_map.keys())
+        if not required.issubset(df.columns):
+            missing = required - set(df.columns)
+            logger.warning("CSV missing columns %s — skipping seed.", missing)
+            return
+
+        rows = (
+            df[list(col_map.keys())]
+            .rename(columns=col_map)
+            .fillna({"explanation": "", "anomaly_flag": 0})
+            .to_dict(orient="records")
+        )
+        count = db.bulk_upsert_containers(rows)
+        logger.info("Seeded %d container(s) into DB from %s", count, full_path.name)
+    except Exception as exc:
+        logger.warning("Could not seed containers from CSV: %s", exc)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global _bundle
+    logger.info("Startup: initialising database …")
+    db.init_db()
+    _migrate_json_to_db()
+    _seed_containers_from_csv()
     logger.info("Startup: loading model bundle …")
     _bundle = load_models()
     logger.info("Startup complete — API is ready.")
@@ -320,6 +408,15 @@ async def predict_endpoint(request: ContainerRequest):
             detail=f"Prediction error: {exc}",
         ) from exc
 
+    # Persist the result so GET /containers and /flag-container can access it
+    db.upsert_container(
+        container_id = str(result.container_id),
+        risk_score   = result.risk_score,
+        risk_level   = result.risk_level,
+        anomaly_flag = result.anomaly_flag,
+        explanation  = result.explanation_summary,
+    )
+
     return PredictionResponse(
         Container_ID        = result.container_id,
         Risk_Score          = result.risk_score,
@@ -404,26 +501,21 @@ async def predict_batch_endpoint(file: UploadFile = File(...)):
             detail=f"Batch prediction error: {exc}",
         ) from exc
 
-    # Save predictions to disk so GET /containers can serve them later
-    DATA_DIR.mkdir(parents=True, exist_ok=True)
-    pred_rows = [
+    # ── Persist to database ──────────────────────────────────────────────────
+    now = datetime.utcnow()
+    db_rows = [
         {
-            "Container_ID": p.container_id,
-            "Risk_Score": round(p.risk_score, 2),
-            "Risk_Level": p.risk_level,
-            "Anomaly_Flag": p.anomaly_flag,
-            "Explanation_Summary": p.explanation_summary,
+            "container_id": str(p.container_id),
+            "risk_score":   round(p.risk_score, 2),
+            "risk_level":   p.risk_level,
+            "anomaly_flag": p.anomaly_flag,
+            "explanation":  p.explanation_summary,
+            "created_at":   now,
         }
         for p in result.predictions
     ]
-    pd.DataFrame(pred_rows).to_csv(DATA_DIR / "predictions.csv", index=False)
-    logger.info("Saved %d predictions to %s", len(pred_rows), DATA_DIR / "predictions.csv")
-
-    # Also save full input+output merged CSV
-    merged = df.copy()
-    pred_df = pd.DataFrame(pred_rows).set_index("Container_ID")
-    merged = merged.set_index("Container_ID").join(pred_df, rsuffix="_pred").reset_index()
-    merged.to_csv(DATA_DIR / "full_predictions.csv", index=False)
+    inserted = db.bulk_upsert_containers(db_rows)
+    logger.info("Upserted %d prediction(s) into containers table", inserted)
 
     return BatchPredictionResponse(
         summary=BatchSummary(
@@ -446,14 +538,8 @@ async def predict_batch_endpoint(file: UploadFile = File(...)):
 
 
 # ---------------------------------------------------------------------------
-# GET /containers — serve cached predictions merged with source data
+# GET /containers — serve predictions from the database
 # ---------------------------------------------------------------------------
-RAW_DATA_PATHS = [
-    DATA_DIR / "full_predictions.csv",
-    DATA_DIR.parent.parent / "data" / "processed" / "Historical_Engineered.csv",
-    DATA_DIR.parent / "Historical_Data.csv",
-]
-
 
 @app.get(
     "/containers",
@@ -462,64 +548,68 @@ RAW_DATA_PATHS = [
 )
 async def get_containers():
     """
-    Returns every predicted container as JSON, including raw shipment fields
-    (Declared_Weight, Measured_Weight, Origin_Country, etc.) merged from the
-    source data file.
-    """
-    full_path = DATA_DIR / "full_predictions.csv"
-    pred_path = DATA_DIR / "predictions.csv"
+    Returns every predicted container as JSON.
 
-    # If full_predictions.csv exists (created by /predict-batch), use it directly
+    Primary source: the **containers** table in SQLite.
+    The database records are enriched with extra shipment columns
+    (Declared_Weight, Origin_Country, etc.) from full_predictions.csv when
+    that file is available, so the frontend receives the full row shape it
+    expects.
+
+    Fallback: if the database is empty, full_predictions.csv is returned
+    directly (e.g. before the first /predict-batch call post-migration).
+    """
+    db_rows = db.get_all_containers()
+
+    if db_rows:
+        # Normalise column names to match the CSV / frontend convention
+        col_rename = {
+            "container_id": "Container_ID",
+            "risk_score":   "Risk_Score",
+            "risk_level":   "Risk_Level",
+            "anomaly_flag": "Anomaly_Flag",
+            "explanation":  "Explanation_Summary",
+            "created_at":   "created_at",
+        }
+        db_df = pd.DataFrame(db_rows).rename(columns=col_rename)
+
+        # Attempt to enrich with extra shipment columns from full_predictions.csv
+        full_path = DATA_DIR / "full_predictions.csv"
+        if full_path.exists():
+            try:
+                csv_df = pd.read_csv(full_path)
+                # Only pull in columns that are NOT already in the DB result
+                extra_cols = [
+                    c for c in csv_df.columns
+                    if c not in db_df.columns and c != "Container_ID"
+                ]
+                if extra_cols and "Container_ID" in csv_df.columns:
+                    csv_df["Container_ID"] = csv_df["Container_ID"].astype(str)
+                    db_df["Container_ID"]  = db_df["Container_ID"].astype(str)
+                    db_df = db_df.merge(
+                        csv_df[["Container_ID"] + extra_cols],
+                        on="Container_ID",
+                        how="left",
+                    )
+            except Exception as exc:
+                logger.warning("Could not enrich DB rows with CSV columns: %s", exc)
+
+        return db_df.fillna("").to_dict(orient="records")
+
+    # ── Fallback: DB is empty — serve the CSV directly ──────────────────────
+    full_path = DATA_DIR / "full_predictions.csv"
     if full_path.exists():
         try:
-            df = pd.read_csv(full_path)
-            df = df.fillna("")
+            df = pd.read_csv(full_path).fillna("")
+            logger.info("DB empty — serving %d rows from CSV fallback", len(df))
             return df.to_dict(orient="records")
         except Exception as exc:
             raise HTTPException(
                 status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                detail=f"Failed to read full predictions: {exc}",
+                detail=f"Failed to read predictions CSV: {exc}",
             ) from exc
 
-    if not pred_path.exists():
-        return []
-
-    try:
-        pred_df = pd.read_csv(pred_path)
-    except Exception as exc:
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to read predictions: {exc}",
-        ) from exc
-
-    # Try to merge with a raw data source to get full shipment details
-    raw_cols = [
-        "Container_ID", "Declared_Value", "Declared_Weight", "Measured_Weight",
-        "Origin_Country", "Destination_Country", "Destination_Port",
-        "HS_Code", "Importer_ID", "Exporter_ID", "Dwell_Time_Hours",
-        "Declaration_Date (YYYY-MM-DD)", "Declaration_Time",
-        "Trade_Regime (Import / Export / Transit)",
-    ]
-
-    for raw_path in RAW_DATA_PATHS:
-        if not raw_path.exists():
-            continue
-        try:
-            raw_df = pd.read_csv(raw_path, usecols=lambda c: c in raw_cols)
-            merged = pred_df.merge(raw_df, on="Container_ID", how="left")
-            # Save for next time so we don't re-merge
-            merged.to_csv(full_path, index=False)
-            logger.info(
-                "Merged predictions with %s (%d rows)", raw_path.name, len(merged)
-            )
-            merged = merged.fillna("")
-            return merged.to_dict(orient="records")
-        except Exception:
-            continue
-
-    # Fallback: return predictions-only
-    pred_df = pred_df.fillna("")
-    return pred_df.to_dict(orient="records")
+    return []
 
 
 # ---------------------------------------------------------------------------
@@ -532,40 +622,31 @@ async def get_containers():
     summary="Flag a container for inspection",
 )
 async def flag_container(req: FlagRequest):
-    flagged = _load_json(FLAGGED_PATH)
     cid = str(req.container_id)
 
-    # Check if already flagged
-    for entry in flagged:
-        if str(entry.get("container_id")) == cid:
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail=f"Container {cid} is already flagged for inspection.",
-            )
+    if db.is_flagged(cid):
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail=f"Container {cid} is already flagged for inspection.",
+        )
 
-    # Look up risk score from predictions if available
-    risk_score: float | None = None
-    pred_path = DATA_DIR / "predictions.csv"
-    if pred_path.exists():
-        try:
-            df = pd.read_csv(pred_path)
-            match = df[df["Container_ID"].astype(str) == cid]
-            if not match.empty:
-                risk_score = float(match.iloc[0]["Risk_Score"])
-        except Exception:
-            pass
+    # Look up the stored risk score from the containers table
+    risk_score: float | None = db.get_container_risk_score(cid)
 
-    entry = {
-        "container_id": cid,
-        "risk_score": risk_score,
-        "note": req.note,
-        "timestamp": datetime.utcnow().isoformat(),
-        "status": "flagged",
-    }
-    flagged.append(entry)
-    _save_json(FLAGGED_PATH, flagged)
+    try:
+        entry = db.insert_flagged(
+            container_id=cid,
+            risk_score=risk_score,
+            note=req.note,
+            timestamp=datetime.utcnow(),
+        )
+    except Exception as exc:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Failed to flag container: {exc}",
+        ) from exc
+
     logger.info("Container %s flagged for inspection", cid)
-
     return FlagResponse(**entry)
 
 
@@ -579,7 +660,7 @@ async def flag_container(req: FlagRequest):
     summary="Get all flagged containers",
 )
 async def get_flagged_containers():
-    return _load_json(FLAGGED_PATH)
+    return db.get_all_flagged()
 
 
 # ---------------------------------------------------------------------------
@@ -592,20 +673,18 @@ async def get_flagged_containers():
     summary="Add a note to a container",
 )
 async def add_container_note(req: NoteRequest):
-    if not req.note.strip():
+    note_text = req.note.strip()
+    if not note_text:
         raise HTTPException(
             status_code=status.HTTP_400_BAD_REQUEST,
             detail="Note cannot be empty.",
         )
 
-    notes = _load_json(NOTES_PATH)
-    entry = {
-        "container_id": str(req.container_id),
-        "note": req.note.strip(),
-        "timestamp": datetime.utcnow().isoformat(),
-    }
-    notes.append(entry)
-    _save_json(NOTES_PATH, notes)
+    entry = db.insert_note(
+        container_id=str(req.container_id),
+        note=note_text,
+        created_at=datetime.utcnow(),
+    )
     logger.info("Note added for container %s", req.container_id)
     return NoteResponse(**entry)
 
@@ -620,5 +699,4 @@ async def add_container_note(req: NoteRequest):
     summary="Get notes for a specific container",
 )
 async def get_container_notes(container_id: str):
-    notes = _load_json(NOTES_PATH)
-    return [n for n in notes if str(n.get("container_id")) == container_id]
+    return db.get_notes(container_id)

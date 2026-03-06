@@ -98,6 +98,15 @@ def init_db() -> None:
 
             CREATE INDEX IF NOT EXISTS idx_notes_cid
                 ON container_notes (container_id);
+
+            CREATE TABLE IF NOT EXISTS notifications (
+                id            INTEGER PRIMARY KEY AUTOINCREMENT,
+                title         TEXT    NOT NULL,
+                message       TEXT    NOT NULL DEFAULT '',
+                type          TEXT    NOT NULL DEFAULT 'info',
+                is_read       INTEGER NOT NULL DEFAULT 0,
+                created_at    TEXT    DEFAULT (strftime('%Y-%m-%dT%H:%M:%S', 'now'))
+            );
         """)
     logger.info("Database ready → %s", DB_PATH)
 
@@ -318,5 +327,61 @@ def get_notes(container_id: str) -> list[dict]:
             (str(container_id),),
         ).fetchall()
         return [dict(r) for r in rows]
+    finally:
+        conn.close()
+
+
+# ---------------------------------------------------------------------------
+# notifications table
+# ---------------------------------------------------------------------------
+
+def insert_notification(
+    *,
+    title: str,
+    message: str = "",
+    ntype: str = "info",
+    created_at: datetime | None = None,
+) -> dict:
+    """Insert a new notification. Returns the created record."""
+    ts = (created_at or datetime.utcnow()).isoformat()
+    with _db() as conn:
+        cur = conn.execute(
+            "INSERT INTO notifications (title, message, type, created_at) VALUES (?, ?, ?, ?)",
+            (title, message, ntype, ts),
+        )
+        return {
+            "id": cur.lastrowid,
+            "title": title,
+            "message": message,
+            "type": ntype,
+            "is_read": False,
+            "created_at": ts,
+        }
+
+
+def get_notifications(limit: int = 50) -> list[dict]:
+    """Return recent notifications ordered by created_at descending."""
+    conn = _connect()
+    try:
+        rows = conn.execute(
+            "SELECT id, title, message, type, is_read, created_at FROM notifications ORDER BY created_at DESC LIMIT ?",
+            (limit,),
+        ).fetchall()
+        return [{**dict(r), "is_read": bool(r["is_read"])} for r in rows]
+    finally:
+        conn.close()
+
+
+def mark_all_notifications_read() -> int:
+    """Mark every notification as read. Returns the count of rows updated."""
+    with _db() as conn:
+        cur = conn.execute("UPDATE notifications SET is_read = 1 WHERE is_read = 0")
+        return cur.rowcount
+
+
+def count_unread_notifications() -> int:
+    conn = _connect()
+    try:
+        return conn.execute("SELECT COUNT(*) FROM notifications WHERE is_read = 0").fetchone()[0]
     finally:
         conn.close()

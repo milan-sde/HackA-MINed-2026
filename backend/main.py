@@ -161,6 +161,60 @@ def _seed_containers_from_csv() -> None:
         logger.warning("Could not seed containers from CSV: %s", exc)
 
 
+def _seed_notifications() -> None:
+    """Generate real notifications from the container data on startup."""
+    # Only seed if there are no notifications yet
+    existing = db.get_notifications(limit=1)
+    if existing:
+        return
+
+    try:
+        containers = db.get_all_containers(limit=10_000)
+        if not containers:
+            return
+
+        # 1. Critical containers alert
+        critical = [c for c in containers if c.get("risk_level") == "Critical"]
+        if critical:
+            high_weight = [c for c in critical if "weight discrepancy" in c.get("explanation", "").lower()]
+            msg = f"Weight discrepancy >30% detected" if high_weight else f"Anomaly detection flagged high-risk shipments"
+            db.insert_notification(
+                title=f"{len(critical)} Critical containers flagged",
+                message=msg,
+                ntype="critical",
+            )
+
+        # 2. High dwell time alerts (pick top one)
+        long_dwell = [c for c in containers if "dwell" in c.get("explanation", "").lower()]
+        if long_dwell:
+            top = long_dwell[0]
+            db.insert_notification(
+                title="High dwell time alert",
+                message=f"{top['container_id']} exceeded 120 hrs",
+                ntype="warning",
+            )
+
+        # 3. Anomaly detection summary
+        anomalies = [c for c in containers if c.get("anomaly_flag")]
+        if anomalies:
+            db.insert_notification(
+                title=f"{len(anomalies)} anomalies detected",
+                message="Isolation Forest + rule-based checks flagged suspicious containers",
+                ntype="warning",
+            )
+
+        # 4. Model loaded notification
+        db.insert_notification(
+            title="Model loaded successfully",
+            message="XGBoost + Isolation Forest ensemble ready",
+            ntype="success",
+        )
+
+        logger.info("Seeded %d startup notifications", 4 if anomalies else 3)
+    except Exception as exc:
+        logger.warning("Could not seed notifications: %s", exc)
+
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     global _bundle
@@ -168,6 +222,7 @@ async def lifespan(app: FastAPI):
     db.init_db()
     _migrate_json_to_db()
     _seed_containers_from_csv()
+    _seed_notifications()
     logger.info("Startup: loading model bundle …")
     _bundle = load_models()
     logger.info("Startup complete — API is ready.")
@@ -331,6 +386,16 @@ class NoteResponse(BaseModel):
     container_id: str
     note: str
     timestamp: str
+
+
+# ── Notification schemas ──────────────────────────────────────────────────
+class NotificationOut(BaseModel):
+    id: int
+    title: str
+    message: str
+    type: str
+    is_read: bool
+    created_at: str
 
 class ContainerRecord(BaseModel):
     model_config = {"extra": "allow"}
@@ -517,6 +582,27 @@ async def predict_batch_endpoint(file: UploadFile = File(...)):
     inserted = db.bulk_upsert_containers(db_rows)
     logger.info("Upserted %d prediction(s) into containers table", inserted)
 
+    # ── Generate notifications for this batch ────────────────────────────────
+    crit_count = result.critical_count
+    if crit_count > 0:
+        db.insert_notification(
+            title=f"{crit_count} Critical containers detected",
+            message=f"Batch upload flagged {crit_count} high-risk shipments",
+            ntype="critical",
+        )
+    anomaly_count = sum(1 for p in result.predictions if p.anomaly_flag)
+    if anomaly_count > 0:
+        db.insert_notification(
+            title=f"{anomaly_count} anomalies in uploaded batch",
+            message="Isolation Forest + rule-based checks triggered",
+            ntype="warning",
+        )
+    db.insert_notification(
+        title=f"Batch processed: {result.total} containers",
+        message=f"Critical: {crit_count} | Low Risk: {result.low_risk_count} | Clear: {result.clear_count}",
+        ntype="success",
+    )
+
     return BatchPredictionResponse(
         summary=BatchSummary(
             total_containers = result.total,
@@ -647,6 +733,11 @@ async def flag_container(req: FlagRequest):
         ) from exc
 
     logger.info("Container %s flagged for inspection", cid)
+    db.insert_notification(
+        title=f"Container {cid} flagged",
+        message=req.note or "Flagged for inspection from dashboard",
+        ntype="info",
+    )
     return FlagResponse(**entry)
 
 
@@ -700,3 +791,35 @@ async def add_container_note(req: NoteRequest):
 )
 async def get_container_notes(container_id: str):
     return db.get_notes(container_id)
+
+
+# ---------------------------------------------------------------------------
+# Notifications
+# ---------------------------------------------------------------------------
+@app.get(
+    "/notifications",
+    response_model=list[NotificationOut],
+    tags=["Notifications"],
+    summary="Get recent notifications",
+)
+async def get_notifications():
+    return db.get_notifications()
+
+
+@app.post(
+    "/notifications/read",
+    tags=["Notifications"],
+    summary="Mark all notifications as read",
+)
+async def mark_notifications_read():
+    count = db.mark_all_notifications_read()
+    return {"marked_read": count}
+
+
+@app.get(
+    "/notifications/unread-count",
+    tags=["Notifications"],
+    summary="Get unread notification count",
+)
+async def unread_count():
+    return {"count": db.count_unread_notifications()}

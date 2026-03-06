@@ -179,7 +179,7 @@ seaborn>=0.12.0
 joblib>=1.2.0
 ```
 
-## 🚀 Usage
+## 🚀 Usage3    
 
 ### Quick Start — Full Pipeline
 
@@ -207,7 +207,12 @@ python src/07_generate_predictions.py    # Score real-time containers
 ### Launch the Dashboard
 
 ```bash
-cd dashboard
+# Start the FastAPI backend
+cd backend
+python -m uvicorn main:app --reload --port 8000
+
+# In a new terminal — start the React frontend
+cd frontend
 npm install
 npm run dev
 ```
@@ -275,7 +280,7 @@ A modern single-page application built with React 19, TypeScript, Tailwind CSS, 
 | **Settings** | Configuration panel |
 
 ```bash
-cd dashboard && npm install && npm run dev
+cd frontend && npm install && npm run dev
 ```
 
 ## 📁 Project Structure
@@ -316,12 +321,22 @@ HackaMinded/
 │   ├── 05_train_isolation_forest.py
 │   ├── 06_ensemble_and_threshold.py
 │   └── 07_generate_predictions.py
-├── dashboard/                        # React + TypeScript web dashboard
+├── backend/                          # FastAPI prediction server
+│   ├── main.py                       # API endpoints & CORS
+│   ├── model_loader.py               # Model artifact loading
+│   ├── feature_engineering.py        # Feature pipeline (single & batch)
+│   └── predict_service.py            # Inference orchestration
+├── frontend/                         # React + TypeScript web dashboard
 │   ├── src/
-│   │   ├── pages/                    # Overview, Containers, Analytics, Reports, Settings
-│   │   ├── components/               # Reusable UI & dashboard components
-│   │   ├── data/                     # Data service & mock data
-│   │   ├── store/                    # Zustand state management
+│   │   ├── pages/                    # Overview, Containers, Analytics, Reports, Settings, InspectionQueue
+│   │   ├── components/
+│   │   │   ├── ui/                   # Primitive UI components (ShadCN)
+│   │   │   ├── layout/              # Header, Sidebar, Layout shell
+│   │   │   └── features/            # Domain components (charts, tables, modals)
+│   │   ├── services/                 # API client & simulation engine
+│   │   ├── store/                    # Zustand global state
+│   │   ├── hooks/                    # Custom React hooks
+│   │   ├── lib/                      # Utility functions
 │   │   └── types/                    # TypeScript type definitions
 │   ├── package.json
 │   └── vite.config.ts

@@ -43,7 +43,7 @@ export default function RiskAlertFeed() {
   }
 
   return (
-    <Card className="border-red-500/20">
+    <Card className="border-red-500/30">
       <CardHeader className="pb-2">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
@@ -106,8 +106,8 @@ export default function RiskAlertFeed() {
                   "transition-all duration-300 hover:bg-accent/50",
                   i === 0 && "animate-in slide-in-from-top-2 fade-in duration-300",
                   alert.riskLevel === "Critical"
-                    ? "border-red-500/30 bg-red-500/5"
-                    : "border-orange-500/30 bg-orange-500/5",
+                    ? "border-red-500/30 bg-red-500/10"
+                    : "border-amber-500/30 bg-amber-500/10",
                 )}
                 onClick={() => handleClickAlert(alert.containerId)}
               >
@@ -115,8 +115,8 @@ export default function RiskAlertFeed() {
                   className={cn(
                     "mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-full",
                     alert.riskLevel === "Critical"
-                      ? "bg-red-500/20 text-red-400"
-                      : "bg-orange-500/20 text-orange-400",
+                      ? "bg-red-500/15 text-red-400"
+                      : "bg-amber-500/15 text-amber-400",
                   )}
                 >
                   <ShieldAlert className="h-4 w-4" />

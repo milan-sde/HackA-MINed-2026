@@ -25,25 +25,29 @@ export default function Sidebar() {
   return (
     <aside
       className={cn(
-        "relative flex h-full flex-col border-r border-border bg-card transition-all duration-300",
-        sidebarCollapsed ? "w-16" : "w-56"
+        "relative flex h-full flex-col transition-all duration-300 rounded-r-2xl overflow-hidden",
+        sidebarCollapsed ? "w-[72px]" : "w-60"
       )}
+      style={{
+        background: "hsl(var(--sidebar-bg))",
+        borderRight: "1px solid hsl(var(--border))",
+      }}
     >
       {/* Logo */}
-      <div className="flex h-16 items-center gap-3 border-b border-border px-4">
-        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-primary/10">
-          <Ship className="h-5 w-5 text-primary" />
+      <div className="flex h-16 items-center gap-3 px-4">
+        <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-cyan-500/20">
+          <Ship className="h-5 w-5 text-white" />
         </div>
         {!sidebarCollapsed && (
           <div className="min-w-0">
-            <p className="truncate text-sm font-bold text-foreground">SmartContainer</p>
-            <p className="truncate text-[10px] text-muted-foreground">Risk Engine v2.0</p>
+            <p className="truncate text-sm font-bold text-white">SmartContainer</p>
+            <p className="truncate text-[10px] text-white/60">Risk Engine v2.0</p>
           </div>
         )}
       </div>
 
       {/* Nav */}
-      <nav className="flex flex-col gap-1 p-2 flex-1">
+      <nav className="flex flex-col gap-1 px-3 py-4 flex-1">
         {NAV_ITEMS.map(({ path, label, icon: Icon, badge: showBadge }) => {
           const active = location.pathname === path || (path !== "/" && location.pathname.startsWith(path));
           return (
@@ -52,21 +56,21 @@ export default function Sidebar() {
                 <Link
                   to={path}
                   className={cn(
-                    "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-all duration-150",
+                    "flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm font-medium transition-all duration-200",
                     active
-                      ? "bg-primary/15 text-primary"
-                      : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                      ? "bg-blue-900/60 text-white shadow-lg shadow-black/20 border border-blue-700/40"
+                      : "text-slate-400 hover:bg-white/5 hover:text-white"
                   )}
                 >
-                  <Icon className="h-4.5 w-4.5 shrink-0" />
+                  <Icon className="h-[18px] w-[18px] shrink-0" />
                   {!sidebarCollapsed && <span>{label}</span>}
                   {!sidebarCollapsed && showBadge && flaggedCount > 0 && (
-                    <Badge variant="destructive" className="ml-auto h-5 min-w-[20px] px-1.5 text-[10px] justify-center">
+                    <Badge className="ml-auto h-5 min-w-[20px] px-1.5 text-[10px] justify-center bg-red-500/80 text-white border-0 hover:bg-red-500">
                       {flaggedCount}
                     </Badge>
                   )}
                   {!sidebarCollapsed && !showBadge && active && (
-                    <span className="ml-auto h-1.5 w-1.5 rounded-full bg-primary" />
+                    <span className="ml-auto h-1.5 w-1.5 rounded-full bg-cyan-400" />
                   )}
                 </Link>
               </TooltipTrigger>
@@ -78,22 +82,22 @@ export default function Sidebar() {
 
       {/* Status */}
       {!sidebarCollapsed && (
-        <div className="m-2 rounded-lg bg-green-500/10 border border-green-500/20 p-3">
+        <div className="m-3 rounded-xl bg-cyan-500/10 border border-cyan-500/20 p-3">
           <div className="flex items-center gap-2">
             <div className="relative">
-              <div className="h-2 w-2 rounded-full bg-green-500" />
-              <div className="absolute inset-0 h-2 w-2 rounded-full bg-green-500 animate-ping" />
+              <div className="h-2 w-2 rounded-full bg-emerald-400" />
+              <div className="absolute inset-0 h-2 w-2 rounded-full bg-emerald-400 animate-ping" />
             </div>
-            <span className="text-xs text-green-400 font-medium">System Online</span>
+            <span className="text-xs text-white/90 font-medium">System Online</span>
           </div>
-          <p className="mt-1 text-[10px] text-muted-foreground">All services operational</p>
+          <p className="mt-1 text-[10px] text-white/50">All services operational</p>
         </div>
       )}
 
       {/* Collapse toggle */}
       <button
         onClick={toggleSidebar}
-        className="absolute -right-3 top-20 flex h-6 w-6 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm hover:text-foreground transition-colors z-10"
+        className="absolute -right-3 top-20 flex h-6 w-6 items-center justify-center rounded-full bg-[hsl(var(--sidebar-bg))] text-muted-foreground shadow-md hover:shadow-lg hover:text-foreground transition-all z-10 border border-border"
       >
         {sidebarCollapsed ? <ChevronRight className="h-3 w-3" /> : <ChevronLeft className="h-3 w-3" />}
       </button>

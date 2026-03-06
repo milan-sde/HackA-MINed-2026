@@ -154,17 +154,17 @@ export default function CSVUploader({ compact = false }: CSVUploaderProps) {
   // ── Success state (data loaded) ──────────────────────────────────────
   if (hasData && phase === "done" && batchSummary) {
     return (
-      <Card className="border-green-500/30 bg-green-500/5">
+      <Card className="border-emerald-500/30 bg-emerald-500/10">
         <CardContent className={compact ? "py-4" : "py-6"}>
           <div className="flex items-start gap-4">
-            <div className="rounded-full bg-green-500/20 p-2.5 shrink-0">
-              <CheckCircle2 className="h-5 w-5 text-green-500" />
+            <div className="rounded-full bg-emerald-500/15 p-2.5 shrink-0">
+              <CheckCircle2 className="h-5 w-5 text-emerald-400" />
             </div>
 
             <div className="flex-1 min-w-0">
               <p className="text-sm font-semibold">
                 Processed{" "}
-                <span className="text-green-500">
+                <span className="text-emerald-400">
                   {batchSummary.total_containers.toLocaleString()}
                 </span>{" "}
                 containers
@@ -179,21 +179,21 @@ export default function CSVUploader({ compact = false }: CSVUploaderProps) {
               <div className="flex flex-wrap items-center gap-2 mt-3">
                 <Badge
                   variant="outline"
-                  className="gap-1.5 border-red-500/40 text-red-400"
+                  className="gap-1.5 border-red-500/30 text-red-400"
                 >
                   <ShieldAlert className="h-3 w-3" />
                   {batchSummary.critical_count} Critical
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="gap-1.5 border-orange-500/40 text-orange-400"
+                  className="gap-1.5 border-amber-500/30 text-amber-400"
                 >
                   <ShieldMinus className="h-3 w-3" />
                   {batchSummary.low_risk_count} Low Risk
                 </Badge>
                 <Badge
                   variant="outline"
-                  className="gap-1.5 border-green-500/40 text-green-400"
+                  className="gap-1.5 border-emerald-500/30 text-emerald-400"
                 >
                   <ShieldCheck className="h-3 w-3" />
                   {batchSummary.clear_count} Clear
@@ -230,10 +230,10 @@ export default function CSVUploader({ compact = false }: CSVUploaderProps) {
   // ── If data exists from a previous session but phase is idle ─────────
   if (hasData && phase !== "done") {
     return (
-      <Card className="border-green-500/30 bg-green-500/5">
+      <Card className="border-emerald-500/30 bg-emerald-500/10">
         <CardContent className="py-4">
           <div className="flex items-center gap-3">
-            <CheckCircle2 className="h-4 w-4 text-green-500 shrink-0" />
+            <CheckCircle2 className="h-4 w-4 text-emerald-400 shrink-0" />
             <p className="text-sm text-muted-foreground flex-1">
               Showing predictions for{" "}
               <span className="font-semibold text-foreground">

@@ -206,13 +206,13 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                     onClick={() => openModal(container)}
                     className={cn(
                       "border-b border-border cursor-pointer transition-colors hover:bg-accent/50",
-                      container.riskLevel === "Critical" && "hover:bg-red-500/5"
+                      container.riskLevel === "Critical" && "hover:bg-red-500/10"
                     )}
                   >
                     <td className={tdCls}>
                       <div className="flex items-center gap-2">
                         {container.anomalyFlag && (
-                          <AlertCircle className="h-3.5 w-3.5 text-orange-400 shrink-0" />
+                          <AlertCircle className="h-3.5 w-3.5 text-amber-400 shrink-0" />
                         )}
                         {flaggedIds.includes(container.id) && (
                           <Flag className="h-3.5 w-3.5 text-red-400 fill-current shrink-0" />
@@ -244,7 +244,7 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                       <span className="ml-1.5 text-xs text-muted-foreground">{container.originCountry}</span>
                     </td>
                     <td className={cn(tdCls, "tabular-nums")}>
-                      <span className={container.dwellTimeHours > 80 ? "text-orange-400" : ""}>
+                      <span className={container.dwellTimeHours > 80 ? "text-amber-400" : ""}>
                         {container.dwellTimeHours.toFixed(0)}h
                       </span>
                     </td>
@@ -265,7 +265,7 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                               container.riskLevel === "Critical"
                                 ? "bg-red-500/15 text-red-400"
                                 : container.riskLevel === "Low Risk"
-                                  ? "bg-orange-500/15 text-orange-400"
+                                  ? "bg-amber-500/15 text-amber-400"
                                   : "bg-secondary text-secondary-foreground"
                             )}>
                               <span className="font-bold">+</span> {f}

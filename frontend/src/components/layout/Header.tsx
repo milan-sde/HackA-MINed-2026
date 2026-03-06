@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import {
   Bell, RefreshCw, Sun, Moon, Download, ChevronDown,
-  User, LogOut, Settings, Clock,
+  User, LogOut, Settings, Clock, AlertTriangle, CheckCircle2,
+  Info, Siren,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -13,6 +14,54 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import { useDashboardStore } from "@/store/dashboardStore";
 import { cn } from "@/lib/utils";
 import { toast } from "sonner";
+import {
+  fetchNotifications,
+  markNotificationsRead,
+  fetchUnreadCount,
+  type Notification,
+} from "@/services/api";
+
+/* ---- helpers ---- */
+
+const NOTIFICATION_ICONS: Record<string, typeof AlertTriangle> = {
+  critical: Siren,
+  warning: AlertTriangle,
+  success: CheckCircle2,
+  info: Info,
+};
+const NOTIFICATION_COLORS: Record<string, string> = {
+  critical: "text-red-500",
+  warning: "text-yellow-500",
+  success: "text-green-500",
+  info: "text-blue-500",
+};
+
+function timeAgo(dateStr: string): string {
+  const diff = Date.now() - new Date(dateStr).getTime();
+  const mins = Math.floor(diff / 60_000);
+  if (mins < 1) return "just now";
+  if (mins < 60) return `${mins}m ago`;
+  const hrs = Math.floor(mins / 60);
+  if (hrs < 24) return `${hrs}h ago`;
+  return `${Math.floor(hrs / 24)}d ago`;
+}
+
+function NotificationItem({ notification: n }: { notification: Notification }) {
+  const Icon = NOTIFICATION_ICONS[n.type] ?? Info;
+  const color = NOTIFICATION_COLORS[n.type] ?? "text-muted-foreground";
+  return (
+    <DropdownMenuItem className={cn("flex items-start gap-2.5 p-3", !n.is_read && "bg-muted/40")}>
+      <Icon className={cn("h-4 w-4 mt-0.5 shrink-0", color)} />
+      <div className="flex flex-col gap-0.5 min-w-0">
+        <p className="text-sm font-medium leading-tight">{n.title}</p>
+        <p className="text-xs text-muted-foreground truncate">{n.message}</p>
+        <p className="text-[10px] text-muted-foreground mt-0.5">{timeAgo(n.created_at)}</p>
+      </div>
+    </DropdownMenuItem>
+  );
+}
+
+/* ---- main component ---- */
 
 interface HeaderProps {
   title: string;
@@ -22,17 +71,49 @@ interface HeaderProps {
 }
 
 export default function Header({ title, subtitle, onRefresh, isRefreshing }: HeaderProps) {
-  const { theme, toggleTheme, notificationCount, clearNotifications } = useDashboardStore();
+  const { theme, toggleTheme, notificationCount, clearNotifications, notifications, setNotifications, setNotificationCount } = useDashboardStore();
   const [lastUpdated, setLastUpdated] = useState(new Date());
+
+  const loadNotifications = useCallback(async () => {
+    try {
+      const [list, count] = await Promise.all([
+        fetchNotifications(),
+        fetchUnreadCount(),
+      ]);
+      setNotifications(list);
+      setNotificationCount(count);
+    } catch {
+      /* backend may not be running — silently ignore */
+    }
+  }, [setNotifications, setNotificationCount]);
+
+  useEffect(() => {
+    loadNotifications();
+    const poll = setInterval(loadNotifications, 15_000);
+    return () => clearInterval(poll);
+  }, [loadNotifications]);
 
   useEffect(() => {
     const int = setInterval(() => setLastUpdated(new Date()), 30000);
     return () => clearInterval(int);
   }, []);
 
+  async function handleMarkRead() {
+    try {
+      await markNotificationsRead();
+      // immediately reflect in UI, then re-fetch to sync
+      setNotificationCount(0);
+      setNotifications(notifications.map((n) => ({ ...n, is_read: true })));
+      await loadNotifications();
+    } catch {
+      setNotificationCount(0);
+    }
+  }
+
   function handleRefresh() {
     setLastUpdated(new Date());
     onRefresh?.();
+    loadNotifications();
     toast.success("Data refreshed", { description: "All data has been updated." });
   }
 
@@ -43,7 +124,7 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
   const timeStr = lastUpdated.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
   return (
-    <header className="flex h-16 items-center gap-4 border-b border-border bg-card/50 backdrop-blur-sm px-6">
+    <header className="flex h-16 items-center gap-4 border-b border-border/60 bg-card px-8">
       {/* Title area */}
       <div className="flex-1 min-w-0">
         <h1 className="text-lg font-semibold truncate">{title}</h1>
@@ -103,7 +184,7 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
       {/* Notifications */}
       <DropdownMenu>
         <DropdownMenuTrigger asChild>
-          <Button variant="ghost" size="icon" className="relative" onClick={clearNotifications}>
+          <Button variant="ghost" size="icon" className="relative">
             <Bell className="h-4 w-4" />
             {notificationCount > 0 && (
               <Badge className="absolute -top-1 -right-1 h-4 w-4 p-0 flex items-center justify-center text-[10px] bg-red-500 text-white border-0 rounded-full">
@@ -112,29 +193,25 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
             )}
           </Button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent align="end" className="w-72">
+        <DropdownMenuContent align="end" className="w-80">
           <DropdownMenuLabel className="flex items-center justify-between">
             <span>Notifications</span>
-            <Button variant="ghost" size="sm" className="h-6 text-xs px-2" onClick={clearNotifications}>
+            <Button variant="ghost" size="sm" className="h-6 text-xs px-2" onClick={handleMarkRead}>
               Mark all read
             </Button>
           </DropdownMenuLabel>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="flex flex-col items-start gap-0.5 p-3">
-            <p className="text-sm font-medium">🚨 3 Critical containers flagged</p>
-            <p className="text-xs text-muted-foreground">Weight discrepancy &gt;30% detected</p>
-            <p className="text-[10px] text-muted-foreground mt-0.5">2 min ago</p>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex flex-col items-start gap-0.5 p-3">
-            <p className="text-sm font-medium">⚠️ High dwell time alert</p>
-            <p className="text-xs text-muted-foreground">CTR14563892 exceeded 120 hrs</p>
-            <p className="text-[10px] text-muted-foreground mt-0.5">15 min ago</p>
-          </DropdownMenuItem>
-          <DropdownMenuItem className="flex flex-col items-start gap-0.5 p-3">
-            <p className="text-sm font-medium">📊 Model retrained successfully</p>
-            <p className="text-xs text-muted-foreground">F1 score improved to 0.847</p>
-            <p className="text-[10px] text-muted-foreground mt-0.5">1 hr ago</p>
-          </DropdownMenuItem>
+          {notifications.length === 0 ? (
+            <div className="p-4 text-center text-sm text-muted-foreground">
+              No notifications yet
+            </div>
+          ) : (
+            <div className="max-h-[320px] overflow-y-auto">
+              {notifications.slice(0, 8).map((n) => (
+                <NotificationItem key={n.id} notification={n} />
+              ))}
+            </div>
+          )}
         </DropdownMenuContent>
       </DropdownMenu>
 
@@ -158,7 +235,7 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
           <DropdownMenuItem><User className="h-4 w-4 mr-2" />Profile</DropdownMenuItem>
           <DropdownMenuItem><Settings className="h-4 w-4 mr-2" />Settings</DropdownMenuItem>
           <DropdownMenuSeparator />
-          <DropdownMenuItem className="text-red-400"><LogOut className="h-4 w-4 mr-2" />Sign out</DropdownMenuItem>
+          <DropdownMenuItem className="text-red-500"><LogOut className="h-4 w-4 mr-2" />Sign out</DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </header>

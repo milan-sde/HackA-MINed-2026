@@ -12,10 +12,11 @@ import {
   ReferenceLine, LabelList,
 } from "recharts";
 import {
-  Flag, FileText, AlertTriangle, Info, Copy, Check, Loader2,
+  Flag, FileText, AlertTriangle, Copy, Check, Loader2,
   BrainCircuit, TrendingUp, TrendingDown, Minus, ShieldAlert,
-  MessageSquare, Clock,
+  MessageSquare, Clock, Download,
 } from "lucide-react";
+import jsPDF from "jspdf";
 import { cn } from "@/lib/utils";
 import type { Container } from "@/types";
 import { useDashboardStore } from "@/store/dashboardStore";
@@ -30,7 +31,7 @@ import {
 // ── Risk gauge with threshold markers ────────────────────────────────────
 
 function RiskGauge({ score, level }: { score: number; level: string }) {
-  const color = score >= 70 ? "#ff4b4b" : score >= 30 ? "#ffa64b" : "#4bff4b";
+  const color = score >= 70 ? "#EF4444" : score >= 30 ? "#F59E0B" : "#10B981";
   const r = 72;
   const cx = 100, cy = 100;
 
@@ -58,15 +59,15 @@ function RiskGauge({ score, level }: { score: number; level: string }) {
     <div className="flex flex-col items-center">
       <svg viewBox="0 0 200 145" className="w-full max-w-[210px]">
         <path d={trackArc} fill="none" stroke="hsl(var(--muted))" strokeWidth={14} strokeLinecap="round" />
-        <path d={clearArc} fill="none" stroke="#4bff4b" strokeWidth={14} strokeLinecap="round" opacity={0.15} />
-        <path d={lowRiskArc} fill="none" stroke="#ffa64b" strokeWidth={14} opacity={0.15} />
-        <path d={criticalArc} fill="none" stroke="#ff4b4b" strokeWidth={14} strokeLinecap="round" opacity={0.15} />
+        <path d={clearArc} fill="none" stroke="#10B981" strokeWidth={14} strokeLinecap="round" opacity={0.15} />
+        <path d={lowRiskArc} fill="none" stroke="#F59E0B" strokeWidth={14} opacity={0.15} />
+        <path d={criticalArc} fill="none" stroke="#EF4444" strokeWidth={14} strokeLinecap="round" opacity={0.15} />
         <path d={fillArc} fill="none" stroke={color} strokeWidth={14} strokeLinecap="round" />
         <text x={cx} y={cy + 2} textAnchor="middle" fontSize={32} fontWeight={800} fill={color}>{score.toFixed(1)}</text>
         <text x={cx} y={cy + 19} textAnchor="middle" fontSize={10} fontWeight={600} fill="hsl(var(--muted-foreground))">RISK SCORE</text>
-        <text x={16} y={120} fontSize={8} fill="#4bff4b">Clear</text>
-        <text x={80} y={22} textAnchor="middle" fontSize={8} fill="#ffa64b">Low Risk</text>
-        <text x={170} y={120} fontSize={8} fill="#ff4b4b" textAnchor="end">Critical</text>
+        <text x={16} y={120} fontSize={8} fill="#10B981">Clear</text>
+        <text x={80} y={22} textAnchor="middle" fontSize={8} fill="#F59E0B">Low Risk</text>
+        <text x={170} y={120} fontSize={8} fill="#EF4444" textAnchor="end">Critical</text>
       </svg>
       <Badge
         variant={level === "Critical" ? "critical" : level === "Low Risk" ? "lowrisk" : "clear"}
@@ -130,9 +131,9 @@ function buildFeatureImpacts(c: Container): FeatureImpact[] {
 }
 
 function impactColor(value: number) {
-  if (value >= 60) return "#ff4b4b";
-  if (value >= 35) return "#ffa64b";
-  return "#4bff4b";
+  if (value >= 60) return "#EF4444";
+  if (value >= 35) return "#F59E0B";
+  return "#10B981";
 }
 
 function ImpactTooltip({ active, payload }: { active?: boolean; payload?: Array<{ payload: FeatureImpact }> }) {
@@ -164,8 +165,8 @@ function FeatureImpactChart({ container }: { container: Container }) {
             width={75}
           />
           <Tooltip content={<ImpactTooltip />} />
-          <ReferenceLine x={35} stroke="#ffa64b" strokeDasharray="3 3" opacity={0.5} />
-          <ReferenceLine x={60} stroke="#ff4b4b" strokeDasharray="3 3" opacity={0.5} />
+          <ReferenceLine x={35} stroke="#F59E0B" strokeDasharray="3 3" opacity={0.5} />
+          <ReferenceLine x={60} stroke="#EF4444" strokeDasharray="3 3" opacity={0.5} />
           <Bar dataKey="value" radius={[0, 4, 4, 0]} barSize={18}>
             {impacts.map((d, i) => (
               <Cell key={i} fill={impactColor(d.value)} />
@@ -208,7 +209,7 @@ function FeatureRadar({ scores }: { scores: Container["featureScores"] }) {
 
 function DirectionIcon({ dir }: { dir: "up" | "down" | "neutral" }) {
   if (dir === "up") return <TrendingUp className="h-3.5 w-3.5 text-red-400" />;
-  if (dir === "down") return <TrendingDown className="h-3.5 w-3.5 text-green-400" />;
+  if (dir === "down") return <TrendingDown className="h-3.5 w-3.5 text-emerald-400" />;
   return <Minus className="h-3.5 w-3.5 text-muted-foreground" />;
 }
 
@@ -426,7 +427,7 @@ export default function ContainerDetailModal() {
                 ].map(({ label, value, alert }) => (
                   <div key={label} className="rounded-lg border border-border bg-card p-2.5 text-center">
                     <p className="text-[10px] text-muted-foreground uppercase tracking-wide">{label}</p>
-                    <p className={cn("text-sm font-semibold mt-0.5 tabular-nums", alert && "text-orange-400")}>{value}</p>
+                    <p className={cn("text-sm font-semibold mt-0.5 tabular-nums", alert && "text-amber-400")}>{value}</p>
                   </div>
                 ))}
               </div>
@@ -442,13 +443,13 @@ export default function ContainerDetailModal() {
                   <FeatureImpactChart container={container} />
                   <div className="flex items-center gap-4 mt-2 text-[10px] text-muted-foreground">
                     <span className="flex items-center gap-1">
-                      <span className="h-2 w-2 rounded-full bg-[#4bff4b]" /> Low (&lt;35%)
+                      <span className="h-2 w-2 rounded-full bg-[#10B981]" /> Low (&lt;35%)
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="h-2 w-2 rounded-full bg-[#ffa64b]" /> Medium (35-60%)
+                      <span className="h-2 w-2 rounded-full bg-[#F59E0B]" /> Medium (35-60%)
                     </span>
                     <span className="flex items-center gap-1">
-                      <span className="h-2 w-2 rounded-full bg-[#ff4b4b]" /> High (&gt;60%)
+                      <span className="h-2 w-2 rounded-full bg-[#EF4444]" /> High (&gt;60%)
                     </span>
                   </div>
                 </div>
@@ -522,7 +523,7 @@ export default function ContainerDetailModal() {
                       {flagLoading ? (
                         <Loader2 className="h-3.5 w-3.5 animate-spin" />
                       ) : isFlagged ? (
-                        <Check className="h-3.5 w-3.5 text-green-400" />
+                        <Check className="h-3.5 w-3.5 text-emerald-400" />
                       ) : (
                         <Flag className="h-3.5 w-3.5" />
                       )}
@@ -533,24 +534,216 @@ export default function ContainerDetailModal() {
                       size="sm"
                       className="gap-2"
                       onClick={() => {
-                        const text = [
-                          `Container: ${container.id}`,
-                          `Risk Score: ${container.riskScore}`,
-                          `Risk Level: ${container.riskLevel}`,
-                          `Explanation: ${container.explanation}`,
-                          `Origin: ${container.originCountry} → ${container.destinationCountry}`,
-                          `Key Factors: ${container.keyRiskFactors.join(", ")}`,
-                        ].join("\n");
-                        navigator.clipboard.writeText(text);
-                        toast.success("Report copied to clipboard");
+                        const doc = new jsPDF();
+                        const pw = 210;      // page width
+                        const lm = 18;       // left margin
+                        const rm = pw - lm;  // right edge
+                        const cw = rm - lm;  // content width
+                        let y = 0;
+
+                        // ── Colour palette ──
+                        const navy  = [15, 23, 42]   as const;  // header bg
+                        const white = [255, 255, 255] as const;
+                        const slate = [100, 116, 139] as const; // muted text
+                        const dark  = [30, 41, 59]    as const; // body text
+                        const red   = [236, 72, 153]  as const;
+                        const amber = [168, 85, 247]  as const;
+                        const green = [139, 92, 246]   as const;
+                        const lightBg = [241, 245, 249] as const; // section bg
+
+                        const riskColor = container.riskLevel === "Critical" ? red
+                          : container.riskLevel === "Low Risk" ? amber : green;
+
+                        // ── Helper: rounded‑rect fill ──
+                        function roundedRect(x: number, yy: number, w: number, h: number, r: number, fill: readonly [number, number, number]) {
+                          doc.setFillColor(...fill);
+                          doc.roundedRect(x, yy, w, h, r, r, "F");
+                        }
+
+                        // ── Header banner ──
+                        roundedRect(0, 0, pw, 48, 0, navy);
+                        doc.setFont("helvetica", "bold");
+                        doc.setFontSize(22);
+                        doc.setTextColor(...white);
+                        doc.text("SmartContainer", lm, 18);
+                        doc.setFontSize(11);
+                        doc.setFont("helvetica", "normal");
+                        doc.text("RISK  INSPECTION  REPORT", lm, 26);
+
+                        // Risk badge in header
+                        const badgeText = container.riskLevel.toUpperCase();
+                        const badgeW = doc.getTextWidth(badgeText) + 12;
+                        roundedRect(rm - badgeW, 10, badgeW, 10, 3, riskColor);
+                        doc.setFontSize(9);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...white);
+                        doc.text(badgeText, rm - badgeW + 6, 17);
+
+                        // Score circle
+                        doc.setFontSize(18);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...white);
+                        doc.text(`${container.riskScore}`, rm - badgeW / 2, 36, { align: "center" });
+                        doc.setFontSize(7);
+                        doc.setFont("helvetica", "normal");
+                        doc.text("RISK SCORE", rm - badgeW / 2, 42, { align: "center" });
+
+                        // Date line
+                        doc.setFontSize(8);
+                        doc.setTextColor(180, 190, 210);
+                        doc.text(`Generated ${new Date().toLocaleString()}`, lm, 42);
+
+                        y = 56;
+
+                        // ── Container ID headline ──
+                        doc.setFontSize(14);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...dark);
+                        doc.text(`Container  #${container.id}`, lm, y);
+                        y += 4;
+
+                        // Thin accent line
+                        doc.setDrawColor(...riskColor);
+                        doc.setLineWidth(0.8);
+                        doc.line(lm, y, lm + 60, y);
+                        y += 8;
+
+                        // ── Shipment Details card ──
+                        const cardTop = y;
+                        roundedRect(lm, y, cw, 68, 3, lightBg);
+                        y += 7;
+                        doc.setFontSize(9);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...navy);
+                        doc.text("SHIPMENT  DETAILS", lm + 6, y);
+                        y += 7;
+
+                        // Two‑column detail grid
+                        const leftCol: [string, string][] = [
+                          ["Origin", `${container.originCountry} > ${container.destinationCountry}`],
+                          ["Destination Port", container.destinationPort],
+                          ["HS Code", container.hsCode],
+                          ["Trade Regime", container.tradeRegime],
+                          ["Importer", container.importerId],
+                          ["Exporter", container.exporterId],
+                        ];
+                        const rightCol: [string, string][] = [
+                          ["Declared Value", `$${container.declaredValue.toLocaleString()}`],
+                          ["Declared Weight", `${container.declaredWeight.toLocaleString()} kg`],
+                          ["Measured Weight", `${container.measuredWeight.toLocaleString()} kg`],
+                          ["Weight Diff", `${container.weightDiscrepancyPct > 0 ? "+" : ""}${container.weightDiscrepancyPct.toFixed(1)} %`],
+                          ["Dwell Time", `${container.dwellTimeHours.toFixed(0)} hours`],
+                          ["Anomaly Flag", container.anomalyFlag ? "Yes" : "No"],
+                        ];
+
+                        const colX1 = lm + 6;
+                        const colX2 = lm + cw / 2 + 4;
+                        const rowH = 8;
+                        let ry = y;
+                        doc.setFontSize(8);
+                        for (let i = 0; i < Math.max(leftCol.length, rightCol.length); i++) {
+                          if (leftCol[i]) {
+                            doc.setFont("helvetica", "normal"); doc.setTextColor(...slate);
+                            doc.text(leftCol[i][0], colX1, ry);
+                            doc.setFont("helvetica", "bold"); doc.setTextColor(...dark);
+                            doc.text(leftCol[i][1], colX1 + 36, ry);
+                          }
+                          if (rightCol[i]) {
+                            doc.setFont("helvetica", "normal"); doc.setTextColor(...slate);
+                            doc.text(rightCol[i][0], colX2, ry);
+                            doc.setFont("helvetica", "bold"); doc.setTextColor(...dark);
+                            const valColor = (rightCol[i][0] === "Weight Diff" && container.weightDiscrepancyPct > 20)
+                              ? red
+                              : (rightCol[i][0] === "Anomaly Flag" && container.anomalyFlag) ? red : dark;
+                            doc.setTextColor(...valColor);
+                            doc.text(rightCol[i][1], colX2 + 36, ry);
+                          }
+                          ry += rowH;
+                        }
+                        y = cardTop + 68 + 8;
+
+                        // ── AI Explanation card ──
+                        doc.setFontSize(9);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...navy);
+                        doc.text("AI  EXPLANATION", lm, y);
+                        y += 5;
+
+                        roundedRect(lm, y, cw, 1, 0, riskColor);
+                        y += 5;
+
+                        doc.setFontSize(9);
+                        doc.setFont("helvetica", "normal");
+                        doc.setTextColor(...dark);
+                        const explanationLines = doc.splitTextToSize(container.explanation, cw - 4);
+                        doc.text(explanationLines, lm + 2, y);
+                        y += explanationLines.length * 5 + 8;
+
+                        // ── Key Risk Factors ──
+                        if (container.keyRiskFactors.length > 0) {
+                          doc.setFontSize(9);
+                          doc.setFont("helvetica", "bold");
+                          doc.setTextColor(...navy);
+                          doc.text("KEY  RISK  FACTORS", lm, y);
+                          y += 6;
+
+                          doc.setFontSize(8.5);
+                          for (const factor of container.keyRiskFactors) {
+                            // Bullet dot
+                            doc.setFillColor(...red);
+                            doc.circle(lm + 3, y - 1.2, 1.2, "F");
+
+                            doc.setFont("helvetica", "normal");
+                            doc.setTextColor(...dark);
+                            doc.text(factor, lm + 8, y);
+                            y += 6.5;
+                          }
+                          y += 4;
+                        }
+
+                        // ── Risk Score visual bar ──
+                        doc.setFontSize(9);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...navy);
+                        doc.text("RISK  SCORE  BREAKDOWN", lm, y);
+                        y += 6;
+
+                        // Background bar
+                        const barW = cw - 4;
+                        roundedRect(lm + 2, y, barW, 8, 3, [226, 232, 240]);
+                        // Filled portion
+                        const fillW = Math.max(4, (container.riskScore / 100) * barW);
+                        roundedRect(lm + 2, y, fillW, 8, 3, riskColor);
+                        // Score text on bar
+                        doc.setFontSize(7);
+                        doc.setFont("helvetica", "bold");
+                        doc.setTextColor(...white);
+                        doc.text(`${container.riskScore} / 100`, lm + fillW - 2, y + 5.5, { align: "right" });
+                        y += 12;
+
+                        // Scale labels
+                        doc.setFontSize(6.5);
+                        doc.setFont("helvetica", "normal");
+                        doc.setTextColor(...green);  doc.text("Clear", lm + 2, y);
+                        doc.setTextColor(...amber);  doc.text("Low Risk", lm + 2 + barW * 0.35, y);
+                        doc.setTextColor(...red);    doc.text("Critical", lm + 2 + barW * 0.75, y);
+                        y += 10;
+
+                        // ── Footer ──
+                        doc.setDrawColor(220, 225, 235);
+                        doc.setLineWidth(0.3);
+                        doc.line(lm, y, rm, y);
+                        y += 5;
+                        doc.setFontSize(7);
+                        doc.setFont("helvetica", "normal");
+                        doc.setTextColor(...slate);
+                        doc.text("SmartContainer Risk Engine  |  Hybrid AI Anomaly Detection  |  Confidential", pw / 2, y, { align: "center" });
+
+                        doc.save(`Container_${container.id}_Report.pdf`);
+                        toast.success("PDF report downloaded");
                       }}
                     >
-                      <FileText className="h-3.5 w-3.5" />Export Report
-                    </Button>
-                    <Button variant="outline" size="sm" className="gap-2"
-                      onClick={() => toast.info("Verification request sent")}
-                    >
-                      <Info className="h-3.5 w-3.5" />Request Verification
+                      <Download className="h-3.5 w-3.5" />Export Report
                     </Button>
                   </div>
                 </div>

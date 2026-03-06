@@ -109,15 +109,15 @@ export default function RiskDonutChart({ containers }: RiskDonutChartProps) {
           </ResponsiveContainer>
         </div>
         {/* Legend */}
-        <div className="mt-2 space-y-1.5">
+        <div className="mt-3 space-y-2">
           {data.map((entry) => (
             <button
               key={entry.name}
               onClick={() => handleClick(entry)}
-              className="flex w-full items-center justify-between rounded-md px-2 py-1 text-xs hover:bg-accent transition-colors"
+              className="flex w-full items-center justify-between rounded-xl px-3 py-2 text-xs hover:bg-muted transition-colors"
             >
-              <div className="flex items-center gap-2">
-                <div className="h-2 w-2 rounded-full" style={{ background: entry.fill }} />
+              <div className="flex items-center gap-2.5">
+                <div className="h-2.5 w-2.5 rounded-full" style={{ background: entry.fill }} />
                 <span className="text-muted-foreground">{entry.name}</span>
               </div>
               <span className="font-semibold tabular-nums">{entry.value.toLocaleString()}</span>

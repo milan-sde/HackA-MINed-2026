@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import type { Container, FilterState, BatchSummary } from "@/types";
-import type { ContainerNote, FlaggedContainer } from "@/services/api";
+import type { ContainerNote, FlaggedContainer, Notification } from "@/services/api";
 
 export interface RiskAlert {
   id: string;
@@ -41,6 +41,11 @@ interface DashboardState {
   // Notification count
   notificationCount: number;
   clearNotifications: () => void;
+
+  // Notifications list
+  notifications: Notification[];
+  setNotifications: (list: Notification[]) => void;
+  setNotificationCount: (n: number) => void;
 
   // Active page
   activePage: string;
@@ -119,6 +124,10 @@ export const useDashboardStore = create<DashboardState>()(
 
       notificationCount: 3,
       clearNotifications: () => set({ notificationCount: 0 }),
+
+      notifications: [],
+      setNotifications: (list) => set({ notifications: list }),
+      setNotificationCount: (n) => set({ notificationCount: n }),
 
       activePage: "overview",
       setActivePage: (p) => set({ activePage: p }),

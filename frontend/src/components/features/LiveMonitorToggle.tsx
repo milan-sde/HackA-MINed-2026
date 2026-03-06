@@ -64,17 +64,17 @@ export default function LiveMonitorToggle() {
               <div
                 className={cn(
                   "h-2.5 w-2.5 rounded-full",
-                  running ? "bg-green-500" : "bg-muted-foreground/40",
+                  running ? "bg-red-500" : "bg-muted-foreground/40",
                 )}
               />
               {running && (
-                <div className="absolute h-2.5 w-2.5 rounded-full bg-green-500 animate-ping" />
+                <div className="absolute h-2.5 w-2.5 rounded-full bg-red-500 animate-ping" />
               )}
             </div>
             <span
               className={cn(
                 "text-xs font-medium",
-                running ? "text-green-500" : "text-muted-foreground",
+                running ? "text-red-500" : "text-muted-foreground",
               )}
             >
               {running ? "LIVE" : "PAUSED"}

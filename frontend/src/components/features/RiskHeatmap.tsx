@@ -95,11 +95,11 @@ const COUNTRY_NAMES: Record<string, string> = {
 };
 
 function riskColor(avgScore: number): string {
-  if (avgScore >= 70) return "#dc2626";
-  if (avgScore >= 50) return "#ea580c";
-  if (avgScore >= 30) return "#f59e0b";
+  if (avgScore >= 70) return "#EF4444";
+  if (avgScore >= 50) return "#f97316";
+  if (avgScore >= 30) return "#F59E0B";
   if (avgScore >= 15) return "#84cc16";
-  return "#22c55e";
+  return "#10B981";
 }
 
 function riskColorWithOpacity(avgScore: number, total: number, maxTotal: number): string {
@@ -309,11 +309,11 @@ export default function RiskHeatmap({ containers }: RiskHeatmapProps) {
             <div className="flex items-center gap-1.5">
               <span className="text-xs text-muted-foreground">Risk:</span>
               {[
-                { label: "Clear", color: "#22c55e" },
+                { label: "Clear", color: "#10B981" },
                 { label: "Low", color: "#84cc16" },
-                { label: "Medium", color: "#f59e0b" },
-                { label: "High", color: "#ea580c" },
-                { label: "Critical", color: "#dc2626" },
+                { label: "Medium", color: "#F59E0B" },
+                { label: "High", color: "#f97316" },
+                { label: "Critical", color: "#EF4444" },
               ].map(({ label, color }) => (
                 <div key={label} className="flex items-center gap-1">
                   <div

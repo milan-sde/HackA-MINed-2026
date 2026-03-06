@@ -10,9 +10,9 @@ import { useDashboardStore } from "@/store/dashboardStore";
 import { deriveEntityRisk } from "@/services/api";
 
 function riskColor(score: number) {
-  if (score >= 70) return "#ff4b4b";
-  if (score >= 30) return "#ffa64b";
-  return "#4bff4b";
+  if (score >= 70) return "#EF4444";
+  if (score >= 30) return "#F59E0B";
+  return "#10B981";
 }
 
 interface EntityTooltipProps {

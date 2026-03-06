@@ -496,3 +496,32 @@ export function deriveEntityRisk(
     .sort((a, b) => b.riskScore - a.riskScore)
     .slice(0, 10);
 }
+
+
+// ── Notifications ────────────────────────────────────────────────────────
+
+export interface Notification {
+  id: number;
+  title: string;
+  message: string;
+  type: "critical" | "warning" | "success" | "info";
+  is_read: boolean;
+  created_at: string;
+}
+
+export async function fetchNotifications(): Promise<Notification[]> {
+  const res = await fetch(`${API_BASE}/notifications`);
+  if (!res.ok) throw new Error("Failed to fetch notifications");
+  return res.json();
+}
+
+export async function markNotificationsRead(): Promise<void> {
+  await fetch(`${API_BASE}/notifications/read`, { method: "POST" });
+}
+
+export async function fetchUnreadCount(): Promise<number> {
+  const res = await fetch(`${API_BASE}/notifications/unread-count`);
+  if (!res.ok) return 0;
+  const data = await res.json();
+  return data.count;
+}

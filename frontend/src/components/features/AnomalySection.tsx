@@ -51,7 +51,7 @@ function ScatterTooltip({ active, payload }: CustomTooltipProps) {
       <p>Weight Δ: <span className="font-semibold">{c.weightDiscrepancyPct.toFixed(1)}%</span></p>
       <p>Origin: {c.originFlag} {c.originCountry}</p>
       {c.anomalyFlag && (
-        <p className="text-red-400 font-semibold mt-1">⚠ Anomaly Flagged</p>
+        <p className="text-amber-400 font-semibold mt-1">⚠ Anomaly Flagged</p>
       )}
     </div>
   );
@@ -104,9 +104,9 @@ export default function AnomalySection({ containers }: Props) {
                 tick={{ fontSize: 10 }}
                 stroke="hsl(var(--border))"
               />
-              <ReferenceLine y={70} stroke="#ff4b4b" strokeDasharray="4 3" strokeWidth={1.5} label={{ value: "Critical", fill: "#ff4b4b", fontSize: 10 }} />
-              <ReferenceLine y={30} stroke="#4bff4b" strokeDasharray="4 3" strokeWidth={1.5} label={{ value: "Clear", fill: "#4bff4b", fontSize: 10 }} />
-              <ReferenceLine x={20} stroke="#ffa64b" strokeDasharray="4 3" strokeWidth={1.5} />
+              <ReferenceLine y={70} stroke="#EF4444" strokeDasharray="4 3" strokeWidth={1.5} label={{ value: "Critical", fill: "#EF4444", fontSize: 10 }} />
+              <ReferenceLine y={30} stroke="#10B981" strokeDasharray="4 3" strokeWidth={1.5} label={{ value: "Clear", fill: "#10B981", fontSize: 10 }} />
+              <ReferenceLine x={20} stroke="#F59E0B" strokeDasharray="4 3" strokeWidth={1.5} />
               <Tooltip content={<ScatterTooltip />} />
               <Scatter data={scatterData} shape={<CustomDot />}>
                 {scatterData.map((c) => (
@@ -148,7 +148,7 @@ export default function AnomalySection({ containers }: Props) {
                       className="h-full rounded-full"
                       style={{
                         width: `${(p.avgRisk / 100) * 100}%`,
-                        background: p.avgRisk >= 70 ? "#ff4b4b" : p.avgRisk >= 30 ? "#ffa64b" : "#4bff4b",
+                        background: p.avgRisk >= 70 ? "#EF4444" : p.avgRisk >= 30 ? "#F59E0B" : "#10B981",
                       }}
                     />
                   </div>

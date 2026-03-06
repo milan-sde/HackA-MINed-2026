@@ -1,9 +1,7 @@
 import { TrendingUp, TrendingDown, Package, AlertTriangle, Activity, BarChart2 } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn, formatNumber, formatPct } from "@/lib/utils";
 import type { KPIData } from "@/types";
-import { RadialBarChart, RadialBar, ResponsiveContainer } from "recharts";
 
 interface KPICardsProps {
   data: KPIData | null;
@@ -17,31 +15,13 @@ function Skeleton({ className }: { className?: string }) {
 function TrendBadge({ value }: { value: number }) {
   const up = value > 0;
   return (
-    <span className={cn("inline-flex items-center gap-0.5 text-xs font-medium", up ? "text-red-400" : "text-green-400")}>
+    <span className={cn(
+      "inline-flex items-center gap-0.5 text-[11px] font-semibold px-2 py-0.5 rounded-full",
+      up ? "bg-white/20 text-white" : "bg-white/20 text-white"
+    )}>
       {up ? <TrendingUp className="h-3 w-3" /> : <TrendingDown className="h-3 w-3" />}
-      {Math.abs(value).toFixed(1)}%
+      {up ? "+" : ""}{Math.abs(value).toFixed(1)}%
     </span>
-  );
-}
-
-function GaugeMini({ value }: { value: number }) {
-  const color = value >= 70 ? "#ff4b4b" : value >= 40 ? "#ffa64b" : "#4bff4b";
-  const data = [{ value, fill: color }];
-  return (
-    <div className="h-12 w-12">
-      <ResponsiveContainer width="100%" height="100%">
-        <RadialBarChart
-          data={data}
-          startAngle={200}
-          endAngle={-20}
-          innerRadius="65%"
-          outerRadius="100%"
-          barSize={6}
-        >
-          <RadialBar dataKey="value" cornerRadius={3} background={{ fill: "hsl(var(--muted))" }} />
-        </RadialBarChart>
-      </ResponsiveContainer>
-    </div>
   );
 }
 
@@ -50,7 +30,7 @@ const CARD_DEFS = [
     key: "total",
     label: "Total Containers",
     icon: Package,
-    iconBg: "bg-blue-500/10 text-blue-400",
+    gradient: "from-[#1E3A8A] to-[#1d4ed8]",
     tooltip: "Total containers processed in the current period",
     getValue: (d: KPIData) => formatNumber(d.totalContainers),
     getSub: (d: KPIData) => <TrendBadge value={d.trend.total} />,
@@ -59,12 +39,12 @@ const CARD_DEFS = [
     key: "critical",
     label: "Critical Risk",
     icon: AlertTriangle,
-    iconBg: "bg-red-500/10 text-red-400",
+    gradient: "from-[#7f1d1d] to-[#EF4444]",
     tooltip: "Containers classified as Critical risk requiring immediate inspection",
     getValue: (d: KPIData) => formatNumber(d.criticalCount),
     getSub: (d: KPIData) => (
-      <span className="text-xs text-muted-foreground">
-        {formatPct(d.criticalPct)} of total · <TrendBadge value={d.trend.critical} />
+      <span className="flex items-center gap-1.5 text-[11px] text-white/80">
+        {formatPct(d.criticalPct)} of total <TrendBadge value={d.trend.critical} />
       </span>
     ),
   },
@@ -72,12 +52,12 @@ const CARD_DEFS = [
     key: "anomaly",
     label: "Anomalies Detected",
     icon: Activity,
-    iconBg: "bg-orange-500/10 text-orange-400",
+    gradient: "from-[#78350f] to-[#F59E0B]",
     tooltip: "Containers flagged as anomalous by Isolation Forest or rule-based engine",
     getValue: (d: KPIData) => formatNumber(d.anomalyCount),
     getSub: (d: KPIData) => (
-      <span className="text-xs text-muted-foreground">
-        {formatPct(d.anomalyRate)} detection rate · <TrendBadge value={d.trend.anomaly} />
+      <span className="flex items-center gap-1.5 text-[11px] text-white/80">
+        {formatPct(d.anomalyRate)} rate <TrendBadge value={d.trend.anomaly} />
       </span>
     ),
   },
@@ -85,49 +65,54 @@ const CARD_DEFS = [
     key: "avgscore",
     label: "Avg Risk Score",
     icon: BarChart2,
-    iconBg: "bg-purple-500/10 text-purple-400",
-    tooltip: "Mean ensemble risk score across all containers (0–100)",
+    gradient: "from-[#164e63] to-[#06B6D4]",
+    tooltip: "Mean ensemble risk score across all containers (0-100)",
     getValue: (d: KPIData) => d.avgRiskScore.toFixed(1),
     getSub: (d: KPIData) => <TrendBadge value={d.trend.avgScore} />,
-    extra: (d: KPIData) => <GaugeMini value={d.avgRiskScore} />,
   },
 ] as const;
 
 export default function KPICards({ data, loading }: KPICardsProps) {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
       {CARD_DEFS.map((def) => {
         const Icon = def.icon;
         return (
           <Tooltip key={def.key} delayDuration={300}>
             <TooltipTrigger asChild>
-              <Card className="group cursor-default transition-all duration-200 hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5">
-                <CardContent className="p-5">
-                  {loading || !data ? (
-                    <div className="space-y-3">
-                      <Skeleton className="h-4 w-24" />
-                      <Skeleton className="h-8 w-16" />
-                      <Skeleton className="h-3 w-32" />
-                    </div>
-                  ) : (
-                    <div className="flex items-start justify-between">
-                      <div className="space-y-1">
-                        <p className="text-xs font-medium text-muted-foreground uppercase tracking-wide">
-                          {def.label}
-                        </p>
-                        <p className="text-2xl font-bold tabular-nums">{def.getValue(data)}</p>
-                        <div className="flex items-center gap-1">{def.getSub(data)}</div>
+              <div
+                className={cn(
+                  "relative overflow-hidden rounded-2xl bg-gradient-to-br p-5 shadow-lg transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5 cursor-default",
+                  def.gradient
+                )}
+              >
+                {/* Decorative circles */}
+                <div className="absolute -top-4 -right-4 h-24 w-24 rounded-full bg-white/10" />
+                <div className="absolute -bottom-6 -right-6 h-20 w-20 rounded-full bg-white/5" />
+
+                {loading || !data ? (
+                  <div className="space-y-3">
+                    <Skeleton className="h-4 w-24 !bg-white/20" />
+                    <Skeleton className="h-8 w-16 !bg-white/20" />
+                    <Skeleton className="h-3 w-32 !bg-white/20" />
+                  </div>
+                ) : (
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-3">
+                      <p className="text-xs font-semibold text-white/80 uppercase tracking-wider">
+                        {def.label}
+                      </p>
+                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+                        <Icon className="h-5 w-5 text-white" />
                       </div>
-                      <div className="flex flex-col items-end gap-2">
-                        <div className={cn("flex h-9 w-9 items-center justify-center rounded-lg", def.iconBg)}>
-                          <Icon className="h-4.5 w-4.5" />
-                        </div>
-                        {"extra" in def && def.extra(data)}
-                      </div>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
+                    <p className="text-3xl font-bold tabular-nums text-white mb-1">
+                      {def.getValue(data)}
+                    </p>
+                    <div className="flex items-center gap-1">{def.getSub(data)}</div>
+                  </div>
+                )}
+              </div>
             </TooltipTrigger>
             <TooltipContent side="bottom" className="max-w-xs">{def.tooltip}</TooltipContent>
           </Tooltip>

@@ -20,7 +20,7 @@ export default function Layout({ title = "SmartContainer Risk Engine", subtitle,
 
   useEffect(() => {
     document.documentElement.classList.remove("light", "dark");
-    if (theme === "light") document.documentElement.classList.add("light");
+    document.documentElement.classList.add(theme);
   }, [theme]);
 
   // Auto-load containers + flagged list on first mount
@@ -72,7 +72,7 @@ export default function Layout({ title = "SmartContainer Risk Engine", subtitle,
       <Sidebar />
       <div className="flex flex-1 flex-col overflow-hidden">
         <Header title={title} subtitle={subtitle} onRefresh={onRefresh} isRefreshing={isRefreshing} />
-        <main className="flex-1 overflow-y-auto p-6">
+        <main className="flex-1 overflow-y-auto px-8 py-6">
           <Outlet />
         </main>
       </div>

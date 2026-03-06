@@ -17,12 +17,12 @@ function riskBadge(score: number | null) {
   if (score >= 70) return <Badge variant="destructive">{score.toFixed(1)}</Badge>;
   if (score >= 30)
     return (
-      <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
+      <Badge className="bg-amber-500/15 text-amber-400 border-amber-500/30">
         {score.toFixed(1)}
       </Badge>
     );
   return (
-    <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
+      <Badge className="bg-emerald-500/15 text-emerald-400 border-emerald-500/30">
       {score.toFixed(1)}
     </Badge>
   );
@@ -122,45 +122,48 @@ export default function InspectionQueue() {
 
       {/* Summary cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-              <ShieldAlert className="h-5 w-5 text-primary" />
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#1E3A8A] to-[#1d4ed8] p-5 shadow-lg">
+          <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-white/10" />
+          <div className="flex items-center gap-3 relative z-10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+              <ShieldAlert className="h-5 w-5 text-white" />
             </div>
             <div>
-              <p className="text-2xl font-bold tabular-nums">
+              <p className="text-2xl font-bold tabular-nums text-white">
                 {formatNumber(flaggedContainers.length)}
               </p>
-              <p className="text-xs text-muted-foreground">Total Flagged</p>
+              <p className="text-xs text-white/70">Total Flagged</p>
             </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-red-500/10">
-              <AlertTriangle className="h-5 w-5 text-red-400" />
+          </div>
+        </div>
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#7f1d1d] to-[#EF4444] p-5 shadow-lg">
+          <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-white/10" />
+          <div className="flex items-center gap-3 relative z-10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+              <AlertTriangle className="h-5 w-5 text-white" />
             </div>
             <div>
-              <p className="text-2xl font-bold tabular-nums text-red-400">
+              <p className="text-2xl font-bold tabular-nums text-white">
                 {formatNumber(criticalCount)}
               </p>
-              <p className="text-xs text-muted-foreground">Critical Risk</p>
+              <p className="text-xs text-white/70">Critical Risk</p>
             </div>
-          </CardContent>
-        </Card>
-        <Card>
-          <CardContent className="p-4 flex items-center gap-3">
-            <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500/10">
-              <Clock className="h-5 w-5 text-orange-400" />
+          </div>
+        </div>
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#164e63] to-[#06B6D4] p-5 shadow-lg">
+          <div className="absolute -top-4 -right-4 h-20 w-20 rounded-full bg-white/10" />
+          <div className="flex items-center gap-3 relative z-10">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white/20 backdrop-blur-sm">
+              <Clock className="h-5 w-5 text-white" />
             </div>
             <div>
-              <p className="text-2xl font-bold tabular-nums">
+              <p className="text-2xl font-bold tabular-nums text-white">
                 {formatNumber(flaggedContainers.filter((f) => f.status === "flagged").length)}
               </p>
-              <p className="text-xs text-muted-foreground">Pending Review</p>
+              <p className="text-xs text-white/70">Pending Review</p>
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </div>
       </div>
 
       {/* Queue table */}
@@ -223,8 +226,8 @@ export default function InspectionQueue() {
                           className={cn(
                             "text-[10px]",
                             fc.status === "flagged"
-                              ? "border-orange-500/50 text-orange-400"
-                              : "border-green-500/50 text-green-400",
+                              ? "border-amber-500/30 text-amber-400"
+                              : "border-emerald-500/30 text-emerald-400",
                           )}
                         >
                           {fc.status}

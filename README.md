@@ -730,6 +730,23 @@ For customs authorities, this means **fewer unnecessary inspections, faster proc
 
 ---
 
+### Project Images:
+
+#### Main Dashboard
+![Overview](assets/Overview.png)
+#### Containers
+![Overview](assets/Container.png)
+#### Containers
+![Overview](assets/Inspection%20Queue.png)
+#### Analytics
+#### Containers
+![Overview](assets/Analytics.png)
+
+
+
+
+
+
 <div align="center">
 
 **Built for HackA MINed 2026**

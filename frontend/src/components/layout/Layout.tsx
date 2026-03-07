@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Toaster, toast } from "sonner";
 import Sidebar from "./Sidebar";
 import Header from "./Header";
+import LoadingScreen from "@/components/features/LoadingScreen";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { useEffect } from "react";
 import { fetchContainersFromAPI, fetchFlaggedContainers } from "@/services/api";
@@ -69,6 +70,7 @@ export default function Layout({ title = "SmartContainer Risk Engine", subtitle,
 
   return (
     <div className="flex h-screen overflow-hidden bg-background">
+      <LoadingScreen finished={initialLoadDone} />
       <Sidebar />
       <div className="flex flex-1 flex-col overflow-hidden">
         <Header title={title} subtitle={subtitle} onRefresh={onRefresh} isRefreshing={isRefreshing} />

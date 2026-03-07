@@ -378,6 +378,9 @@ class FlagResponse(BaseModel):
     timestamp: str
     status: str = "flagged"
 
+class ContainerIdRequest(BaseModel):
+    container_id: int | str
+
 class NoteRequest(BaseModel):
     container_id: int | str
     note: str
@@ -752,6 +755,107 @@ async def flag_container(req: FlagRequest):
 )
 async def get_flagged_containers():
     return db.get_all_flagged()
+
+
+# ---------------------------------------------------------------------------
+# POST /mark-under-review — update status to under_review
+# ---------------------------------------------------------------------------
+@app.post(
+    "/mark-under-review",
+    response_model=FlagResponse,
+    tags=["Actions"],
+    summary="Mark a flagged container as under review",
+)
+async def mark_under_review(req: ContainerIdRequest):
+    cid = str(req.container_id)
+
+    if not db.is_flagged(cid):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Container {cid} is not in the inspection queue.",
+        )
+
+    entry = db.update_flagged_status(cid, "under_review")
+    if entry is None:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to update container status.",
+        )
+
+    logger.info("Container %s marked as under review", cid)
+    db.insert_notification(
+        title=f"Container {cid} under review",
+        message="Inspection review has started",
+        ntype="info",
+    )
+    return FlagResponse(**entry)
+
+
+# ---------------------------------------------------------------------------
+# POST /mark-inspected — update status to inspected
+# ---------------------------------------------------------------------------
+@app.post(
+    "/mark-inspected",
+    response_model=FlagResponse,
+    tags=["Actions"],
+    summary="Mark a flagged container as inspected",
+)
+async def mark_inspected(req: ContainerIdRequest):
+    cid = str(req.container_id)
+
+    if not db.is_flagged(cid):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Container {cid} is not in the inspection queue.",
+        )
+
+    entry = db.update_flagged_status(cid, "inspected")
+    if entry is None:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to update container status.",
+        )
+
+    logger.info("Container %s marked as inspected", cid)
+    db.insert_notification(
+        title=f"Container {cid} inspected",
+        message="Inspection completed and recorded",
+        ntype="success",
+    )
+    return FlagResponse(**entry)
+
+
+# ---------------------------------------------------------------------------
+# POST /unflag-container — remove from inspection queue
+# ---------------------------------------------------------------------------
+@app.post(
+    "/unflag-container",
+    tags=["Actions"],
+    summary="Remove a container from the inspection queue",
+)
+async def unflag_container(req: ContainerIdRequest):
+    cid = str(req.container_id)
+
+    if not db.is_flagged(cid):
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Container {cid} is not in the inspection queue.",
+        )
+
+    deleted = db.delete_flagged(cid)
+    if not deleted:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to remove container from queue.",
+        )
+
+    logger.info("Container %s unflagged", cid)
+    db.insert_notification(
+        title=f"Container {cid} unflagged",
+        message="Removed from inspection queue",
+        ntype="info",
+    )
+    return {"container_id": cid, "removed": True}
 
 
 # ---------------------------------------------------------------------------

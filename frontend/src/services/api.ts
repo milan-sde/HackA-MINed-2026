@@ -311,6 +311,57 @@ export async function fetchFlaggedContainers(): Promise<FlaggedContainer[]> {
   return res.json();
 }
 
+// ── Mark container as under review ───────────────────────────────────────
+
+export async function markContainerUnderReview(
+  containerId: string,
+): Promise<FlaggedContainer> {
+  const res = await fetch(`${API_BASE}/mark-under-review`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ container_id: containerId }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(body);
+  }
+  return res.json();
+}
+
+// ── Mark container as inspected ──────────────────────────────────────────
+
+export async function markContainerInspected(
+  containerId: string,
+): Promise<FlaggedContainer> {
+  const res = await fetch(`${API_BASE}/mark-inspected`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ container_id: containerId }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(body);
+  }
+  return res.json();
+}
+
+// ── Unflag container (remove from inspection queue) ──────────────────────
+
+export async function unflagContainer(
+  containerId: string,
+): Promise<{ container_id: string; removed: boolean }> {
+  const res = await fetch(`${API_BASE}/unflag-container`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ container_id: containerId }),
+  });
+  if (!res.ok) {
+    const body = await res.text();
+    throw new Error(body);
+  }
+  return res.json();
+}
+
 // ── Container notes ──────────────────────────────────────────────────────
 
 export async function addContainerNote(

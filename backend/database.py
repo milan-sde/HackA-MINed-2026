@@ -86,6 +86,7 @@ def init_db() -> None:
                 container_id  TEXT    NOT NULL UNIQUE,
                 risk_score    REAL,
                 note          TEXT    DEFAULT '',
+                status        TEXT    NOT NULL DEFAULT 'flagged',
                 timestamp     TEXT    DEFAULT (strftime('%Y-%m-%dT%H:%M:%S', 'now'))
             );
 
@@ -108,6 +109,11 @@ def init_db() -> None:
                 created_at    TEXT    DEFAULT (strftime('%Y-%m-%dT%H:%M:%S', 'now'))
             );
         """)
+        # Migrate existing tables: add status column if missing
+        cols = [row[1] for row in conn.execute("PRAGMA table_info(flagged_containers)").fetchall()]
+        if "status" not in cols:
+            conn.execute("ALTER TABLE flagged_containers ADD COLUMN status TEXT NOT NULL DEFAULT 'flagged'")
+            logger.info("Migrated flagged_containers: added 'status' column")
     logger.info("Database ready → %s", DB_PATH)
 
 
@@ -243,6 +249,7 @@ def insert_flagged(
     risk_score: float | None,
     note: str,
     timestamp: datetime,
+    status: str = "flagged",
 ) -> dict:
     """
     Flag a container for inspection.
@@ -254,17 +261,17 @@ def insert_flagged(
     with _db() as conn:
         conn.execute(
             """
-            INSERT INTO flagged_containers (container_id, risk_score, note, timestamp)
-            VALUES (?, ?, ?, ?)
+            INSERT INTO flagged_containers (container_id, risk_score, note, status, timestamp)
+            VALUES (?, ?, ?, ?, ?)
             """,
-            (str(container_id), risk_score, note, ts_iso),
+            (str(container_id), risk_score, note, status, ts_iso),
         )
     return {
         "container_id": str(container_id),
         "risk_score": risk_score,
         "note": note,
         "timestamp": ts_iso,
-        "status": "flagged",
+        "status": status,
     }
 
 
@@ -274,19 +281,40 @@ def get_all_flagged(limit: int = 1_000) -> list[dict]:
     try:
         rows = conn.execute(
             """
-            SELECT container_id, risk_score, note, timestamp
+            SELECT container_id, risk_score, note, status, timestamp
             FROM flagged_containers
             ORDER BY timestamp DESC
             LIMIT ?
             """,
             (limit,),
         ).fetchall()
-        return [
-            {**dict(r), "status": "flagged"}
-            for r in rows
-        ]
+        return [dict(r) for r in rows]
     finally:
         conn.close()
+
+
+def update_flagged_status(container_id: str, new_status: str) -> dict | None:
+    """Update the status of a flagged container. Returns the updated record or None."""
+    with _db() as conn:
+        conn.execute(
+            "UPDATE flagged_containers SET status = ? WHERE container_id = ?",
+            (new_status, str(container_id)),
+        )
+        row = conn.execute(
+            "SELECT container_id, risk_score, note, status, timestamp FROM flagged_containers WHERE container_id = ?",
+            (str(container_id),),
+        ).fetchone()
+    return dict(row) if row else None
+
+
+def delete_flagged(container_id: str) -> bool:
+    """Remove a container from the flagged_containers table. Returns True if deleted."""
+    with _db() as conn:
+        cur = conn.execute(
+            "DELETE FROM flagged_containers WHERE container_id = ?",
+            (str(container_id),),
+        )
+    return cur.rowcount > 0
 
 
 # ---------------------------------------------------------------------------

@@ -68,19 +68,40 @@ def _load(filename: str, label: str) -> Any:
 
 def _derive_iso_bounds(iso_forest, models_dir: str) -> tuple[float, float]:
     """
-    Compute the min/max of iso_forest.score_samples on the validation set so
-    we can reproduce the 0-1 normalisation used during training.
-    Falls back to empirical defaults when prepared_data.pkl is absent.
+    Load the min/max of iso_forest.score_samples so we can reproduce the
+    0-1 normalisation used during training.
+
+    Priority order:
+      1. iso_bounds.pkl  — pre-computed from the prediction batch
+      2. prepared_data.pkl — derive from validation set
+      3. Hardcoded fallback
     """
+    # 1. Pre-computed bounds (most reliable)
+    bounds_path = os.path.join(models_dir, "iso_bounds.pkl")
+    if os.path.exists(bounds_path):
+        try:
+            bounds = joblib.load(bounds_path)
+            lo = float(bounds["iso_score_min"])
+            hi = float(bounds["iso_score_max"])
+            logger.info("  Iso score bounds (from iso_bounds.pkl): min=%.4f, max=%.4f", lo, hi)
+            return lo, hi
+        except Exception as exc:
+            logger.warning("  Could not load iso_bounds.pkl: %s", exc)
+
+    # 2. Derive from validation set
     prepared_path = os.path.join(models_dir, "prepared_data.pkl")
     if os.path.exists(prepared_path):
-        _, _, X_val, _, _, _ = joblib.load(prepared_path)
-        raw = iso_forest.score_samples(X_val)
-        lo, hi = float(raw.min()), float(raw.max())
-        logger.info("  Iso score bounds (from val set): min=%.4f, max=%.4f", lo, hi)
-        return lo, hi
+        try:
+            _, _, X_val, _, _, _ = joblib.load(prepared_path)
+            raw = iso_forest.score_samples(X_val)
+            lo, hi = float(raw.min()), float(raw.max())
+            logger.info("  Iso score bounds (from val set): min=%.4f, max=%.4f", lo, hi)
+            return lo, hi
+        except Exception as exc:
+            logger.warning("  Could not load prepared_data.pkl: %s", exc)
+
     logger.warning(
-        "  prepared_data.pkl not found — using fallback iso bounds [-0.50, 0.00]"
+        "  No iso bounds source found — using fallback bounds [-0.50, 0.00]"
     )
     return -0.50, 0.00
 

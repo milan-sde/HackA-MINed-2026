@@ -1,0 +1,8482 @@
+actual_label,predicted_label,risk_score,anomaly_flag
+Clear,Clear,2.6,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,3.1,0
+Clear,Clear,2.5,0
+Low Risk,Clear,1.4,0
+Clear,Clear,4.3,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.6,0
+Clear,Clear,1.7,0
+Clear,Clear,0.5,0
+Clear,Clear,2.9,0
+Clear,Clear,4.0,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,7.8,0
+Clear,Clear,6.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.3,0
+Clear,Clear,3.1,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,2.4,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,1.5,0
+Clear,Clear,3.0,0
+Clear,Clear,1.7,0
+Clear,Clear,1.2,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,10.7,0
+Clear,Clear,1.8,0
+Clear,Clear,4.4,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,10.5,0
+Clear,Clear,2.9,0
+Clear,Clear,0.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,3.1,0
+Clear,Clear,1.0,0
+Clear,Clear,3.5,0
+Low Risk,Clear,2.0,0
+Clear,Clear,0.9,0
+Low Risk,Clear,4.8,0
+Clear,Clear,2.2,0
+Low Risk,Clear,5.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,3.1,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.2,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.4,0
+Low Risk,Low Risk,31.1,1
+Critical,Critical,98.7,1
+Low Risk,Clear,2.5,0
+Clear,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,2.3,0
+Low Risk,Clear,6.5,0
+Low Risk,Clear,9.9,0
+Clear,Clear,1.1,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,10.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,25.5,1
+Clear,Clear,0.8,0
+Low Risk,Clear,5.4,0
+Clear,Clear,3.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,2.3,0
+Low Risk,Clear,9.6,0
+Clear,Clear,3.7,0
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,3.5,0
+Clear,Clear,5.8,0
+Clear,Clear,0.9,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Clear,Clear,2.2,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.4,0
+Clear,Clear,22.3,1
+Clear,Clear,4.7,0
+Low Risk,Clear,3.3,0
+Clear,Clear,0.2,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.1,0
+Clear,Clear,5.3,0
+Clear,Clear,2.1,0
+Clear,Clear,2.4,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,4.0,0
+Critical,Critical,87.2,1
+Low Risk,Clear,2.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.7,0
+Clear,Clear,2.7,0
+Clear,Clear,2.1,0
+Clear,Clear,0.4,0
+Clear,Clear,3.7,0
+Clear,Clear,2.0,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,2.1,0
+Low Risk,Clear,28.5,1
+Low Risk,Clear,5.4,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,0.2,0
+Low Risk,Clear,7.8,0
+Clear,Clear,2.1,0
+Clear,Clear,0.7,0
+Clear,Clear,3.2,0
+Clear,Clear,2.4,0
+Clear,Clear,4.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,3.9,0
+Clear,Clear,1.8,0
+Low Risk,Clear,6.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.6,0
+Clear,Clear,4.0,0
+Clear,Clear,3.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.2,0
+Clear,Clear,3.3,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Clear,Clear,1.2,0
+Clear,Clear,29.0,1
+Clear,Clear,0.3,0
+Low Risk,Clear,5.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,6.1,0
+Clear,Clear,25.8,1
+Clear,Clear,1.7,0
+Clear,Clear,1.9,0
+Low Risk,Clear,7.6,0
+Clear,Clear,6.2,0
+Low Risk,Clear,10.0,0
+Clear,Low Risk,33.3,1
+Low Risk,Low Risk,32.1,1
+Clear,Clear,7.5,0
+Clear,Clear,6.1,0
+Low Risk,Clear,6.0,0
+Clear,Clear,5.7,0
+Clear,Clear,6.6,0
+Clear,Clear,5.0,0
+Clear,Clear,5.9,0
+Low Risk,Clear,8.7,0
+Clear,Clear,7.6,0
+Clear,Clear,5.5,0
+Clear,Clear,5.1,0
+Clear,Clear,8.1,0
+Clear,Low Risk,32.7,1
+Low Risk,Clear,13.2,1
+Clear,Clear,5.8,0
+Clear,Clear,5.0,0
+Clear,Clear,5.7,0
+Clear,Clear,7.4,0
+Clear,Low Risk,33.3,1
+Clear,Clear,5.8,0
+Clear,Clear,6.3,0
+Clear,Clear,6.5,0
+Clear,Clear,6.2,0
+Clear,Clear,6.0,0
+Clear,Clear,6.3,0
+Low Risk,Clear,5.6,0
+Clear,Low Risk,31.7,1
+Clear,Clear,4.8,0
+Clear,Clear,4.5,0
+Clear,Clear,6.2,0
+Clear,Clear,6.6,0
+Clear,Clear,6.2,0
+Clear,Clear,8.0,0
+Clear,Clear,6.7,0
+Clear,Clear,5.0,0
+Clear,Clear,5.1,0
+Clear,Clear,11.8,0
+Low Risk,Clear,12.0,0
+Clear,Clear,6.0,0
+Clear,Clear,7.2,0
+Clear,Clear,5.4,0
+Clear,Clear,4.7,0
+Low Risk,Clear,7.3,0
+Clear,Clear,0.3,0
+Clear,Clear,2.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.3,0
+Clear,Clear,2.0,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.3,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.0,0
+Critical,Critical,89.9,1
+Clear,Clear,1.5,0
+Clear,Clear,22.1,1
+Low Risk,Clear,5.1,0
+Clear,Clear,1.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,10.1,0
+Clear,Clear,2.6,0
+Clear,Clear,5.8,0
+Low Risk,Clear,5.0,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.0,0
+Clear,Clear,4.2,0
+Low Risk,Clear,6.5,0
+Clear,Clear,2.8,0
+Clear,Clear,3.1,0
+Clear,Clear,1.6,0
+Critical,Critical,66.9,0
+Low Risk,Low Risk,31.1,1
+Clear,Clear,1.9,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,8.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,2.7,0
+Clear,Clear,5.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.8,0
+Clear,Clear,0.3,0
+Clear,Clear,1.6,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,2.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.7,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,3.1,0
+Clear,Clear,1.3,0
+Low Risk,Clear,4.2,0
+Clear,Clear,0.8,0
+Clear,Clear,3.0,0
+Clear,Clear,24.7,1
+Clear,Clear,3.6,0
+Low Risk,Low Risk,53.5,1
+Low Risk,Clear,2.7,0
+Clear,Clear,2.1,0
+Clear,Clear,1.8,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,0.8,0
+Clear,Clear,2.3,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Low Risk,Low Risk,31.3,1
+Clear,Clear,2.1,0
+Clear,Clear,2.1,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Clear,Clear,8.6,0
+Low Risk,Clear,2.3,0
+Clear,Clear,0.4,0
+Clear,Clear,4.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.3,0
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,2.4,0
+Clear,Clear,28.2,1
+Low Risk,Clear,10.3,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.4,0
+Clear,Clear,0.1,0
+Clear,Clear,1.1,0
+Low Risk,Clear,24.1,1
+Clear,Clear,2.0,0
+Clear,Clear,4.3,0
+Clear,Clear,2.7,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.7,0
+Clear,Clear,3.2,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.4,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.3,0
+Clear,Clear,0.5,0
+Low Risk,Clear,11.3,0
+Clear,Clear,2.5,0
+Clear,Clear,1.6,0
+Clear,Clear,2.0,0
+Clear,Clear,2.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Critical,Critical,96.1,1
+Low Risk,Clear,7.2,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,29.2,1
+Clear,Clear,3.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Clear,Clear,3.1,0
+Clear,Clear,2.5,0
+Clear,Clear,1.2,0
+Clear,Clear,3.3,0
+Clear,Clear,3.4,0
+Clear,Clear,2.2,0
+Clear,Clear,0.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.9,0
+Clear,Clear,0.8,0
+Clear,Clear,2.3,0
+Clear,Clear,1.8,0
+Clear,Clear,4.1,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.0,0
+Clear,Clear,2.8,0
+Clear,Clear,2.3,0
+Clear,Clear,0.3,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.6,0
+Low Risk,Clear,6.2,0
+Clear,Clear,5.3,0
+Low Risk,Clear,5.0,0
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.2,0
+Clear,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,1.4,0
+Clear,Clear,4.1,0
+Clear,Clear,2.3,0
+Clear,Clear,2.1,0
+Clear,Clear,2.4,0
+Clear,Clear,3.1,0
+Clear,Clear,7.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.0,0
+Clear,Clear,3.4,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.6,0
+Clear,Clear,2.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,30.0,1
+Clear,Clear,1.7,0
+Clear,Clear,2.1,0
+Clear,Clear,0.8,0
+Low Risk,Clear,8.3,0
+Clear,Clear,2.3,0
+Clear,Clear,0.2,0
+Clear,Clear,3.6,0
+Low Risk,Clear,1.5,0
+Clear,Clear,2.3,0
+Clear,Clear,0.5,0
+Clear,Clear,29.2,1
+Clear,Clear,2.1,0
+Clear,Clear,4.6,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.4,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.5,0
+Clear,Clear,0.6,0
+Clear,Clear,3.2,0
+Clear,Clear,2.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,0.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.8,0
+Clear,Clear,0.2,0
+Low Risk,Clear,4.0,0
+Low Risk,Clear,3.3,0
+Clear,Clear,3.7,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,3.8,0
+Low Risk,Low Risk,31.2,1
+Low Risk,Clear,2.1,0
+Clear,Clear,3.2,0
+Clear,Clear,1.5,0
+Clear,Clear,2.6,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.2,0
+Low Risk,Clear,9.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,3.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.2,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.9,0
+Clear,Clear,1.4,0
+Low Risk,Clear,2.7,0
+Clear,Clear,5.7,0
+Clear,Clear,2.1,0
+Clear,Clear,23.5,1
+Clear,Clear,0.9,0
+Low Risk,Clear,1.6,0
+Clear,Clear,4.5,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Low Risk,Low Risk,37.3,1
+Low Risk,Clear,9.1,0
+Clear,Clear,5.0,0
+Clear,Clear,3.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.4,0
+Clear,Clear,29.3,1
+Clear,Clear,2.1,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,2.4,0
+Clear,Clear,0.4,0
+Clear,Clear,2.3,0
+Clear,Clear,0.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Low Risk,Clear,5.5,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.6,0
+Clear,Clear,2.2,0
+Clear,Clear,2.5,0
+Low Risk,Clear,4.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Clear,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,0.4,0
+Clear,Clear,2.2,0
+Low Risk,Clear,8.8,0
+Clear,Clear,3.5,0
+Clear,Clear,2.4,0
+Clear,Clear,6.0,0
+Low Risk,Clear,1.9,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Clear,Clear,3.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.5,0
+Clear,Clear,2.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Clear,Clear,3.8,0
+Clear,Clear,4.7,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.1,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.7,0
+Clear,Clear,2.6,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.9,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.9,0
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Clear,Clear,3.7,0
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.2,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,2.0,0
+Clear,Low Risk,30.9,1
+Low Risk,Clear,1.8,0
+Low Risk,Clear,10.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,8.8,0
+Clear,Clear,2.3,0
+Low Risk,Clear,10.6,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,2.5,0
+Clear,Clear,1.9,0
+Clear,Clear,22.4,1
+Clear,Clear,1.8,0
+Clear,Clear,2.7,0
+Clear,Clear,1.8,0
+Clear,Clear,2.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.6,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Low Risk,Clear,6.5,0
+Clear,Clear,3.9,0
+Low Risk,Clear,7.5,0
+Clear,Clear,8.7,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,26.5,1
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,2.3,0
+Clear,Clear,2.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,9.8,0
+Clear,Clear,1.7,0
+Clear,Clear,7.6,0
+Low Risk,Clear,3.7,0
+Low Risk,Clear,2.0,0
+Clear,Clear,5.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,28.5,1
+Clear,Clear,1.5,0
+Clear,Low Risk,30.4,1
+Clear,Clear,1.2,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.4,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.8,0
+Low Risk,Clear,25.3,1
+Clear,Clear,0.9,0
+Low Risk,Clear,3.0,0
+Clear,Clear,1.5,0
+Low Risk,Clear,9.0,0
+Clear,Clear,4.2,0
+Clear,Clear,5.9,0
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,3.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,2.1,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Low Risk,Clear,5.3,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.5,0
+Clear,Clear,22.0,1
+Clear,Clear,0.5,0
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Clear,Clear,4.6,0
+Clear,Clear,3.3,0
+Low Risk,Clear,9.7,0
+Clear,Clear,0.7,0
+Clear,Clear,2.6,0
+Clear,Clear,1.8,0
+Low Risk,Clear,3.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.2,0
+Low Risk,Clear,12.1,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,2.7,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.8,0
+Clear,Clear,1.9,0
+Clear,Clear,0.8,0
+Clear,Clear,5.9,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.0,0
+Low Risk,Clear,4.5,0
+Clear,Clear,1.1,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.8,0
+Clear,Clear,3.5,0
+Low Risk,Clear,2.4,0
+Clear,Clear,3.8,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.9,0
+Low Risk,Clear,7.6,0
+Clear,Clear,3.1,0
+Clear,Clear,2.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.4,0
+Clear,Clear,3.3,0
+Clear,Clear,5.8,0
+Low Risk,Clear,1.0,0
+Clear,Clear,0.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,1.7,0
+Clear,Clear,0.6,0
+Clear,Clear,24.9,1
+Low Risk,Clear,8.8,0
+Low Risk,Clear,2.9,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.2,0
+Low Risk,Clear,3.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Low Risk,Clear,3.6,0
+Low Risk,Clear,10.5,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,7.7,0
+Clear,Clear,1.9,0
+Clear,Clear,22.2,1
+Clear,Clear,0.6,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Low Risk,Clear,5.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Low Risk,Clear,8.1,0
+Clear,Clear,2.2,0
+Clear,Clear,1.9,0
+Low Risk,Clear,7.8,0
+Low Risk,Clear,8.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,3.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.3,0
+Clear,Clear,2.3,0
+Low Risk,Clear,5.6,0
+Clear,Clear,0.8,0
+Clear,Clear,3.5,0
+Clear,Clear,2.3,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.3,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.8,0
+Clear,Clear,26.6,1
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,3.5,0
+Clear,Clear,25.7,1
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.9,0
+Clear,Clear,2.9,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Low Risk,Clear,7.7,0
+Clear,Clear,6.5,0
+Clear,Clear,0.4,0
+Clear,Clear,3.5,0
+Clear,Clear,1.8,0
+Clear,Clear,1.7,0
+Clear,Clear,0.6,0
+Clear,Clear,3.9,0
+Clear,Clear,0.4,0
+Clear,Clear,1.4,0
+Clear,Clear,1.8,0
+Clear,Clear,24.8,1
+Clear,Clear,0.4,0
+Clear,Clear,0.3,0
+Clear,Clear,2.0,0
+Clear,Clear,26.9,1
+Clear,Clear,2.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,1.0,0
+Clear,Clear,3.6,0
+Clear,Clear,0.5,0
+Low Risk,Clear,4.0,0
+Low Risk,Clear,3.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.6,0
+Clear,Clear,0.9,0
+Clear,Clear,2.6,0
+Clear,Clear,0.3,0
+Clear,Clear,0.9,0
+Clear,Clear,4.4,0
+Clear,Clear,3.4,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.4,0
+Clear,Clear,2.5,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Low Risk,Clear,8.2,0
+Low Risk,Clear,10.5,0
+Clear,Clear,0.5,0
+Clear,Clear,0.4,0
+Clear,Clear,2.0,0
+Low Risk,Clear,4.1,0
+Clear,Clear,1.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.3,0
+Clear,Clear,3.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.8,0
+Clear,Clear,2.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,7.3,0
+Low Risk,Clear,3.3,0
+Clear,Clear,2.4,0
+Clear,Clear,3.9,0
+Clear,Clear,0.4,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,2.0,0
+Low Risk,Clear,11.8,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,4.7,0
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,3.0,0
+Clear,Clear,1.8,0
+Clear,Clear,2.8,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.0,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.8,0
+Clear,Clear,4.0,0
+Clear,Clear,2.2,0
+Clear,Clear,1.7,0
+Low Risk,Clear,9.9,0
+Clear,Clear,3.0,0
+Clear,Clear,2.1,0
+Clear,Clear,3.6,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.3,0
+Clear,Clear,0.6,0
+Low Risk,Clear,5.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.9,0
+Clear,Clear,3.0,0
+Clear,Clear,4.7,0
+Clear,Clear,2.4,0
+Clear,Clear,3.2,0
+Clear,Clear,2.5,0
+Clear,Clear,2.2,0
+Clear,Clear,1.3,0
+Clear,Clear,27.1,1
+Clear,Clear,2.5,0
+Clear,Clear,28.0,1
+Clear,Clear,1.2,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,7.9,0
+Clear,Clear,1.8,0
+Clear,Clear,2.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,1.4,0
+Low Risk,Clear,9.3,0
+Low Risk,Clear,11.9,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.6,0
+Clear,Clear,2.0,0
+Clear,Clear,29.7,1
+Clear,Clear,24.0,1
+Clear,Clear,6.3,0
+Clear,Clear,2.3,0
+Low Risk,Clear,3.1,0
+Clear,Clear,6.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Low Risk,Clear,5.8,0
+Low Risk,Clear,6.5,0
+Clear,Clear,5.3,0
+Clear,Clear,5.9,0
+Low Risk,Clear,6.7,0
+Clear,Clear,8.8,0
+Clear,Clear,5.0,0
+Clear,Clear,6.2,0
+Clear,Clear,8.3,0
+Low Risk,Clear,7.7,0
+Clear,Clear,6.0,0
+Clear,Clear,5.1,0
+Clear,Clear,4.6,0
+Low Risk,Clear,11.7,0
+Clear,Clear,6.5,0
+Clear,Clear,28.0,1
+Low Risk,Clear,8.6,0
+Clear,Clear,8.0,0
+Clear,Clear,6.8,0
+Clear,Clear,27.5,1
+Clear,Clear,4.5,0
+Clear,Clear,8.0,0
+Clear,Clear,6.6,0
+Clear,Clear,6.5,0
+Clear,Clear,5.7,0
+Clear,Clear,6.1,0
+Clear,Clear,4.4,0
+Clear,Clear,6.9,0
+Clear,Clear,4.8,0
+Clear,Clear,3.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.4,0
+Clear,Clear,2.5,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,23.6,1
+Clear,Clear,29.7,1
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,4.0,0
+Clear,Clear,3.2,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Clear,Clear,2.1,0
+Low Risk,Clear,11.6,0
+Clear,Clear,2.3,0
+Clear,Clear,2.3,0
+Clear,Clear,2.2,0
+Critical,Critical,97.0,1
+Low Risk,Clear,10.4,0
+Low Risk,Clear,3.0,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,4.0,0
+Clear,Clear,1.2,0
+Low Risk,Clear,4.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.0,0
+Clear,Clear,5.5,0
+Low Risk,Clear,1.2,0
+Clear,Clear,0.3,0
+Clear,Clear,2.9,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.4,0
+Clear,Clear,3.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,6.7,0
+Clear,Clear,2.6,0
+Clear,Clear,6.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,26.0,1
+Clear,Clear,3.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,2.4,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Critical,Critical,92.8,1
+Clear,Clear,1.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,3.3,0
+Clear,Clear,0.4,0
+Clear,Clear,2.4,0
+Clear,Clear,1.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,1.4,0
+Clear,Clear,2.6,0
+Clear,Clear,0.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.9,0
+Clear,Clear,3.1,0
+Clear,Clear,3.4,0
+Clear,Clear,1.8,0
+Clear,Clear,3.0,0
+Clear,Clear,4.8,0
+Clear,Clear,1.7,0
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Low Risk,Low Risk,34.3,1
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Low Risk,Clear,5.0,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.7,0
+Clear,Clear,3.1,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Clear,Clear,3.0,0
+Clear,Clear,1.1,0
+Low Risk,Clear,5.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.8,0
+Clear,Clear,3.8,0
+Clear,Clear,3.7,0
+Clear,Clear,1.9,0
+Low Risk,Clear,9.0,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.4,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,7.2,0
+Clear,Clear,0.5,0
+Low Risk,Clear,5.5,0
+Clear,Clear,5.2,0
+Clear,Clear,5.3,0
+Low Risk,Clear,3.2,0
+Clear,Clear,0.7,0
+Clear,Clear,29.0,1
+Clear,Clear,1.7,0
+Low Risk,Clear,4.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,2.5,0
+Clear,Clear,0.3,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.5,0
+Clear,Low Risk,31.2,1
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Clear,Clear,22.3,1
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Low Risk,Clear,6.5,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,0.8,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,4.8,0
+Clear,Clear,0.3,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,2.6,0
+Clear,Clear,3.9,0
+Low Risk,Clear,24.2,1
+Clear,Clear,3.4,0
+Clear,Clear,0.6,0
+Low Risk,Clear,4.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.0,0
+Clear,Clear,4.7,0
+Clear,Clear,0.5,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.3,0
+Clear,Clear,2.7,0
+Clear,Clear,1.9,0
+Low Risk,Clear,22.7,1
+Clear,Low Risk,31.0,1
+Clear,Clear,0.9,0
+Low Risk,Clear,8.9,0
+Clear,Clear,2.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,3.1,0
+Clear,Clear,2.0,0
+Low Risk,Clear,4.5,0
+Clear,Clear,2.2,0
+Clear,Clear,1.3,0
+Clear,Clear,23.2,1
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Low Risk,30.4,1
+Clear,Clear,0.4,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,3.5,0
+Clear,Clear,5.2,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.6,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.4,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.9,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.6,0
+Low Risk,Clear,25.0,1
+Clear,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.9,0
+Low Risk,Clear,11.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Clear,Clear,1.4,0
+Clear,Clear,6.7,0
+Clear,Clear,3.1,0
+Low Risk,Clear,26.5,1
+Clear,Clear,2.9,0
+Clear,Clear,3.8,0
+Clear,Clear,1.8,0
+Low Risk,Clear,8.8,0
+Clear,Clear,0.4,0
+Clear,Clear,2.1,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,3.0,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.0,0
+Low Risk,Clear,2.0,0
+Clear,Clear,3.6,0
+Clear,Clear,2.5,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Clear,Clear,2.2,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,4.4,0
+Clear,Clear,6.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.8,0
+Clear,Clear,6.4,0
+Clear,Clear,0.3,0
+Low Risk,Clear,23.1,1
+Clear,Clear,26.2,1
+Low Risk,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,2.4,0
+Clear,Clear,0.2,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.3,0
+Clear,Clear,4.2,0
+Clear,Clear,29.7,1
+Clear,Clear,23.4,1
+Clear,Clear,0.8,0
+Clear,Clear,3.1,0
+Clear,Clear,1.6,0
+Clear,Clear,3.2,0
+Clear,Clear,0.8,0
+Clear,Clear,2.1,0
+Low Risk,Clear,4.4,0
+Clear,Clear,0.6,0
+Clear,Clear,2.2,0
+Clear,Clear,2.2,0
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,3.1,0
+Low Risk,Clear,4.4,0
+Clear,Clear,2.5,0
+Clear,Clear,1.8,0
+Clear,Clear,0.6,0
+Low Risk,Clear,10.0,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.2,0
+Clear,Clear,8.1,0
+Clear,Clear,1.9,0
+Clear,Clear,2.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,9.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.4,0
+Clear,Clear,24.7,1
+Low Risk,Clear,22.8,1
+Clear,Clear,1.7,0
+Clear,Clear,5.8,0
+Clear,Clear,2.0,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,2.2,0
+Clear,Clear,2.5,0
+Clear,Clear,2.3,0
+Low Risk,Clear,11.0,0
+Clear,Clear,1.3,0
+Low Risk,Clear,23.3,1
+Clear,Clear,1.7,0
+Clear,Clear,3.0,0
+Low Risk,Clear,1.7,0
+Low Risk,Clear,5.8,0
+Clear,Clear,9.8,0
+Clear,Clear,1.6,0
+Clear,Clear,28.7,1
+Clear,Clear,2.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,2.3,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,7.5,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.7,0
+Low Risk,Clear,2.4,0
+Clear,Clear,2.9,0
+Clear,Clear,2.3,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.2,0
+Clear,Clear,1.6,0
+Clear,Clear,0.4,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Clear,Clear,3.4,0
+Clear,Clear,2.0,0
+Low Risk,Clear,7.3,0
+Clear,Clear,3.6,0
+Low Risk,Clear,2.9,0
+Clear,Clear,7.0,0
+Clear,Clear,2.0,0
+Low Risk,Low Risk,32.0,1
+Clear,Low Risk,32.8,1
+Clear,Clear,7.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.6,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,6.4,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.0,0
+Clear,Clear,2.1,0
+Clear,Clear,3.7,0
+Critical,Critical,98.6,1
+Clear,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,3.6,0
+Clear,Clear,2.6,0
+Low Risk,Clear,10.7,0
+Low Risk,Clear,7.8,0
+Clear,Clear,3.3,0
+Clear,Clear,2.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,2.1,0
+Clear,Clear,1.4,0
+Clear,Clear,2.6,0
+Clear,Clear,24.9,1
+Clear,Clear,1.2,0
+Clear,Clear,2.9,0
+Clear,Clear,0.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,9.1,0
+Clear,Clear,1.2,0
+Clear,Clear,29.5,1
+Clear,Clear,5.8,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.1,0
+Clear,Clear,0.7,0
+Clear,Clear,26.4,1
+Clear,Clear,1.1,0
+Low Risk,Clear,1.4,0
+Clear,Clear,3.3,0
+Low Risk,Clear,7.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Low Risk,Clear,6.0,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Clear,Clear,1.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.5,0
+Low Risk,Low Risk,33.1,1
+Low Risk,Clear,6.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,2.6,0
+Low Risk,Clear,3.7,0
+Clear,Clear,0.3,0
+Clear,Clear,3.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.4,0
+Low Risk,Clear,8.0,0
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Low Risk,Clear,4.3,0
+Clear,Clear,2.2,0
+Low Risk,Clear,9.1,0
+Low Risk,Clear,3.1,0
+Low Risk,Low Risk,33.9,1
+Clear,Clear,26.2,1
+Low Risk,Clear,3.7,0
+Clear,Clear,4.2,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.7,0
+Low Risk,Clear,2.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.5,0
+Low Risk,Clear,6.6,0
+Clear,Clear,4.0,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,23.5,1
+Clear,Clear,2.0,0
+Low Risk,Clear,29.6,1
+Clear,Clear,0.8,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,8.9,0
+Clear,Clear,3.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,1.4,0
+Low Risk,Clear,4.6,0
+Low Risk,Clear,3.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,2.5,0
+Low Risk,Clear,3.0,0
+Low Risk,Clear,7.7,0
+Clear,Clear,22.4,1
+Clear,Clear,0.9,0
+Clear,Clear,1.4,0
+Clear,Clear,0.4,0
+Low Risk,Clear,9.5,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Low Risk,Clear,7.9,0
+Clear,Clear,0.8,0
+Clear,Clear,2.1,0
+Clear,Clear,3.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,1.1,0
+Clear,Clear,2.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.7,0
+Low Risk,Low Risk,32.0,1
+Clear,Clear,1.9,0
+Clear,Clear,23.0,1
+Clear,Clear,1.1,0
+Clear,Clear,2.9,0
+Clear,Clear,2.8,0
+Low Risk,Clear,9.7,0
+Clear,Clear,6.7,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.3,0
+Low Risk,Clear,8.0,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,2.7,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,12.2,0
+Clear,Clear,2.1,0
+Clear,Clear,3.5,0
+Clear,Clear,6.9,0
+Clear,Clear,1.7,0
+Clear,Clear,2.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,4.2,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Clear,Clear,0.8,0
+Clear,Clear,26.0,1
+Clear,Clear,1.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,7.7,0
+Critical,Critical,94.2,1
+Low Risk,Clear,7.2,0
+Clear,Clear,1.4,0
+Clear,Clear,1.5,0
+Clear,Clear,0.6,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,7.2,0
+Clear,Clear,28.2,1
+Low Risk,Clear,3.7,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.0,0
+Clear,Clear,2.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.4,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Critical,Critical,87.3,1
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,2.6,0
+Clear,Clear,3.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,5.5,0
+Clear,Clear,0.9,0
+Clear,Clear,4.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,2.0,0
+Clear,Clear,2.9,0
+Clear,Clear,4.2,0
+Low Risk,Clear,1.9,0
+Clear,Clear,0.3,0
+Low Risk,Clear,1.5,0
+Clear,Clear,3.1,0
+Clear,Clear,2.0,0
+Clear,Clear,24.3,1
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.1,0
+Low Risk,Clear,1.3,0
+Clear,Clear,3.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,11.3,0
+Clear,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Clear,1.2,0
+Low Risk,Low Risk,30.3,1
+Clear,Clear,2.3,0
+Clear,Clear,3.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Low Risk,Clear,8.8,0
+Low Risk,Clear,5.5,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Low Risk,Low Risk,33.6,1
+Clear,Clear,22.2,1
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,22.6,1
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.8,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,6.3,0
+Clear,Clear,1.2,0
+Clear,Clear,2.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Clear,Clear,3.4,0
+Clear,Clear,2.1,0
+Clear,Clear,4.4,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,10.7,0
+Clear,Clear,1.9,0
+Low Risk,Clear,10.0,0
+Clear,Clear,2.9,0
+Low Risk,Clear,3.5,0
+Clear,Clear,24.0,1
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,0.7,0
+Clear,Clear,3.3,0
+Clear,Clear,2.3,0
+Clear,Clear,29.6,1
+Low Risk,Clear,4.4,0
+Clear,Clear,2.1,0
+Low Risk,Clear,7.6,0
+Clear,Clear,1.8,0
+Clear,Clear,2.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,5.8,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.4,0
+Clear,Clear,29.4,1
+Low Risk,Clear,2.5,0
+Clear,Clear,1.5,0
+Low Risk,Clear,0.9,0
+Clear,Clear,2.4,0
+Clear,Clear,23.4,1
+Clear,Clear,5.7,0
+Clear,Clear,5.8,0
+Low Risk,Clear,11.0,0
+Low Risk,Clear,8.2,0
+Clear,Clear,4.9,0
+Clear,Clear,7.7,0
+Clear,Clear,5.6,0
+Clear,Clear,6.6,0
+Low Risk,Clear,5.9,0
+Clear,Clear,9.4,0
+Clear,Clear,6.6,0
+Clear,Clear,26.7,1
+Low Risk,Clear,6.1,0
+Clear,Clear,6.7,0
+Low Risk,Clear,9.6,0
+Clear,Clear,4.5,0
+Clear,Clear,5.3,0
+Clear,Low Risk,32.8,1
+Low Risk,Clear,4.9,0
+Clear,Clear,6.8,0
+Low Risk,Clear,5.3,0
+Clear,Clear,5.6,0
+Clear,Clear,9.3,0
+Clear,Clear,26.2,1
+Clear,Clear,4.6,0
+Clear,Clear,4.7,0
+Low Risk,Clear,7.9,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.1,0
+Low Risk,Clear,4.7,0
+Clear,Clear,0.5,0
+Clear,Clear,23.3,1
+Clear,Clear,1.4,0
+Low Risk,Low Risk,30.5,1
+Clear,Clear,25.9,1
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,2.2,0
+Clear,Low Risk,30.4,1
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Low Risk,Clear,5.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,7.3,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Clear,Clear,2.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,2.4,0
+Clear,Clear,0.4,0
+Clear,Clear,0.8,0
+Critical,Critical,91.2,1
+Clear,Clear,2.1,0
+Clear,Clear,2.3,0
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Clear,Clear,2.0,0
+Clear,Clear,23.5,1
+Clear,Clear,24.1,1
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,3.8,0
+Clear,Clear,1.6,0
+Critical,Critical,91.1,1
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Low Risk,Clear,26.6,1
+Low Risk,Clear,1.3,0
+Low Risk,Clear,5.4,0
+Low Risk,Clear,13.6,1
+Clear,Clear,2.2,0
+Low Risk,Clear,9.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,6.7,0
+Clear,Clear,5.5,0
+Low Risk,Clear,8.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.7,0
+Low Risk,Clear,8.2,0
+Low Risk,Clear,8.0,0
+Clear,Clear,1.1,0
+Low Risk,Clear,4.1,0
+Clear,Clear,3.9,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Clear,Clear,25.2,1
+Low Risk,Clear,3.1,0
+Clear,Clear,0.4,0
+Clear,Clear,4.3,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,3.1,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.7,0
+Clear,Clear,2.5,0
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.6,0
+Clear,Clear,7.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.5,0
+Clear,Clear,2.9,0
+Clear,Clear,0.5,0
+Low Risk,Clear,10.1,0
+Clear,Clear,3.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Clear,Clear,2.1,0
+Clear,Clear,2.8,0
+Clear,Clear,0.4,0
+Clear,Clear,0.4,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,5.0,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,3.0,0
+Low Risk,Clear,3.9,0
+Low Risk,Clear,8.9,0
+Clear,Clear,5.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,3.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,6.8,0
+Low Risk,Clear,2.8,0
+Low Risk,Clear,5.3,0
+Clear,Clear,2.4,0
+Clear,Clear,6.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.2,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.9,0
+Clear,Clear,0.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.4,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,7.0,0
+Clear,Clear,1.6,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,4.5,0
+Clear,Clear,0.3,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.8,0
+Clear,Clear,2.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,4.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,3.0,0
+Clear,Clear,1.3,0
+Clear,Clear,5.1,0
+Low Risk,Clear,7.6,0
+Clear,Clear,2.4,0
+Low Risk,Low Risk,34.0,1
+Clear,Clear,1.2,0
+Clear,Clear,21.6,1
+Clear,Clear,1.1,0
+Clear,Clear,2.5,0
+Clear,Clear,0.7,0
+Clear,Clear,6.1,0
+Clear,Clear,3.9,0
+Clear,Clear,0.8,0
+Clear,Clear,3.2,0
+Clear,Clear,1.4,0
+Low Risk,Clear,2.4,0
+Clear,Clear,3.0,0
+Clear,Clear,2.2,0
+Low Risk,Clear,1.6,0
+Clear,Clear,6.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,11.2,0
+Clear,Clear,0.2,0
+Clear,Clear,0.7,0
+Clear,Clear,3.7,0
+Clear,Clear,3.7,0
+Clear,Clear,2.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.8,0
+Low Risk,Clear,11.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,11.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.8,0
+Clear,Clear,2.7,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,3.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Low Risk,Clear,11.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,24.0,1
+Clear,Clear,1.3,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.5,0
+Clear,Clear,2.5,0
+Clear,Clear,2.9,0
+Clear,Clear,0.2,0
+Low Risk,Clear,2.5,0
+Clear,Clear,2.7,0
+Clear,Clear,1.3,0
+Clear,Clear,3.9,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.0,0
+Clear,Clear,3.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,3.9,0
+Clear,Clear,24.9,1
+Clear,Clear,1.9,0
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Clear,Clear,3.4,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,2.5,0
+Clear,Clear,1.4,0
+Clear,Clear,3.6,0
+Clear,Clear,0.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.0,0
+Clear,Clear,2.6,0
+Low Risk,Clear,12.2,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.8,0
+Clear,Clear,2.7,0
+Clear,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,3.4,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Low Risk,Clear,7.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Low Risk,Clear,6.4,0
+Clear,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,2.6,0
+Clear,Clear,1.1,0
+Clear,Clear,3.8,0
+Clear,Clear,1.9,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,1.6,0
+Clear,Clear,5.8,0
+Low Risk,Clear,3.0,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.8,0
+Low Risk,Clear,12.0,0
+Clear,Clear,2.3,0
+Clear,Clear,2.2,0
+Clear,Clear,2.1,0
+Clear,Clear,2.7,0
+Low Risk,Clear,2.2,0
+Clear,Clear,2.7,0
+Low Risk,Clear,4.9,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.2,0
+Clear,Clear,4.4,0
+Clear,Clear,21.8,1
+Clear,Clear,1.9,0
+Clear,Clear,2.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Low Risk,Clear,4.9,0
+Clear,Clear,4.0,0
+Clear,Clear,3.7,0
+Low Risk,Clear,9.3,0
+Clear,Clear,1.5,0
+Clear,Clear,3.5,0
+Low Risk,Clear,3.7,0
+Clear,Clear,1.0,0
+Clear,Clear,2.6,0
+Clear,Clear,2.3,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.5,0
+Clear,Clear,2.3,0
+Clear,Clear,0.5,0
+Low Risk,Clear,4.4,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.4,0
+Low Risk,Clear,3.2,0
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Critical,Critical,69.9,0
+Clear,Clear,2.6,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.6,0
+Clear,Clear,3.6,0
+Clear,Clear,3.0,0
+Clear,Clear,1.0,0
+Clear,Clear,1.4,0
+Clear,Clear,1.4,0
+Clear,Clear,2.5,0
+Critical,Critical,98.6,1
+Clear,Clear,5.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,4.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,0.3,0
+Clear,Clear,3.6,0
+Clear,Clear,1.4,0
+Clear,Clear,4.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.9,0
+Clear,Clear,3.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.4,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.2,0
+Low Risk,Low Risk,30.3,1
+Clear,Clear,5.7,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,3.0,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.7,0
+Clear,Clear,5.0,0
+Clear,Clear,2.4,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,1.7,0
+Clear,Clear,2.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.6,0
+Clear,Clear,0.9,0
+Critical,Critical,91.9,1
+Clear,Clear,1.6,0
+Clear,Clear,2.0,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,2.0,0
+Clear,Clear,3.0,0
+Low Risk,Clear,6.0,0
+Low Risk,Clear,3.5,0
+Clear,Clear,4.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,8.4,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,1.5,0
+Clear,Clear,3.2,0
+Clear,Clear,1.0,0
+Clear,Clear,6.9,0
+Clear,Clear,2.6,0
+Low Risk,Clear,3.4,0
+Clear,Clear,2.6,0
+Clear,Clear,6.7,0
+Clear,Clear,1.6,0
+Clear,Clear,3.8,0
+Clear,Clear,25.2,1
+Clear,Clear,1.1,0
+Clear,Clear,0.3,0
+Low Risk,Clear,1.2,0
+Low Risk,Clear,4.4,0
+Clear,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,3.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Clear,Clear,2.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,24.5,1
+Low Risk,Clear,4.6,0
+Clear,Clear,2.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Clear,Clear,0.3,0
+Clear,Clear,2.4,0
+Clear,Clear,2.6,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.9,0
+Clear,Clear,0.9,0
+Clear,Clear,0.9,0
+Clear,Clear,24.3,1
+Clear,Clear,24.0,1
+Clear,Clear,1.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Clear,Low Risk,30.5,1
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,25.8,1
+Clear,Clear,0.2,0
+Clear,Clear,5.9,0
+Clear,Clear,6.6,0
+Clear,Clear,3.1,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,2.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,10.0,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,3.9,0
+Clear,Clear,0.4,0
+Clear,Clear,3.7,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,3.0,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,2.2,0
+Clear,Clear,1.1,0
+Clear,Clear,3.2,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Clear,Clear,2.6,0
+Clear,Clear,2.3,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,28.7,1
+Low Risk,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.9,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.4,0
+Clear,Clear,1.5,0
+Clear,Clear,5.1,0
+Clear,Clear,0.4,0
+Clear,Clear,2.1,0
+Low Risk,Clear,5.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,2.7,0
+Low Risk,Clear,3.1,0
+Clear,Clear,24.5,1
+Clear,Clear,3.5,0
+Clear,Clear,5.8,0
+Clear,Clear,0.9,0
+Clear,Clear,3.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,6.9,0
+Low Risk,Clear,5.4,0
+Clear,Clear,5.4,0
+Clear,Clear,1.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.1,0
+Clear,Clear,3.0,0
+Clear,Clear,4.2,0
+Clear,Clear,1.0,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.4,0
+Clear,Clear,5.3,0
+Clear,Clear,6.2,0
+Clear,Clear,5.9,0
+Clear,Clear,7.3,0
+Clear,Clear,6.4,0
+Low Risk,Clear,7.8,0
+Clear,Clear,6.0,0
+Clear,Clear,5.0,0
+Clear,Clear,6.9,0
+Clear,Clear,7.3,0
+Clear,Clear,6.3,0
+Clear,Clear,7.4,0
+Clear,Clear,4.8,0
+Clear,Clear,7.5,0
+Clear,Clear,7.5,0
+Clear,Clear,6.0,0
+Clear,Clear,5.3,0
+Clear,Clear,5.0,0
+Low Risk,Clear,5.0,0
+Clear,Clear,5.6,0
+Clear,Clear,4.5,0
+Clear,Clear,5.4,0
+Clear,Clear,7.0,0
+Clear,Clear,6.2,0
+Low Risk,Clear,6.4,0
+Clear,Clear,4.9,0
+Clear,Clear,6.7,0
+Clear,Clear,5.1,0
+Clear,Clear,5.0,0
+Low Risk,Clear,13.6,1
+Clear,Clear,6.8,0
+Clear,Clear,6.6,0
+Clear,Clear,5.0,0
+Clear,Clear,5.7,0
+Clear,Clear,6.6,0
+Low Risk,Low Risk,30.1,1
+Clear,Clear,7.0,0
+Clear,Clear,4.3,0
+Clear,Clear,5.9,0
+Low Risk,Clear,11.9,0
+Clear,Clear,5.0,0
+Clear,Clear,7.7,0
+Low Risk,Clear,4.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.2,0
+Clear,Clear,2.8,0
+Clear,Clear,4.2,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Low Risk,Clear,9.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,2.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Clear,Clear,2.1,0
+Clear,Clear,3.6,0
+Clear,Clear,2.0,0
+Clear,Clear,0.7,0
+Clear,Clear,3.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,6.7,0
+Clear,Clear,2.4,0
+Clear,Clear,2.4,0
+Clear,Clear,1.7,0
+Clear,Clear,3.4,0
+Clear,Clear,0.6,0
+Clear,Clear,29.8,1
+Clear,Clear,1.0,0
+Low Risk,Clear,1.6,0
+Clear,Clear,2.9,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,1.7,0
+Low Risk,Clear,4.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.1,0
+Clear,Clear,2.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Low Risk,Clear,3.4,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.9,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Clear,Clear,2.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Clear,Clear,2.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Clear,Clear,2.3,0
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Clear,Clear,24.2,1
+Low Risk,Clear,7.3,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.9,0
+Clear,Clear,0.9,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,3.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,1.7,0
+Clear,Clear,3.0,0
+Low Risk,Clear,6.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,7.7,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,2.9,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,14.4,1
+Clear,Clear,1.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,2.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.8,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Low Risk,Clear,11.2,0
+Clear,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Clear,Clear,2.4,0
+Low Risk,Clear,2.4,0
+Clear,Clear,3.6,0
+Low Risk,Clear,4.1,0
+Low Risk,Clear,5.3,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,10.2,0
+Clear,Clear,1.6,0
+Clear,Clear,6.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.4,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Low Risk,33.1,1
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.7,0
+Clear,Clear,2.8,0
+Clear,Clear,1.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.8,0
+Low Risk,Low Risk,32.5,1
+Clear,Clear,1.2,0
+Clear,Clear,1.4,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,0.4,0
+Clear,Clear,2.1,0
+Clear,Clear,2.5,0
+Clear,Clear,2.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.6,0
+Clear,Clear,3.1,0
+Clear,Clear,0.5,0
+Clear,Clear,2.3,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.9,0
+Clear,Clear,4.0,0
+Clear,Clear,2.1,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,2.4,0
+Low Risk,Clear,4.3,0
+Clear,Clear,1.9,0
+Clear,Clear,2.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,12.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.4,0
+Low Risk,Clear,9.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.5,0
+Low Risk,Clear,4.5,0
+Clear,Clear,0.7,0
+Clear,Clear,6.2,0
+Clear,Clear,0.9,0
+Clear,Clear,3.7,0
+Low Risk,Clear,4.6,0
+Clear,Clear,1.4,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Clear,Clear,4.6,0
+Clear,Clear,2.3,0
+Critical,Critical,88.2,1
+Clear,Clear,0.8,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.7,0
+Clear,Clear,1.8,0
+Clear,Clear,5.6,0
+Clear,Clear,3.9,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.4,0
+Clear,Clear,1.9,0
+Low Risk,Clear,6.1,0
+Clear,Clear,23.1,1
+Clear,Clear,1.1,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,7.7,0
+Clear,Clear,0.9,0
+Clear,Clear,1.4,0
+Clear,Low Risk,32.6,1
+Clear,Clear,2.9,0
+Clear,Clear,2.4,0
+Low Risk,Clear,5.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.6,0
+Clear,Clear,2.5,0
+Clear,Clear,1.4,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,2.5,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.9,0
+Clear,Clear,27.3,1
+Clear,Clear,2.2,0
+Clear,Clear,2.2,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,2.5,0
+Low Risk,Clear,2.3,0
+Clear,Clear,4.0,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.9,0
+Clear,Clear,2.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,7.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,2.0,0
+Clear,Clear,2.1,0
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.3,0
+Low Risk,Clear,23.4,1
+Critical,Critical,70.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.1,0
+Clear,Clear,4.0,0
+Clear,Clear,0.5,0
+Low Risk,Clear,0.9,0
+Clear,Clear,2.5,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,0.7,0
+Clear,Clear,4.3,0
+Clear,Clear,1.3,0
+Low Risk,Clear,8.5,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,1.8,0
+Clear,Clear,28.8,1
+Clear,Clear,0.9,0
+Clear,Clear,4.6,0
+Low Risk,Clear,7.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.1,0
+Clear,Clear,0.6,0
+Clear,Clear,4.0,0
+Clear,Clear,22.8,1
+Clear,Clear,2.1,0
+Low Risk,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,0.6,0
+Low Risk,Clear,14.0,1
+Clear,Clear,0.9,0
+Low Risk,Clear,2.5,0
+Clear,Clear,0.6,0
+Clear,Clear,2.3,0
+Clear,Clear,2.8,0
+Clear,Clear,0.3,0
+Clear,Clear,1.7,0
+Clear,Clear,6.2,0
+Low Risk,Clear,3.7,0
+Clear,Clear,1.1,0
+Clear,Clear,27.0,1
+Clear,Clear,22.4,1
+Low Risk,Clear,2.1,0
+Clear,Clear,24.3,1
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,2.8,0
+Clear,Clear,22.5,1
+Clear,Clear,1.4,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,3.7,0
+Clear,Clear,1.1,0
+Clear,Clear,2.4,0
+Low Risk,Clear,29.9,1
+Clear,Clear,0.4,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.4,0
+Clear,Clear,4.4,0
+Clear,Clear,2.4,0
+Clear,Clear,1.9,0
+Clear,Clear,0.3,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.7,0
+Clear,Clear,2.9,0
+Clear,Clear,0.4,0
+Clear,Low Risk,30.9,1
+Clear,Clear,2.5,0
+Clear,Clear,2.9,0
+Low Risk,Clear,5.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,2.1,0
+Critical,Critical,91.1,1
+Clear,Clear,23.3,1
+Low Risk,Clear,6.4,0
+Clear,Clear,0.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,3.1,0
+Low Risk,Clear,7.7,0
+Clear,Clear,4.5,0
+Clear,Clear,2.5,0
+Clear,Clear,2.6,0
+Clear,Clear,0.2,0
+Clear,Clear,0.9,0
+Low Risk,Clear,5.4,0
+Clear,Clear,2.9,0
+Clear,Clear,2.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Clear,Clear,2.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,28.6,1
+Low Risk,Clear,3.0,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.1,0
+Clear,Clear,23.6,1
+Critical,Critical,93.9,1
+Clear,Clear,0.4,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.6,0
+Clear,Clear,0.7,0
+Clear,Clear,0.7,0
+Critical,Critical,88.7,1
+Clear,Clear,0.2,0
+Clear,Clear,1.0,0
+Clear,Clear,3.8,0
+Clear,Clear,28.7,1
+Clear,Clear,0.4,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,2.2,0
+Clear,Clear,4.1,0
+Clear,Low Risk,31.4,1
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.5,0
+Clear,Clear,0.9,0
+Low Risk,Clear,3.1,0
+Clear,Clear,5.0,0
+Clear,Clear,1.1,0
+Clear,Clear,2.2,0
+Clear,Clear,28.7,1
+Clear,Clear,6.3,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.3,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Clear,Clear,2.7,0
+Clear,Clear,2.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.8,0
+Clear,Clear,1.4,0
+Critical,Critical,90.2,1
+Clear,Clear,0.9,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.4,0
+Clear,Clear,2.1,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.8,0
+Clear,Clear,1.8,0
+Critical,Critical,64.9,0
+Clear,Clear,1.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,22.2,1
+Clear,Clear,1.4,0
+Critical,Critical,96.1,1
+Clear,Clear,1.4,0
+Clear,Clear,1.5,0
+Low Risk,Clear,8.2,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Low Risk,Low Risk,37.3,1
+Clear,Clear,1.3,0
+Clear,Clear,2.4,0
+Clear,Clear,0.8,0
+Clear,Clear,3.8,0
+Low Risk,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,0.9,0
+Clear,Clear,4.9,0
+Clear,Clear,0.6,0
+Clear,Clear,2.5,0
+Clear,Clear,6.6,0
+Clear,Clear,4.5,0
+Clear,Clear,1.6,0
+Low Risk,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,3.0,0
+Low Risk,Clear,8.4,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Clear,Clear,3.9,0
+Clear,Clear,22.2,1
+Clear,Clear,0.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.6,0
+Low Risk,Clear,4.3,0
+Clear,Clear,0.8,0
+Low Risk,Clear,5.4,0
+Clear,Clear,2.8,0
+Clear,Clear,1.7,0
+Clear,Clear,6.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,6.4,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,4.3,0
+Clear,Clear,0.5,0
+Clear,Clear,1.7,0
+Clear,Clear,2.1,0
+Clear,Clear,0.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,3.7,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.5,0
+Clear,Clear,22.2,1
+Clear,Clear,2.0,0
+Clear,Clear,2.0,0
+Clear,Clear,2.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,3.0,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Clear,Clear,3.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,23.6,1
+Clear,Clear,3.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,3.7,0
+Clear,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,0.5,0
+Low Risk,Low Risk,33.2,1
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.0,0
+Clear,Clear,4.0,0
+Clear,Clear,1.4,0
+Clear,Clear,27.8,1
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,0.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,2.9,0
+Clear,Clear,0.8,0
+Clear,Clear,0.1,0
+Clear,Clear,0.9,0
+Clear,Clear,29.7,1
+Clear,Clear,1.4,0
+Clear,Clear,3.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,0.2,0
+Clear,Clear,22.7,1
+Low Risk,Clear,2.4,0
+Clear,Clear,1.6,0
+Low Risk,Clear,7.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,6.9,0
+Clear,Clear,29.6,1
+Low Risk,Clear,4.1,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,3.0,0
+Clear,Clear,2.5,0
+Low Risk,Clear,11.5,0
+Clear,Clear,0.5,0
+Clear,Clear,4.8,0
+Clear,Clear,0.6,0
+Low Risk,Clear,24.7,1
+Low Risk,Clear,9.6,0
+Low Risk,Clear,2.2,0
+Low Risk,Clear,8.1,0
+Low Risk,Clear,7.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Low Risk,Clear,4.0,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,2.7,0
+Clear,Clear,1.9,0
+Clear,Clear,2.3,0
+Low Risk,Clear,13.1,0
+Clear,Low Risk,30.1,1
+Clear,Clear,1.4,0
+Clear,Clear,2.3,0
+Clear,Clear,0.8,0
+Clear,Clear,5.0,0
+Low Risk,Clear,11.0,0
+Clear,Clear,0.9,0
+Clear,Clear,2.5,0
+Clear,Clear,2.4,0
+Clear,Clear,0.8,0
+Clear,Clear,4.3,0
+Clear,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Low Risk,Clear,8.6,0
+Clear,Clear,0.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,2.5,0
+Low Risk,Clear,23.8,1
+Low Risk,Clear,26.2,1
+Low Risk,Clear,2.4,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.1,0
+Clear,Clear,24.5,1
+Clear,Clear,0.3,0
+Clear,Clear,2.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,3.0,0
+Clear,Clear,0.6,0
+Clear,Clear,5.0,0
+Clear,Clear,0.8,0
+Clear,Clear,27.8,1
+Clear,Clear,0.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,7.4,0
+Low Risk,Clear,14.4,1
+Low Risk,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.2,0
+Clear,Clear,0.4,0
+Clear,Clear,0.3,0
+Low Risk,Clear,1.6,0
+Clear,Clear,3.8,0
+Clear,Clear,3.1,0
+Clear,Clear,25.3,1
+Clear,Clear,0.3,0
+Clear,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Clear,Clear,3.5,0
+Low Risk,Clear,7.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,3.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,3.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.5,0
+Clear,Clear,3.8,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,3.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,2.4,0
+Clear,Clear,4.9,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Clear,Clear,2.2,0
+Clear,Low Risk,31.5,1
+Low Risk,Clear,3.0,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.0,0
+Clear,Clear,2.5,0
+Clear,Clear,23.1,1
+Clear,Clear,2.0,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.5,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,24.2,1
+Clear,Clear,22.4,1
+Clear,Clear,3.4,0
+Clear,Clear,2.7,0
+Low Risk,Clear,5.2,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,2.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Low Risk,Clear,4.3,0
+Clear,Clear,3.5,0
+Clear,Clear,3.2,0
+Clear,Clear,1.2,0
+Low Risk,Clear,5.6,0
+Clear,Clear,2.3,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,2.7,0
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Low Risk,Clear,25.4,1
+Clear,Clear,2.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.5,0
+Clear,Clear,4.6,0
+Clear,Clear,1.8,0
+Clear,Clear,2.3,0
+Clear,Clear,3.7,0
+Clear,Clear,1.0,0
+Clear,Clear,2.2,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,2.3,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Low Risk,Clear,13.1,0
+Clear,Clear,1.9,0
+Clear,Clear,2.3,0
+Low Risk,Clear,2.4,0
+Clear,Clear,22.8,1
+Clear,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,0.4,0
+Clear,Clear,2.5,0
+Low Risk,Low Risk,30.7,1
+Clear,Clear,0.8,0
+Clear,Clear,28.4,1
+Clear,Clear,3.2,0
+Clear,Clear,2.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,2.7,0
+Clear,Clear,0.2,0
+Clear,Clear,0.7,0
+Clear,Clear,23.2,1
+Clear,Clear,0.7,0
+Clear,Clear,10.3,0
+Clear,Clear,2.4,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Low Risk,Clear,3.3,0
+Critical,Critical,69.9,0
+Clear,Clear,4.5,0
+Clear,Clear,6.0,0
+Clear,Clear,5.1,0
+Clear,Clear,8.1,0
+Clear,Clear,5.3,0
+Clear,Clear,6.1,0
+Clear,Clear,5.5,0
+Clear,Clear,5.0,0
+Clear,Clear,6.3,0
+Clear,Clear,4.3,0
+Clear,Clear,6.1,0
+Clear,Clear,8.6,0
+Clear,Clear,6.9,0
+Clear,Clear,8.6,0
+Low Risk,Clear,11.8,0
+Low Risk,Clear,6.9,0
+Low Risk,Clear,10.5,0
+Clear,Clear,7.6,0
+Low Risk,Clear,5.2,0
+Clear,Clear,7.1,0
+Low Risk,Clear,14.4,1
+Clear,Clear,5.8,0
+Clear,Clear,7.3,0
+Clear,Clear,6.0,0
+Clear,Clear,29.3,1
+Clear,Clear,5.9,0
+Clear,Clear,6.8,0
+Clear,Clear,7.9,0
+Clear,Clear,5.9,0
+Clear,Clear,5.6,0
+Clear,Clear,5.1,0
+Clear,Clear,5.6,0
+Clear,Clear,5.0,0
+Clear,Clear,4.7,0
+Clear,Clear,9.1,0
+Low Risk,Clear,7.5,0
+Clear,Clear,6.2,0
+Clear,Clear,5.8,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.9,0
+Low Risk,Clear,1.1,0
+Low Risk,Clear,3.2,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,2.2,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,26.1,1
+Low Risk,Clear,7.9,0
+Clear,Clear,1.0,0
+Clear,Clear,0.2,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,6.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.7,0
+Clear,Clear,2.5,0
+Clear,Clear,24.7,1
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,28.1,1
+Low Risk,Clear,1.0,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.2,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,2.9,0
+Clear,Clear,3.5,0
+Clear,Clear,4.2,0
+Low Risk,Clear,2.9,0
+Clear,Clear,24.1,1
+Low Risk,Clear,8.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.1,0
+Low Risk,Clear,7.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.8,0
+Clear,Clear,5.6,0
+Clear,Clear,0.3,0
+Clear,Clear,4.9,0
+Low Risk,Low Risk,35.3,1
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,1.9,0
+Low Risk,Clear,8.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Low Risk,30.3,1
+Clear,Clear,1.1,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,29.2,1
+Clear,Clear,1.4,0
+Clear,Clear,0.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Low Risk,Clear,6.0,0
+Low Risk,Clear,5.1,0
+Clear,Clear,1.5,0
+Clear,Clear,25.3,1
+Clear,Clear,1.5,0
+Clear,Clear,4.8,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,4.0,0
+Clear,Clear,1.3,0
+Clear,Clear,4.0,0
+Clear,Clear,1.4,0
+Clear,Clear,0.1,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Clear,Clear,3.2,0
+Low Risk,Clear,7.0,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,22.6,1
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,6.0,0
+Low Risk,Clear,8.0,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,8.5,0
+Clear,Clear,5.0,0
+Low Risk,Clear,11.0,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.1,0
+Clear,Clear,3.8,0
+Clear,Clear,0.3,0
+Clear,Clear,0.9,0
+Low Risk,Clear,3.4,0
+Low Risk,Clear,5.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Low Risk,Clear,3.1,0
+Clear,Clear,0.4,0
+Clear,Clear,1.0,0
+Clear,Clear,0.4,0
+Clear,Clear,23.3,1
+Low Risk,Clear,3.2,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.6,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.2,0
+Clear,Clear,2.2,0
+Low Risk,Clear,10.3,0
+Clear,Clear,4.4,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,3.8,0
+Clear,Clear,2.4,0
+Clear,Clear,2.2,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,4.6,0
+Clear,Clear,2.3,0
+Clear,Clear,0.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,5.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.3,0
+Clear,Clear,3.5,0
+Clear,Clear,8.0,0
+Low Risk,Clear,4.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.0,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,0.3,0
+Clear,Clear,1.0,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.2,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.4,0
+Clear,Clear,4.1,0
+Clear,Clear,2.5,0
+Clear,Clear,1.5,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,3.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,0.3,0
+Low Risk,Clear,10.5,0
+Clear,Clear,3.6,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,7.9,0
+Clear,Clear,1.3,0
+Clear,Clear,3.3,0
+Low Risk,Clear,3.2,0
+Clear,Clear,6.4,0
+Clear,Clear,0.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.3,0
+Low Risk,Clear,5.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Clear,2.2,0
+Low Risk,Clear,10.5,0
+Low Risk,Clear,14.3,1
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Clear,Clear,0.3,0
+Clear,Clear,3.0,0
+Low Risk,Low Risk,30.9,1
+Clear,Clear,1.9,0
+Clear,Clear,1.5,0
+Low Risk,Clear,12.2,0
+Clear,Clear,2.6,0
+Clear,Clear,1.3,0
+Clear,Clear,2.2,0
+Clear,Clear,7.0,0
+Clear,Clear,2.0,0
+Low Risk,Clear,7.2,0
+Low Risk,Clear,26.2,1
+Clear,Clear,0.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,7.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Low Risk,Clear,24.6,1
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,2.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,2.2,0
+Clear,Clear,5.1,0
+Clear,Clear,2.5,0
+Clear,Clear,2.6,0
+Clear,Clear,25.9,1
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Critical,Critical,89.8,1
+Clear,Clear,1.6,0
+Clear,Clear,1.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.2,0
+Low Risk,Clear,12.2,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Low Risk,Clear,8.8,0
+Clear,Clear,2.3,0
+Clear,Clear,2.7,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.6,0
+Clear,Clear,3.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,22.9,1
+Clear,Clear,0.7,0
+Low Risk,Clear,8.2,0
+Clear,Clear,2.3,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Clear,Clear,2.1,0
+Clear,Clear,6.3,0
+Clear,Clear,1.5,0
+Clear,Clear,24.9,1
+Clear,Clear,1.9,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,0.3,0
+Low Risk,Clear,4.8,0
+Clear,Clear,3.4,0
+Low Risk,Clear,8.1,0
+Clear,Clear,0.7,0
+Clear,Clear,3.4,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Clear,Clear,0.4,0
+Clear,Clear,5.0,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.1,0
+Clear,Clear,2.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.0,0
+Clear,Low Risk,30.4,1
+Low Risk,Clear,11.4,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.5,0
+Clear,Clear,0.7,0
+Clear,Clear,3.6,0
+Clear,Clear,3.4,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,0.5,0
+Clear,Clear,8.2,0
+Low Risk,Low Risk,32.1,1
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,3.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,2.8,0
+Low Risk,Clear,1.6,0
+Clear,Clear,2.2,0
+Low Risk,Clear,6.9,0
+Clear,Clear,0.8,0
+Clear,Clear,4.4,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.6,0
+Clear,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,4.4,0
+Clear,Clear,4.3,0
+Clear,Clear,0.5,0
+Clear,Clear,0.5,0
+Clear,Clear,2.3,0
+Low Risk,Clear,3.6,0
+Clear,Clear,2.8,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,3.4,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Low Risk,Clear,29.0,1
+Low Risk,Clear,2.5,0
+Clear,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,5.0,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,0.4,0
+Clear,Clear,1.2,0
+Clear,Clear,4.0,0
+Critical,Critical,93.8,1
+Clear,Clear,1.3,0
+Clear,Clear,25.1,1
+Clear,Clear,1.0,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.8,0
+Clear,Clear,3.5,0
+Clear,Clear,2.4,0
+Clear,Clear,23.4,1
+Low Risk,Clear,1.7,0
+Clear,Clear,4.0,0
+Clear,Clear,0.2,0
+Clear,Clear,1.4,0
+Clear,Clear,2.4,0
+Clear,Clear,3.2,0
+Clear,Clear,28.1,1
+Clear,Clear,25.2,1
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,3.0,0
+Clear,Clear,3.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,12.3,0
+Clear,Clear,2.3,0
+Clear,Clear,1.9,0
+Clear,Clear,1.8,0
+Clear,Clear,4.0,0
+Low Risk,Clear,4.8,0
+Clear,Clear,1.0,0
+Clear,Clear,5.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,2.0,0
+Critical,Critical,69.3,0
+Low Risk,Clear,8.2,0
+Clear,Clear,2.5,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Low Risk,Clear,9.7,0
+Clear,Clear,3.2,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Clear,Clear,2.6,0
+Clear,Clear,1.1,0
+Clear,Clear,3.5,0
+Low Risk,Clear,3.3,0
+Clear,Clear,5.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,2.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.6,0
+Clear,Clear,4.1,0
+Clear,Clear,22.8,1
+Low Risk,Clear,3.0,0
+Clear,Clear,0.8,0
+Low Risk,Clear,9.1,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.5,0
+Low Risk,Clear,3.6,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Low Risk,Low Risk,30.7,1
+Clear,Clear,3.8,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Low Risk,Clear,3.0,0
+Clear,Clear,5.2,0
+Clear,Clear,1.3,0
+Clear,Clear,6.1,0
+Clear,Clear,0.2,0
+Clear,Clear,3.2,0
+Clear,Clear,0.7,0
+Clear,Clear,3.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.5,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.0,0
+Clear,Clear,2.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.1,0
+Clear,Clear,0.2,0
+Clear,Clear,2.9,0
+Clear,Clear,2.1,0
+Clear,Clear,3.3,0
+Low Risk,Clear,11.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,4.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Low Risk,Clear,5.1,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Critical,Critical,92.2,1
+Clear,Clear,2.0,0
+Clear,Clear,0.7,0
+Clear,Clear,5.4,0
+Clear,Clear,0.3,0
+Clear,Clear,4.3,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,12.0,0
+Low Risk,Clear,7.8,0
+Low Risk,Clear,3.6,0
+Clear,Clear,8.6,0
+Clear,Clear,1.4,0
+Low Risk,Clear,8.2,0
+Clear,Clear,2.5,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.5,0
+Low Risk,Clear,4.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,23.0,1
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Clear,Clear,1.7,0
+Clear,Clear,1.4,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.0,0
+Clear,Clear,0.1,0
+Clear,Clear,1.8,0
+Low Risk,Clear,0.3,0
+Clear,Clear,0.1,0
+Clear,Low Risk,31.5,1
+Clear,Clear,0.1,0
+Clear,Clear,4.8,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.2,0
+Low Risk,Low Risk,30.1,1
+Clear,Clear,1.2,0
+Low Risk,Clear,9.3,0
+Low Risk,Clear,6.3,0
+Clear,Clear,6.9,0
+Clear,Clear,6.7,0
+Clear,Clear,7.4,0
+Low Risk,Clear,6.6,0
+Clear,Clear,8.1,0
+Clear,Clear,6.8,0
+Clear,Clear,5.8,0
+Low Risk,Clear,5.5,0
+Clear,Clear,5.4,0
+Clear,Clear,5.9,0
+Clear,Clear,6.4,0
+Clear,Clear,4.8,0
+Low Risk,Clear,8.4,0
+Low Risk,Clear,6.1,0
+Clear,Clear,6.9,0
+Clear,Clear,7.0,0
+Low Risk,Clear,6.3,0
+Clear,Clear,10.0,0
+Clear,Clear,4.1,0
+Clear,Clear,5.9,0
+Clear,Clear,5.7,0
+Clear,Clear,4.5,0
+Clear,Clear,4.1,0
+Low Risk,Clear,8.6,0
+Clear,Clear,4.8,0
+Low Risk,Clear,7.9,0
+Clear,Clear,6.0,0
+Low Risk,Clear,10.0,0
+Low Risk,Clear,9.4,0
+Low Risk,Clear,6.4,0
+Low Risk,Low Risk,32.8,1
+Clear,Clear,5.4,0
+Clear,Clear,5.0,0
+Clear,Clear,7.6,0
+Clear,Clear,5.6,0
+Clear,Clear,8.8,0
+Clear,Clear,28.2,1
+Low Risk,Clear,5.0,0
+Low Risk,Clear,13.8,1
+Clear,Clear,4.6,0
+Low Risk,Clear,10.8,0
+Low Risk,Low Risk,32.0,1
+Clear,Clear,5.1,0
+Clear,Clear,5.7,0
+Clear,Clear,4.9,0
+Clear,Clear,6.3,0
+Low Risk,Clear,6.2,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.2,0
+Clear,Clear,6.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,3.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,3.2,0
+Clear,Clear,0.1,0
+Critical,Critical,70.9,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.0,0
+Clear,Clear,0.3,0
+Clear,Clear,0.4,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.0,0
+Clear,Clear,3.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.6,0
+Clear,Clear,2.8,0
+Low Risk,Clear,7.4,0
+Clear,Clear,4.2,0
+Clear,Clear,3.6,0
+Clear,Clear,4.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.0,0
+Clear,Clear,0.4,0
+Clear,Clear,0.5,0
+Clear,Clear,3.9,0
+Low Risk,Clear,2.3,0
+Clear,Clear,2.0,0
+Clear,Clear,4.4,0
+Clear,Clear,2.0,0
+Clear,Clear,0.1,0
+Clear,Clear,3.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.2,0
+Clear,Clear,1.1,0
+Clear,Clear,3.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.8,0
+Clear,Clear,2.4,0
+Clear,Clear,0.6,0
+Clear,Clear,1.8,0
+Clear,Clear,1.7,0
+Low Risk,Clear,3.6,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.8,0
+Clear,Clear,2.1,0
+Clear,Clear,2.3,0
+Low Risk,Clear,9.2,0
+Clear,Low Risk,32.3,1
+Clear,Clear,1.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.4,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,5.1,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.5,0
+Clear,Clear,3.9,0
+Clear,Clear,1.7,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.5,0
+Clear,Clear,3.7,0
+Clear,Clear,3.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.4,0
+Clear,Low Risk,30.1,1
+Low Risk,Clear,6.1,0
+Clear,Clear,26.7,1
+Low Risk,Clear,2.9,0
+Clear,Clear,21.7,1
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Low Risk,Clear,13.3,1
+Clear,Clear,2.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.4,0
+Clear,Clear,3.3,0
+Clear,Clear,1.0,0
+Clear,Clear,24.6,1
+Clear,Clear,0.9,0
+Clear,Clear,26.5,1
+Clear,Clear,1.6,0
+Clear,Clear,2.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Low Risk,Clear,29.9,1
+Clear,Clear,28.8,1
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,4.5,0
+Clear,Clear,2.0,0
+Clear,Clear,0.2,0
+Clear,Clear,0.1,0
+Clear,Clear,24.3,1
+Clear,Clear,27.7,1
+Clear,Clear,5.2,0
+Clear,Critical,57.7,1
+Low Risk,Clear,6.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Low Risk,Clear,3.0,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,5.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.9,0
+Clear,Clear,0.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.2,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,7.4,0
+Clear,Clear,2.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.0,0
+Clear,Clear,3.1,0
+Clear,Clear,2.2,0
+Clear,Clear,0.4,0
+Low Risk,Clear,9.5,0
+Low Risk,Clear,4.4,0
+Clear,Clear,2.1,0
+Low Risk,Clear,10.6,0
+Critical,Critical,93.9,1
+Clear,Clear,24.1,1
+Low Risk,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,0.3,0
+Low Risk,Clear,3.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.5,0
+Clear,Clear,5.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,11.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,1.9,0
+Low Risk,Clear,11.3,0
+Clear,Clear,0.2,0
+Low Risk,Clear,13.4,1
+Low Risk,Clear,12.6,0
+Clear,Clear,0.8,0
+Low Risk,Low Risk,31.1,1
+Clear,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,3.5,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,2.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,5.6,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.6,0
+Clear,Clear,4.4,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.9,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Low Risk,Clear,4.5,0
+Low Risk,Clear,3.3,0
+Low Risk,Clear,0.7,0
+Clear,Clear,0.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.8,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Critical,Critical,99.2,1
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,1.8,0
+Clear,Clear,0.5,0
+Low Risk,Clear,6.4,0
+Clear,Clear,1.9,0
+Low Risk,Clear,6.5,0
+Clear,Clear,6.1,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.1,0
+Clear,Clear,2.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,28.3,1
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.3,0
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.4,0
+Clear,Clear,3.8,0
+Clear,Clear,2.5,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.1,0
+Low Risk,Clear,7.2,0
+Low Risk,Clear,3.8,0
+Clear,Clear,1.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Low Risk,Clear,12.9,0
+Clear,Clear,2.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,8.7,0
+Clear,Clear,2.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Clear,Clear,2.2,0
+Clear,Clear,6.3,0
+Clear,Clear,5.4,0
+Low Risk,Clear,2.4,0
+Clear,Clear,2.6,0
+Clear,Clear,4.1,0
+Clear,Clear,0.8,0
+Clear,Clear,3.6,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.7,0
+Clear,Clear,6.8,0
+Clear,Clear,25.0,1
+Clear,Clear,3.3,0
+Low Risk,Clear,1.6,0
+Clear,Clear,2.2,0
+Clear,Clear,1.7,0
+Low Risk,Clear,3.7,0
+Low Risk,Clear,2.5,0
+Clear,Clear,1.4,0
+Low Risk,Clear,12.6,0
+Low Risk,Clear,2.9,0
+Low Risk,Clear,8.8,0
+Clear,Clear,1.4,0
+Clear,Clear,0.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,2.6,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,25.3,1
+Low Risk,Low Risk,31.7,1
+Clear,Clear,1.5,0
+Low Risk,Clear,2.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,2.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,0.3,0
+Low Risk,Clear,0.8,0
+Critical,Critical,98.7,1
+Clear,Clear,3.6,0
+Clear,Clear,0.6,0
+Clear,Clear,0.5,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.5,0
+Clear,Clear,2.2,0
+Low Risk,Low Risk,34.8,1
+Clear,Clear,1.0,0
+Low Risk,Clear,24.6,1
+Clear,Clear,0.7,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,6.4,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.3,0
+Low Risk,Clear,23.7,1
+Clear,Clear,2.1,0
+Clear,Clear,6.3,0
+Clear,Clear,0.5,0
+Clear,Clear,3.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.2,0
+Clear,Clear,1.5,0
+Clear,Clear,2.3,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,3.4,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.0,0
+Clear,Clear,1.5,0
+Clear,Clear,2.7,0
+Clear,Clear,1.8,0
+Clear,Clear,4.2,0
+Clear,Clear,1.6,0
+Clear,Clear,0.2,0
+Critical,Critical,92.7,1
+Clear,Clear,0.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.2,0
+Clear,Clear,1.5,0
+Clear,Clear,3.2,0
+Low Risk,Clear,6.2,0
+Clear,Clear,0.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.1,0
+Clear,Clear,23.8,1
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,6.5,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,11.3,0
+Clear,Clear,3.6,0
+Clear,Clear,0.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,3.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,10.8,0
+Clear,Clear,2.2,0
+Low Risk,Low Risk,30.0,1
+Low Risk,Clear,2.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,26.0,1
+Low Risk,Clear,1.8,0
+Clear,Clear,4.2,0
+Clear,Clear,2.5,0
+Clear,Clear,29.7,1
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,2.1,0
+Clear,Clear,0.4,0
+Clear,Clear,3.3,0
+Clear,Clear,0.4,0
+Clear,Clear,29.3,1
+Low Risk,Clear,3.9,0
+Low Risk,Low Risk,33.6,1
+Clear,Clear,3.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.2,0
+Clear,Clear,0.7,0
+Clear,Clear,3.7,0
+Clear,Clear,3.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.4,0
+Clear,Clear,24.7,1
+Clear,Clear,0.1,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,25.4,1
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.0,0
+Clear,Clear,1.9,0
+Clear,Clear,0.1,0
+Critical,Critical,98.7,1
+Clear,Clear,1.1,0
+Low Risk,Clear,5.7,0
+Clear,Clear,3.1,0
+Clear,Clear,29.9,1
+Clear,Clear,1.0,0
+Clear,Clear,3.1,0
+Clear,Clear,0.5,0
+Clear,Clear,2.9,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.6,0
+Clear,Clear,2.3,0
+Clear,Clear,2.6,0
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,26.9,1
+Clear,Clear,7.3,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.1,0
+Clear,Clear,3.6,0
+Clear,Clear,2.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.8,0
+Clear,Clear,28.8,1
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Critical,Critical,93.3,1
+Clear,Clear,27.4,1
+Clear,Clear,6.4,0
+Low Risk,Clear,7.9,0
+Clear,Clear,1.0,0
+Clear,Clear,4.2,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,6.4,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Clear,Clear,6.9,0
+Clear,Clear,4.4,0
+Clear,Clear,2.1,0
+Low Risk,Clear,11.1,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.8,0
+Clear,Clear,1.4,0
+Clear,Clear,0.5,0
+Clear,Clear,0.2,0
+Clear,Clear,0.8,0
+Clear,Clear,3.3,0
+Low Risk,Clear,1.6,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,2.6,0
+Clear,Clear,3.2,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,4.2,0
+Low Risk,Clear,0.8,0
+Clear,Clear,1.4,0
+Low Risk,Clear,10.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Clear,Clear,2.7,0
+Clear,Clear,2.3,0
+Clear,Clear,6.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.0,0
+Low Risk,Clear,2.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.2,0
+Clear,Clear,3.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,24.6,1
+Clear,Clear,1.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,3.5,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,3.3,0
+Low Risk,Clear,7.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,3.1,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Clear,2.7,0
+Clear,Clear,6.3,0
+Clear,Clear,1.5,0
+Clear,Clear,23.6,1
+Clear,Clear,1.8,0
+Clear,Clear,2.2,0
+Low Risk,Clear,2.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,2.7,0
+Clear,Clear,1.9,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.5,0
+Clear,Clear,4.0,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,3.9,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.8,0
+Clear,Clear,1.9,0
+Clear,Clear,4.8,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,8.2,0
+Low Risk,Clear,2.2,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Low Risk,Clear,9.8,0
+Clear,Clear,1.5,0
+Clear,Clear,3.2,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,27.6,1
+Clear,Clear,1.8,0
+Low Risk,Clear,11.7,0
+Clear,Clear,6.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Low Risk,Clear,23.6,1
+Clear,Clear,2.1,0
+Clear,Clear,24.5,1
+Clear,Clear,6.1,0
+Low Risk,Clear,5.3,0
+Clear,Clear,6.0,0
+Clear,Clear,5.8,0
+Low Risk,Clear,9.7,0
+Clear,Clear,7.3,0
+Clear,Clear,4.7,0
+Low Risk,Clear,6.3,0
+Clear,Clear,4.8,0
+Low Risk,Clear,9.6,0
+Clear,Clear,6.9,0
+Clear,Clear,6.3,0
+Clear,Clear,4.6,0
+Low Risk,Clear,7.9,0
+Low Risk,Clear,9.3,0
+Low Risk,Clear,4.5,0
+Clear,Clear,4.2,0
+Clear,Clear,5.7,0
+Clear,Clear,6.6,0
+Clear,Clear,7.5,0
+Clear,Clear,5.2,0
+Clear,Clear,4.8,0
+Clear,Clear,6.4,0
+Low Risk,Clear,5.3,0
+Clear,Low Risk,32.9,1
+Clear,Clear,6.4,0
+Clear,Clear,5.9,0
+Low Risk,Low Risk,31.3,1
+Clear,Clear,5.4,0
+Clear,Clear,5.8,0
+Critical,Critical,95.6,1
+Low Risk,Clear,7.4,0
+Clear,Clear,7.1,0
+Low Risk,Clear,9.8,0
+Critical,Critical,99.2,1
+Clear,Clear,7.3,0
+Clear,Clear,6.3,0
+Clear,Clear,4.7,0
+Clear,Clear,5.9,0
+Clear,Clear,4.2,0
+Low Risk,Clear,6.3,0
+Clear,Clear,5.0,0
+Clear,Clear,7.7,0
+Clear,Clear,6.3,0
+Clear,Clear,6.6,0
+Clear,Clear,1.7,0
+Clear,Clear,1.1,0
+Clear,Clear,10.3,0
+Low Risk,Clear,13.4,1
+Low Risk,Clear,4.0,0
+Clear,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,0.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,27.6,1
+Clear,Clear,1.1,0
+Low Risk,Clear,9.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.5,0
+Clear,Clear,5.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,2.3,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,8.2,0
+Clear,Clear,0.5,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,3.6,0
+Low Risk,Clear,29.8,1
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Clear,Clear,1.6,0
+Clear,Clear,2.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.8,0
+Clear,Clear,5.1,0
+Clear,Clear,4.3,0
+Low Risk,Clear,4.3,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Low Risk,Clear,5.0,0
+Clear,Clear,1.4,0
+Clear,Clear,2.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.3,0
+Critical,Critical,96.0,1
+Clear,Clear,1.1,0
+Clear,Clear,0.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,10.0,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.1,0
+Clear,Clear,0.1,0
+Low Risk,Clear,1.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,25.8,1
+Clear,Clear,0.5,0
+Clear,Clear,2.8,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,23.6,1
+Low Risk,Low Risk,33.5,1
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Low Risk,Clear,3.5,0
+Clear,Clear,0.7,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,7.8,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,0.1,0
+Clear,Clear,1.9,0
+Clear,Clear,2.1,0
+Clear,Clear,3.0,0
+Clear,Clear,2.5,0
+Low Risk,Clear,4.6,0
+Clear,Clear,3.1,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.6,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Clear,Low Risk,30.8,1
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,2.3,0
+Clear,Clear,1.2,0
+Clear,Clear,3.1,0
+Clear,Clear,0.4,0
+Low Risk,Clear,24.5,1
+Clear,Clear,2.2,0
+Low Risk,Clear,3.1,0
+Clear,Clear,1.5,0
+Low Risk,Clear,23.4,1
+Clear,Clear,24.2,1
+Low Risk,Clear,1.3,0
+Clear,Clear,26.0,1
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.8,0
+Low Risk,Clear,9.8,0
+Clear,Clear,1.8,0
+Clear,Clear,0.4,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Low Risk,Clear,4.6,0
+Clear,Clear,2.7,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,2.6,0
+Clear,Clear,4.9,0
+Low Risk,Clear,25.5,1
+Low Risk,Low Risk,31.6,1
+Low Risk,Clear,5.4,0
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Low Risk,Low Risk,32.7,1
+Clear,Clear,2.1,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,4.0,0
+Clear,Clear,2.1,0
+Clear,Clear,6.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.4,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.7,0
+Clear,Clear,4.2,0
+Clear,Clear,3.1,0
+Low Risk,Clear,5.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Clear,Clear,1.5,0
+Clear,Clear,2.3,0
+Clear,Clear,1.8,0
+Clear,Clear,5.5,0
+Clear,Clear,23.9,1
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Clear,Clear,2.2,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,3.7,0
+Clear,Clear,25.5,1
+Clear,Clear,2.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.9,0
+Low Risk,Clear,2.1,0
+Clear,Clear,3.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,2.6,0
+Clear,Clear,0.1,0
+Clear,Clear,0.2,0
+Low Risk,Clear,4.0,0
+Clear,Clear,1.7,0
+Clear,Clear,2.9,0
+Clear,Clear,3.8,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Low Risk,Clear,8.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.8,0
+Low Risk,Clear,6.3,0
+Clear,Clear,2.1,0
+Low Risk,Clear,8.2,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.5,0
+Clear,Clear,3.1,0
+Clear,Clear,3.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,6.7,0
+Clear,Clear,1.6,0
+Clear,Clear,2.2,0
+Low Risk,Clear,1.6,0
+Clear,Clear,0.5,0
+Clear,Clear,0.3,0
+Clear,Clear,0.4,0
+Clear,Clear,3.8,0
+Clear,Clear,2.6,0
+Clear,Clear,2.1,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Clear,Clear,4.9,0
+Clear,Clear,3.8,0
+Clear,Clear,0.8,0
+Clear,Clear,23.4,1
+Clear,Clear,2.5,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.1,0
+Clear,Clear,4.0,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,1.3,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.5,0
+Clear,Clear,2.0,0
+Clear,Clear,5.1,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Clear,Clear,2.3,0
+Clear,Clear,3.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,4.4,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,3.3,0
+Clear,Clear,3.4,0
+Clear,Clear,0.7,0
+Clear,Clear,2.0,0
+Clear,Clear,0.2,0
+Low Risk,Clear,5.6,0
+Clear,Clear,1.2,0
+Low Risk,Clear,8.6,0
+Clear,Clear,2.2,0
+Clear,Clear,3.4,0
+Clear,Clear,24.0,1
+Low Risk,Clear,1.7,0
+Clear,Clear,25.4,1
+Clear,Clear,3.3,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,2.2,0
+Clear,Clear,3.1,0
+Low Risk,Clear,11.5,0
+Clear,Clear,2.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Low Risk,Clear,22.3,1
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,0.9,0
+Clear,Clear,4.3,0
+Clear,Clear,3.1,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,6.7,0
+Low Risk,Clear,3.5,0
+Low Risk,Clear,24.3,1
+Low Risk,Clear,1.2,0
+Clear,Clear,2.4,0
+Clear,Clear,2.0,0
+Clear,Clear,29.9,1
+Clear,Clear,3.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.1,0
+Clear,Clear,4.2,0
+Clear,Clear,1.9,0
+Clear,Clear,0.8,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Clear,Clear,25.2,1
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.4,0
+Clear,Clear,3.2,0
+Clear,Clear,26.6,1
+Low Risk,Clear,1.8,0
+Clear,Clear,1.5,0
+Clear,Clear,2.0,0
+Clear,Clear,0.3,0
+Low Risk,Clear,7.5,0
+Clear,Clear,3.2,0
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Clear,Clear,0.9,0
+Low Risk,Clear,11.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.2,0
+Low Risk,Clear,7.7,0
+Low Risk,Clear,29.1,1
+Clear,Clear,6.1,0
+Clear,Clear,0.8,0
+Clear,Clear,1.3,0
+Low Risk,Clear,10.9,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Clear,Clear,8.1,0
+Clear,Clear,2.9,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,7.4,0
+Low Risk,Clear,3.6,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,6.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,5.1,0
+Clear,Clear,26.2,1
+Low Risk,Clear,3.0,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.3,0
+Low Risk,Clear,6.4,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,2.6,0
+Clear,Clear,2.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,5.7,0
+Clear,Clear,0.7,0
+Clear,Clear,2.1,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.4,0
+Low Risk,Clear,8.1,0
+Clear,Clear,0.4,0
+Clear,Clear,3.0,0
+Clear,Clear,1.9,0
+Clear,Clear,4.2,0
+Low Risk,Clear,7.5,0
+Clear,Clear,4.0,0
+Clear,Clear,3.3,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Clear,Clear,2.8,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.4,0
+Low Risk,Clear,0.8,0
+Clear,Clear,1.0,0
+Clear,Clear,2.8,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,9.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Critical,Critical,98.6,1
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.1,0
+Low Risk,Clear,5.6,0
+Clear,Clear,0.7,0
+Clear,Clear,22.2,1
+Clear,Clear,0.8,0
+Low Risk,Clear,9.0,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.8,0
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.9,0
+Low Risk,Clear,24.8,1
+Clear,Clear,2.5,0
+Clear,Clear,3.1,0
+Clear,Clear,2.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Low Risk,Clear,4.4,0
+Clear,Clear,3.7,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.3,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.1,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.0,0
+Clear,Clear,2.9,0
+Clear,Clear,0.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Low Risk,Clear,3.7,0
+Clear,Clear,23.8,1
+Low Risk,Clear,0.8,0
+Clear,Clear,29.8,1
+Clear,Clear,0.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,5.9,0
+Low Risk,Clear,0.8,0
+Clear,Clear,29.5,1
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.2,0
+Low Risk,Clear,0.8,0
+Clear,Clear,26.6,1
+Clear,Clear,0.5,0
+Low Risk,Clear,8.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,12.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.4,0
+Clear,Clear,0.1,0
+Clear,Clear,26.5,1
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.1,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,10.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,2.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,2.3,0
+Clear,Clear,0.4,0
+Clear,Clear,22.6,1
+Low Risk,Clear,6.7,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,8.8,0
+Clear,Clear,4.3,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,0.8,0
+Clear,Clear,3.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.4,0
+Clear,Clear,1.4,0
+Clear,Clear,3.0,0
+Low Risk,Clear,3.7,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.4,0
+Clear,Clear,0.3,0
+Clear,Clear,2.4,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,3.1,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Clear,Clear,4.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.3,0
+Low Risk,Clear,3.5,0
+Clear,Clear,3.3,0
+Clear,Clear,4.2,0
+Low Risk,Clear,14.9,1
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,2.4,0
+Critical,Critical,98.6,1
+Low Risk,Clear,26.7,1
+Low Risk,Clear,2.1,0
+Low Risk,Clear,1.0,0
+Clear,Clear,2.9,0
+Clear,Clear,1.3,0
+Low Risk,Clear,3.2,0
+Critical,Critical,90.8,1
+Clear,Clear,5.1,0
+Clear,Clear,2.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,3.7,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,3.6,0
+Clear,Clear,1.6,0
+Low Risk,Clear,9.0,0
+Clear,Clear,0.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,3.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.4,0
+Low Risk,Clear,3.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.1,0
+Clear,Clear,0.0,0
+Clear,Clear,2.0,0
+Critical,Critical,92.7,1
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,3.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,27.1,1
+Clear,Clear,1.1,0
+Clear,Clear,3.8,0
+Clear,Clear,2.9,0
+Clear,Clear,22.8,1
+Clear,Clear,4.1,0
+Clear,Clear,23.4,1
+Low Risk,Clear,2.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.3,0
+Clear,Clear,2.4,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.2,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,2.6,0
+Clear,Clear,1.7,0
+Clear,Clear,1.1,0
+Low Risk,Clear,5.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Low Risk,Clear,0.6,0
+Low Risk,Clear,3.3,0
+Clear,Clear,0.2,0
+Clear,Clear,0.9,0
+Clear,Clear,0.2,0
+Clear,Clear,3.6,0
+Clear,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Clear,Clear,2.8,0
+Clear,Clear,22.9,1
+Clear,Clear,1.0,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Clear,Clear,0.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,0.2,0
+Clear,Clear,2.5,0
+Clear,Clear,2.0,0
+Clear,Clear,2.1,0
+Critical,Critical,94.7,1
+Clear,Clear,0.6,0
+Clear,Clear,2.1,0
+Clear,Clear,4.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.7,0
+Low Risk,Clear,11.7,0
+Clear,Clear,2.5,0
+Clear,Clear,0.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.7,0
+Clear,Clear,5.2,0
+Clear,Clear,0.2,0
+Clear,Clear,2.2,0
+Clear,Clear,26.8,1
+Clear,Clear,0.8,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,4.5,0
+Clear,Clear,2.4,0
+Low Risk,Clear,7.9,0
+Low Risk,Clear,10.0,0
+Low Risk,Clear,4.1,0
+Clear,Clear,1.7,0
+Clear,Clear,1.7,0
+Clear,Clear,2.0,0
+Clear,Clear,0.7,0
+Low Risk,Clear,28.1,1
+Clear,Clear,1.1,0
+Clear,Clear,3.1,0
+Clear,Low Risk,32.5,1
+Clear,Clear,4.9,0
+Clear,Clear,6.5,0
+Clear,Clear,4.3,0
+Clear,Clear,4.5,0
+Low Risk,Clear,8.2,0
+Clear,Clear,5.7,0
+Clear,Clear,6.6,0
+Clear,Clear,4.2,0
+Clear,Clear,6.6,0
+Clear,Clear,6.6,0
+Clear,Clear,7.0,0
+Low Risk,Clear,7.0,0
+Clear,Clear,4.9,0
+Low Risk,Clear,5.6,0
+Clear,Clear,6.2,0
+Clear,Clear,4.8,0
+Clear,Clear,5.5,0
+Clear,Clear,9.0,0
+Clear,Clear,5.9,0
+Clear,Clear,6.0,0
+Low Risk,Clear,8.7,0
+Clear,Clear,7.2,0
+Clear,Clear,26.4,1
+Clear,Clear,6.3,0
+Clear,Clear,6.4,0
+Clear,Clear,4.9,0
+Clear,Clear,5.0,0
+Clear,Clear,7.1,0
+Clear,Clear,4.5,0
+Clear,Clear,4.4,0
+Clear,Clear,4.7,0
+Clear,Clear,0.9,0
+Clear,Clear,0.5,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,3.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,5.8,0
+Clear,Clear,0.3,0
+Clear,Clear,1.2,0
+Clear,Clear,23.3,1
+Clear,Clear,1.2,0
+Clear,Clear,2.2,0
+Clear,Clear,1.0,0
+Clear,Clear,3.2,0
+Clear,Clear,1.9,0
+Clear,Clear,1.9,0
+Low Risk,Clear,8.2,0
+Clear,Clear,2.3,0
+Clear,Clear,3.5,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.0,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.8,0
+Clear,Clear,3.8,0
+Low Risk,Clear,4.8,0
+Low Risk,Clear,13.5,1
+Low Risk,Clear,2.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.7,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,0.2,0
+Clear,Clear,29.6,1
+Clear,Clear,2.0,0
+Clear,Clear,25.5,1
+Low Risk,Clear,5.1,0
+Clear,Clear,1.2,0
+Clear,Clear,3.6,0
+Low Risk,Clear,7.9,0
+Clear,Clear,2.2,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,3.4,0
+Clear,Clear,1.4,0
+Clear,Clear,6.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,3.2,0
+Clear,Clear,0.8,0
+Clear,Clear,3.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.3,0
+Clear,Clear,0.5,0
+Clear,Clear,3.9,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.2,0
+Clear,Clear,3.1,0
+Clear,Clear,6.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,7.7,0
+Clear,Clear,5.3,0
+Clear,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,5.2,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.1,0
+Clear,Clear,2.1,0
+Clear,Clear,1.5,0
+Low Risk,Clear,7.6,0
+Clear,Clear,5.7,0
+Clear,Clear,1.3,0
+Clear,Clear,3.0,0
+Clear,Clear,1.3,0
+Low Risk,Clear,5.0,0
+Clear,Clear,2.1,0
+Clear,Clear,2.3,0
+Clear,Clear,2.0,0
+Clear,Clear,2.4,0
+Critical,Critical,90.1,1
+Clear,Clear,0.9,0
+Clear,Clear,2.5,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.6,0
+Clear,Clear,1.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.1,0
+Low Risk,Clear,5.2,0
+Clear,Clear,4.4,0
+Clear,Clear,0.6,0
+Clear,Clear,0.2,0
+Clear,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,2.5,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,2.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,27.4,1
+Clear,Clear,29.9,1
+Clear,Clear,0.5,0
+Low Risk,Clear,6.9,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.5,0
+Low Risk,Clear,5.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.2,0
+Clear,Clear,29.1,1
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Low Risk,Clear,13.4,1
+Clear,Clear,0.4,0
+Clear,Clear,2.0,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Clear,Clear,2.8,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Low Risk,Clear,2.3,0
+Clear,Clear,3.5,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,5.3,0
+Clear,Clear,22.4,1
+Clear,Clear,29.5,1
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.4,0
+Clear,Clear,3.0,0
+Clear,Clear,1.5,0
+Critical,Critical,96.2,1
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,23.8,1
+Clear,Clear,0.4,0
+Low Risk,Clear,4.6,0
+Clear,Clear,1.4,0
+Clear,Clear,0.3,0
+Clear,Clear,1.7,0
+Low Risk,Clear,4.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.4,0
+Low Risk,Low Risk,30.2,1
+Clear,Clear,1.6,0
+Low Risk,Clear,5.7,0
+Clear,Clear,2.4,0
+Clear,Clear,2.0,0
+Clear,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,2.5,0
+Clear,Clear,1.9,0
+Clear,Clear,2.0,0
+Clear,Clear,1.1,0
+Clear,Clear,25.3,1
+Low Risk,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Clear,Clear,1.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,6.8,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.9,0
+Clear,Clear,0.5,0
+Low Risk,Clear,28.2,1
+Critical,Critical,96.0,1
+Clear,Clear,1.5,0
+Clear,Clear,2.2,0
+Low Risk,Clear,6.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,1.5,0
+Clear,Clear,4.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,6.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.5,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.1,0
+Low Risk,Clear,0.7,0
+Low Risk,Clear,5.2,0
+Clear,Clear,1.1,0
+Clear,Clear,2.4,0
+Clear,Clear,5.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.5,0
+Clear,Clear,2.4,0
+Clear,Clear,2.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Low Risk,Clear,4.1,0
+Low Risk,Clear,3.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.4,0
+Clear,Clear,22.8,1
+Clear,Clear,1.6,0
+Critical,Critical,90.8,1
+Low Risk,Clear,8.2,0
+Clear,Clear,0.8,0
+Clear,Clear,26.5,1
+Low Risk,Clear,8.7,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,3.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,6.3,0
+Clear,Clear,1.3,0
+Clear,Clear,25.2,1
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,0.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,1.2,0
+Clear,Clear,5.0,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Low Risk,30.4,1
+Clear,Clear,2.0,0
+Clear,Clear,3.5,0
+Low Risk,Clear,0.6,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,4.3,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,5.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.5,0
+Clear,Clear,5.3,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.9,0
+Clear,Clear,3.7,0
+Clear,Clear,1.5,0
+Low Risk,Clear,4.3,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.7,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,0.9,0
+Clear,Clear,3.6,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.3,0
+Low Risk,Low Risk,32.2,1
+Clear,Clear,1.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,1.7,0
+Clear,Clear,25.8,1
+Clear,Clear,3.3,0
+Clear,Clear,2.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.4,0
+Clear,Clear,0.9,0
+Clear,Clear,3.8,0
+Clear,Clear,1.6,0
+Low Risk,Clear,13.8,1
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,2.2,0
+Clear,Clear,1.2,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.3,0
+Clear,Clear,2.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.9,0
+Clear,Clear,4.3,0
+Clear,Clear,2.8,0
+Clear,Clear,4.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Critical,Critical,95.0,1
+Clear,Clear,1.9,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Low Risk,Clear,6.2,0
+Clear,Clear,2.2,0
+Clear,Clear,1.6,0
+Low Risk,Low Risk,30.6,1
+Clear,Clear,5.5,0
+Low Risk,Clear,2.8,0
+Clear,Clear,2.5,0
+Low Risk,Clear,4.0,0
+Low Risk,Clear,7.6,0
+Clear,Clear,0.7,0
+Clear,Clear,2.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,2.2,0
+Low Risk,Clear,9.4,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Clear,Clear,3.1,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,2.0,0
+Low Risk,Clear,7.4,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,3.8,0
+Clear,Clear,3.3,0
+Low Risk,Clear,9.1,0
+Clear,Clear,1.0,0
+Low Risk,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,0.2,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.4,0
+Low Risk,Clear,5.2,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.4,0
+Clear,Clear,1.1,0
+Low Risk,Clear,6.5,0
+Low Risk,Clear,4.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.0,0
+Clear,Clear,2.2,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.4,0
+Clear,Clear,3.0,0
+Low Risk,Clear,3.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,7.7,0
+Clear,Clear,1.5,0
+Clear,Clear,2.9,0
+Clear,Clear,0.2,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,0.8,0
+Clear,Clear,2.5,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Low Risk,Clear,3.9,0
+Clear,Clear,1.8,0
+Clear,Clear,0.5,0
+Clear,Clear,3.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.9,0
+Clear,Clear,0.0,0
+Clear,Clear,2.3,0
+Clear,Clear,0.8,0
+Clear,Clear,2.7,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.5,0
+Clear,Clear,2.5,0
+Clear,Clear,6.5,0
+Clear,Clear,3.1,0
+Clear,Clear,1.8,0
+Clear,Clear,2.5,0
+Clear,Clear,5.2,0
+Clear,Clear,2.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,5.1,0
+Low Risk,Clear,8.2,0
+Low Risk,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.9,0
+Low Risk,Clear,9.5,0
+Clear,Clear,0.7,0
+Clear,Clear,3.5,0
+Clear,Clear,0.6,0
+Clear,Clear,3.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.9,0
+Low Risk,Clear,1.3,0
+Clear,Clear,22.1,1
+Clear,Clear,3.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,5.2,0
+Clear,Clear,2.7,0
+Low Risk,Clear,5.1,0
+Clear,Clear,25.8,1
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.0,0
+Clear,Clear,2.5,0
+Clear,Clear,1.6,0
+Clear,Clear,2.0,0
+Low Risk,Clear,9.8,0
+Clear,Clear,1.7,0
+Clear,Clear,0.3,0
+Clear,Clear,1.4,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,27.5,1
+Clear,Clear,1.3,0
+Low Risk,Clear,0.8,0
+Low Risk,Clear,1.4,0
+Low Risk,Clear,1.8,0
+Clear,Clear,2.6,0
+Clear,Clear,2.8,0
+Clear,Clear,2.3,0
+Clear,Clear,0.6,0
+Clear,Clear,0.3,0
+Low Risk,Clear,6.1,0
+Clear,Clear,0.7,0
+Clear,Clear,5.0,0
+Clear,Clear,6.5,0
+Low Risk,Clear,9.0,0
+Clear,Clear,8.8,0
+Clear,Clear,4.8,0
+Low Risk,Clear,14.2,1
+Clear,Clear,4.4,0
+Clear,Clear,6.3,0
+Low Risk,Clear,9.0,0
+Low Risk,Clear,6.2,0
+Low Risk,Clear,6.3,0
+Clear,Clear,6.9,0
+Clear,Clear,10.8,0
+Clear,Clear,5.4,0
+Clear,Clear,7.1,0
+Clear,Clear,6.8,0
+Low Risk,Clear,7.0,0
+Clear,Clear,6.6,0
+Clear,Clear,4.7,0
+Clear,Clear,4.2,0
+Critical,Critical,96.9,1
+Low Risk,Clear,11.3,0
+Clear,Clear,7.2,0
+Clear,Clear,7.3,0
+Clear,Clear,9.1,0
+Clear,Clear,6.7,0
+Low Risk,Clear,6.2,0
+Clear,Clear,6.1,0
+Clear,Clear,5.9,0
+Clear,Clear,5.1,0
+Clear,Low Risk,35.0,1
+Clear,Clear,4.6,0
+Clear,Clear,4.7,0
+Clear,Clear,4.9,0
+Clear,Clear,6.8,0
+Clear,Clear,6.1,0
+Clear,Clear,7.1,0
+Clear,Clear,6.1,0
+Clear,Clear,26.7,1
+Low Risk,Clear,10.9,0
+Clear,Clear,6.8,0
+Clear,Clear,5.8,0
+Clear,Clear,5.8,0
+Clear,Clear,4.7,0
+Clear,Clear,7.4,0
+Clear,Clear,5.9,0
+Clear,Clear,4.0,0
+Clear,Clear,5.0,0
+Low Risk,Clear,7.6,0
+Low Risk,Clear,10.3,0
+Clear,Clear,6.4,0
+Clear,Clear,6.7,0
+Low Risk,Clear,9.6,0
+Clear,Clear,7.6,0
+Clear,Clear,7.0,0
+Low Risk,Clear,6.9,0
+Low Risk,Clear,5.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,21.6,1
+Low Risk,Clear,5.0,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,8.2,0
+Clear,Clear,23.7,1
+Clear,Clear,2.3,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,2.9,0
+Clear,Clear,3.3,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.9,0
+Low Risk,Clear,4.2,0
+Clear,Clear,0.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,4.7,0
+Clear,Clear,5.4,0
+Clear,Clear,2.0,0
+Clear,Clear,0.4,0
+Clear,Clear,1.7,0
+Clear,Clear,1.5,0
+Low Risk,Clear,7.2,0
+Clear,Clear,2.6,0
+Clear,Clear,0.5,0
+Clear,Clear,2.4,0
+Critical,Critical,65.8,0
+Low Risk,Clear,6.5,0
+Clear,Clear,2.1,0
+Clear,Clear,3.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.5,0
+Low Risk,Clear,8.1,0
+Clear,Clear,26.8,1
+Clear,Clear,1.4,0
+Clear,Clear,1.9,0
+Clear,Clear,0.3,0
+Low Risk,Clear,4.4,0
+Low Risk,Clear,12.2,0
+Clear,Clear,0.3,0
+Clear,Clear,3.8,0
+Clear,Clear,0.9,0
+Clear,Clear,3.1,0
+Low Risk,Clear,4.0,0
+Clear,Clear,3.2,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.1,0
+Low Risk,Clear,29.7,1
+Clear,Clear,3.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Low Risk,Clear,4.0,0
+Clear,Clear,1.9,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,0.8,0
+Clear,Clear,0.1,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Clear,Clear,0.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,3.4,0
+Clear,Clear,7.8,0
+Low Risk,Clear,3.2,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,4.0,0
+Clear,Clear,1.7,0
+Low Risk,Clear,12.8,0
+Clear,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,22.6,1
+Clear,Clear,4.1,0
+Low Risk,Clear,5.6,0
+Clear,Clear,1.0,0
+Clear,Clear,6.2,0
+Low Risk,Clear,5.2,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,4.9,0
+Clear,Clear,24.2,1
+Clear,Clear,22.2,1
+Low Risk,Clear,4.8,0
+Clear,Clear,2.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,29.7,1
+Clear,Clear,4.2,0
+Clear,Clear,0.8,0
+Low Risk,Clear,1.1,0
+Clear,Clear,3.3,0
+Low Risk,Clear,0.9,0
+Clear,Clear,3.7,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.0,0
+Clear,Clear,0.9,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,2.2,0
+Clear,Clear,0.3,0
+Clear,Clear,2.4,0
+Clear,Clear,1.9,0
+Clear,Clear,3.7,0
+Clear,Clear,2.4,0
+Low Risk,Clear,5.7,0
+Critical,Critical,98.4,1
+Clear,Clear,0.4,0
+Clear,Clear,0.7,0
+Clear,Clear,3.9,0
+Low Risk,Clear,0.7,0
+Clear,Clear,2.2,0
+Clear,Clear,0.8,0
+Clear,Clear,2.3,0
+Clear,Clear,4.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Clear,Clear,0.6,0
+Clear,Clear,0.9,0
+Clear,Clear,27.3,1
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,5.8,0
+Clear,Clear,0.8,0
+Clear,Clear,3.7,0
+Clear,Clear,26.9,1
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,11.8,0
+Clear,Clear,0.4,0
+Clear,Clear,3.4,0
+Clear,Clear,0.5,0
+Clear,Clear,1.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,3.0,0
+Clear,Clear,0.1,0
+Low Risk,Clear,2.7,0
+Clear,Clear,25.4,1
+Low Risk,Clear,9.6,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,3.6,0
+Low Risk,Clear,2.6,0
+Critical,Critical,94.6,1
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,2.4,0
+Clear,Clear,1.9,0
+Clear,Clear,0.8,0
+Clear,Clear,0.4,0
+Clear,Clear,0.2,0
+Clear,Clear,2.4,0
+Clear,Clear,1.2,0
+Clear,Clear,0.9,0
+Clear,Clear,0.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,0.8,0
+Clear,Clear,0.2,0
+Clear,Clear,24.1,1
+Clear,Clear,1.3,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.6,0
+Clear,Clear,4.0,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,1.6,0
+Clear,Clear,3.9,0
+Clear,Clear,0.4,0
+Clear,Clear,0.4,0
+Clear,Clear,6.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.3,0
+Low Risk,Clear,7.9,0
+Clear,Clear,0.9,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.1,0
+Clear,Clear,0.6,0
+Low Risk,Clear,4.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,0.1,0
+Low Risk,Clear,7.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.8,0
+Clear,Clear,2.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.7,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.9,0
+Clear,Clear,1.1,0
+Clear,Clear,3.0,0
+Clear,Clear,1.4,0
+Low Risk,Clear,0.8,0
+Clear,Clear,0.3,0
+Clear,Clear,2.9,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.1,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.4,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.2,0
+Clear,Clear,0.8,0
+Low Risk,Low Risk,30.0,1
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.3,0
+Clear,Clear,3.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.4,0
+Clear,Clear,3.1,0
+Clear,Clear,2.4,0
+Clear,Clear,3.0,0
+Clear,Clear,2.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Low Risk,Clear,0.9,0
+Clear,Clear,2.5,0
+Clear,Clear,0.6,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,21.3,1
+Clear,Clear,2.1,0
+Clear,Clear,0.2,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.3,0
+Clear,Clear,2.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,23.3,1
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,0.6,0
+Clear,Clear,1.6,0
+Low Risk,Clear,5.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,15.3,1
+Clear,Clear,2.6,0
+Clear,Clear,0.8,0
+Clear,Clear,22.3,1
+Low Risk,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.6,0
+Clear,Clear,0.6,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Low Risk,Clear,5.0,0
+Clear,Clear,4.8,0
+Clear,Clear,0.8,0
+Clear,Low Risk,30.0,1
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,11.8,0
+Clear,Clear,2.1,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,2.8,0
+Clear,Clear,1.8,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,3.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Low Risk,Clear,8.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,23.6,1
+Clear,Clear,1.5,0
+Clear,Clear,9.3,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,28.5,1
+Clear,Clear,1.0,0
+Clear,Clear,1.3,0
+Clear,Clear,29.2,1
+Clear,Clear,1.2,0
+Clear,Clear,0.9,0
+Clear,Clear,2.4,0
+Clear,Clear,2.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,2.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Clear,Clear,5.3,0
+Low Risk,Clear,1.7,0
+Clear,Clear,25.9,1
+Clear,Clear,3.5,0
+Clear,Clear,2.1,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,1.8,0
+Low Risk,Clear,11.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,27.2,1
+Clear,Clear,0.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.0,0
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,2.6,0
+Clear,Clear,24.4,1
+Clear,Clear,1.9,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,7.1,0
+Clear,Clear,23.1,1
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Clear,Clear,4.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,8.4,0
+Clear,Clear,2.6,0
+Low Risk,Clear,5.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,23.7,1
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,9.7,0
+Clear,Clear,0.9,0
+Clear,Clear,3.1,0
+Low Risk,Clear,2.4,0
+Clear,Clear,2.6,0
+Low Risk,Clear,7.1,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Clear,Clear,4.8,0
+Low Risk,Clear,6.0,0
+Clear,Clear,1.8,0
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,2.1,0
+Low Risk,Clear,3.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.8,0
+Clear,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,2.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.5,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,7.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,5.3,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Low Risk,Clear,4.6,0
+Clear,Low Risk,30.4,1
+Clear,Clear,2.0,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,8.4,0
+Low Risk,Clear,1.6,0
+Clear,Clear,2.5,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,4.6,0
+Clear,Clear,4.4,0
+Clear,Clear,3.8,0
+Low Risk,Clear,13.4,1
+Clear,Clear,0.5,0
+Low Risk,Clear,2.4,0
+Clear,Clear,4.2,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.5,0
+Clear,Clear,3.2,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.7,0
+Low Risk,Clear,4.0,0
+Clear,Clear,1.8,0
+Clear,Clear,0.5,0
+Clear,Clear,2.3,0
+Low Risk,Clear,3.2,0
+Low Risk,Clear,7.5,0
+Low Risk,Clear,10.1,0
+Clear,Clear,0.9,0
+Clear,Clear,2.2,0
+Clear,Clear,1.9,0
+Clear,Clear,0.7,0
+Clear,Clear,6.3,0
+Low Risk,Clear,7.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,10.9,0
+Clear,Clear,1.1,0
+Critical,Critical,70.0,0
+Clear,Clear,3.1,0
+Low Risk,Low Risk,31.5,1
+Clear,Clear,4.6,0
+Clear,Clear,1.3,0
+Clear,Clear,0.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.3,0
+Low Risk,Low Risk,31.6,1
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.3,0
+Clear,Clear,0.2,0
+Clear,Clear,2.3,0
+Critical,Critical,86.7,1
+Clear,Clear,0.4,0
+Clear,Clear,3.1,0
+Clear,Clear,0.5,0
+Low Risk,Clear,9.0,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.7,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Clear,Clear,3.7,0
+Clear,Clear,1.8,0
+Clear,Clear,6.0,0
+Clear,Clear,1.2,0
+Clear,Clear,2.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,2.6,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,2.7,0
+Clear,Clear,2.6,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.6,0
+Clear,Clear,4.0,0
+Clear,Clear,22.6,1
+Clear,Clear,2.1,0
+Clear,Clear,3.2,0
+Clear,Clear,1.2,0
+Low Risk,Clear,5.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Low Risk,Clear,3.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Low Risk,Low Risk,32.3,1
+Clear,Clear,0.9,0
+Low Risk,Clear,3.8,0
+Clear,Clear,4.0,0
+Clear,Clear,0.0,0
+Clear,Clear,3.7,0
+Low Risk,Clear,10.9,0
+Clear,Clear,27.4,1
+Clear,Clear,1.7,0
+Clear,Clear,0.4,0
+Clear,Clear,3.7,0
+Low Risk,Clear,8.7,0
+Clear,Clear,3.8,0
+Clear,Clear,0.3,0
+Clear,Clear,1.7,0
+Clear,Clear,25.3,1
+Clear,Clear,0.3,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,3.7,0
+Clear,Clear,1.4,0
+Clear,Clear,23.6,1
+Clear,Clear,1.0,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,4.3,0
+Clear,Clear,1.7,0
+Clear,Clear,2.2,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.4,0
+Low Risk,Low Risk,31.6,1
+Clear,Clear,3.2,0
+Clear,Clear,5.0,0
+Low Risk,Clear,3.7,0
+Clear,Clear,2.1,0
+Clear,Clear,0.3,0
+Clear,Clear,0.3,0
+Clear,Clear,4.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.5,0
+Clear,Clear,0.8,0
+Clear,Clear,22.4,1
+Low Risk,Clear,0.7,0
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Low Risk,Clear,8.5,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.2,0
+Low Risk,Clear,26.2,1
+Low Risk,Clear,9.6,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Low Risk,Clear,3.2,0
+Low Risk,Clear,23.6,1
+Clear,Clear,2.4,0
+Clear,Clear,2.3,0
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,10.5,0
+Low Risk,Clear,1.3,0
+Critical,Critical,91.6,1
+Clear,Clear,0.8,0
+Clear,Clear,1.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.4,0
+Clear,Clear,2.5,0
+Clear,Clear,0.9,0
+Low Risk,Clear,6.3,0
+Clear,Clear,4.8,0
+Low Risk,Clear,5.8,0
+Clear,Clear,9.4,0
+Clear,Clear,6.0,0
+Clear,Clear,6.8,0
+Clear,Clear,4.9,0
+Clear,Clear,4.2,0
+Clear,Clear,6.6,0
+Clear,Clear,6.1,0
+Clear,Clear,4.6,0
+Low Risk,Clear,28.4,1
+Clear,Clear,4.9,0
+Clear,Clear,4.2,0
+Clear,Clear,6.1,0
+Clear,Clear,5.1,0
+Clear,Clear,7.2,0
+Clear,Clear,9.6,0
+Clear,Clear,7.0,0
+Clear,Clear,5.4,0
+Clear,Clear,5.6,0
+Clear,Clear,6.2,0
+Clear,Clear,4.2,0
+Clear,Clear,4.0,0
+Clear,Clear,6.7,0
+Low Risk,Clear,5.3,0
+Clear,Clear,28.6,1
+Clear,Clear,6.1,0
+Critical,Critical,98.1,1
+Clear,Clear,6.0,0
+Clear,Clear,1.6,0
+Low Risk,Clear,4.6,0
+Clear,Clear,2.9,0
+Clear,Clear,0.5,0
+Low Risk,Clear,4.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.6,0
+Clear,Clear,1.2,0
+Clear,Clear,4.2,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,2.2,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Clear,Clear,2.4,0
+Clear,Clear,2.4,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.5,0
+Low Risk,Clear,3.7,0
+Clear,Clear,24.2,1
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Clear,Clear,0.5,0
+Low Risk,Clear,7.4,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,3.8,0
+Clear,Clear,0.3,0
+Clear,Clear,3.3,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Low Risk,Clear,4.1,0
+Low Risk,Clear,2.2,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.7,0
+Clear,Clear,2.9,0
+Clear,Clear,23.4,1
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,2.9,0
+Clear,Clear,1.4,0
+Clear,Clear,2.7,0
+Clear,Clear,1.8,0
+Low Risk,Clear,6.7,0
+Clear,Clear,1.4,0
+Clear,Clear,8.0,0
+Clear,Clear,1.0,0
+Clear,Clear,3.2,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.2,0
+Low Risk,Clear,8.4,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,5.7,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,29.2,1
+Low Risk,Clear,2.3,0
+Clear,Clear,1.9,0
+Critical,Critical,89.7,1
+Clear,Clear,1.5,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Low Risk,Clear,12.6,0
+Clear,Clear,24.9,1
+Clear,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Clear,2.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.3,0
+Clear,Clear,3.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Low Risk,30.6,1
+Clear,Clear,0.4,0
+Low Risk,Clear,9.5,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.9,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,7.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Low Risk,Clear,10.1,0
+Clear,Clear,5.4,0
+Clear,Clear,2.6,0
+Clear,Clear,6.3,0
+Low Risk,Clear,11.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,7.7,0
+Clear,Clear,2.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,22.2,1
+Clear,Clear,2.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,12.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.8,0
+Clear,Clear,3.4,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Low Risk,Low Risk,33.8,1
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Clear,Clear,2.9,0
+Critical,Critical,90.6,1
+Clear,Clear,1.4,0
+Clear,Clear,0.3,0
+Clear,Clear,0.8,0
+Clear,Clear,2.5,0
+Clear,Clear,3.3,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Clear,Clear,3.6,0
+Clear,Clear,3.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.1,0
+Clear,Clear,21.7,1
+Clear,Clear,2.9,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.0,0
+Clear,Clear,0.9,0
+Clear,Clear,0.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.8,0
+Clear,Clear,0.4,0
+Clear,Clear,0.5,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.1,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Critical,Critical,88.8,1
+Clear,Clear,1.7,0
+Clear,Clear,2.8,0
+Clear,Clear,1.5,0
+Clear,Clear,2.9,0
+Low Risk,Clear,7.6,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,1.3,0
+Low Risk,Clear,2.3,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Clear,Clear,2.3,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.6,0
+Clear,Clear,0.6,0
+Clear,Clear,0.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,5.5,0
+Clear,Clear,3.3,0
+Clear,Clear,0.6,0
+Clear,Clear,2.5,0
+Clear,Clear,1.3,0
+Low Risk,Clear,3.6,0
+Clear,Clear,1.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,4.7,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,2.0,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Low Risk,Clear,7.4,0
+Clear,Clear,1.4,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.6,0
+Clear,Clear,0.8,0
+Clear,Clear,3.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Low Risk,31.2,1
+Clear,Clear,0.8,0
+Clear,Clear,24.3,1
+Low Risk,Clear,2.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,2.0,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,5.1,0
+Clear,Clear,24.4,1
+Clear,Clear,22.5,1
+Low Risk,Clear,1.5,0
+Low Risk,Clear,6.0,0
+Clear,Clear,1.1,0
+Clear,Clear,3.0,0
+Clear,Clear,0.7,0
+Low Risk,Clear,8.4,0
+Clear,Clear,0.4,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.4,0
+Low Risk,Clear,7.1,0
+Clear,Clear,2.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,0.5,0
+Clear,Clear,23.0,1
+Clear,Clear,4.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,26.0,1
+Clear,Clear,2.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.6,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.7,0
+Clear,Clear,2.2,0
+Low Risk,Low Risk,31.2,1
+Clear,Clear,0.8,0
+Clear,Clear,23.8,1
+Clear,Clear,0.2,0
+Clear,Clear,2.0,0
+Clear,Clear,3.1,0
+Low Risk,Clear,2.2,0
+Clear,Clear,0.6,0
+Clear,Clear,3.8,0
+Low Risk,Clear,11.3,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.5,0
+Low Risk,Clear,10.1,0
+Clear,Clear,2.3,0
+Clear,Clear,0.1,0
+Clear,Clear,0.3,0
+Clear,Clear,1.6,0
+Clear,Clear,2.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,5.1,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.7,0
+Low Risk,Clear,5.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,24.5,1
+Clear,Clear,1.1,0
+Clear,Clear,2.0,0
+Low Risk,Clear,11.1,0
+Clear,Clear,0.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,3.4,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.9,0
+Clear,Clear,4.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Low Risk,Low Risk,31.4,1
+Low Risk,Clear,1.5,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.3,0
+Low Risk,Clear,1.5,0
+Clear,Clear,2.1,0
+Clear,Clear,1.0,0
+Clear,Clear,3.4,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.2,0
+Clear,Clear,6.4,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.4,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,3.0,0
+Clear,Clear,1.5,0
+Clear,Clear,6.2,0
+Clear,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,1.0,0
+Low Risk,Clear,4.8,0
+Clear,Clear,24.7,1
+Low Risk,Clear,1.4,0
+Clear,Clear,22.4,1
+Clear,Clear,2.1,0
+Clear,Clear,0.5,0
+Clear,Clear,1.1,0
+Clear,Clear,22.4,1
+Clear,Clear,3.0,0
+Clear,Clear,3.0,0
+Clear,Clear,2.5,0
+Clear,Clear,6.2,0
+Low Risk,Clear,0.9,0
+Clear,Clear,2.1,0
+Clear,Clear,4.5,0
+Clear,Clear,0.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.0,0
+Clear,Clear,1.7,0
+Low Risk,Clear,7.9,0
+Clear,Clear,1.8,0
+Clear,Clear,4.0,0
+Clear,Clear,4.0,0
+Clear,Clear,23.1,1
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,3.8,0
+Clear,Clear,3.0,0
+Low Risk,Clear,4.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.9,0
+Low Risk,Clear,5.5,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,3.6,0
+Clear,Clear,1.4,0
+Clear,Clear,2.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Clear,Clear,29.3,1
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.4,0
+Clear,Clear,4.7,0
+Clear,Clear,1.4,0
+Clear,Clear,3.0,0
+Clear,Clear,2.0,0
+Clear,Clear,1.7,0
+Low Risk,Low Risk,32.8,1
+Clear,Clear,0.6,0
+Low Risk,Clear,0.9,0
+Clear,Clear,6.1,0
+Clear,Clear,22.5,1
+Clear,Clear,0.6,0
+Low Risk,Clear,9.4,0
+Clear,Clear,0.6,0
+Clear,Clear,0.3,0
+Clear,Clear,2.6,0
+Clear,Clear,7.1,0
+Clear,Clear,0.5,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Clear,Clear,5.3,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,3.3,0
+Clear,Clear,3.3,0
+Clear,Clear,6.4,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,2.3,0
+Clear,Clear,21.6,1
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,7.6,0
+Clear,Clear,0.3,0
+Low Risk,Clear,8.3,0
+Clear,Clear,1.6,0
+Clear,Clear,23.7,1
+Clear,Clear,0.9,0
+Clear,Clear,24.7,1
+Clear,Clear,3.6,0
+Critical,Critical,93.7,1
+Clear,Clear,0.5,0
+Clear,Clear,2.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.4,0
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Low Risk,Clear,8.3,0
+Clear,Clear,1.4,0
+Clear,Clear,2.1,0
+Clear,Clear,1.4,0
+Low Risk,Clear,6.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.2,0
+Clear,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Clear,1.9,0
+Clear,Clear,3.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.4,0
+Clear,Clear,2.1,0
+Low Risk,Clear,3.2,0
+Clear,Clear,1.9,0
+Clear,Clear,3.8,0
+Clear,Clear,1.0,0
+Clear,Clear,1.4,0
+Critical,Critical,69.2,0
+Clear,Clear,6.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Clear,Clear,2.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.4,0
+Clear,Clear,4.4,0
+Clear,Clear,0.6,0
+Clear,Clear,2.0,0
+Low Risk,Clear,7.0,0
+Clear,Clear,0.0,0
+Clear,Clear,6.4,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.4,0
+Clear,Clear,0.4,0
+Clear,Clear,4.2,0
+Clear,Clear,1.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Low Risk,Low Risk,30.4,1
+Clear,Clear,1.4,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Clear,Clear,2.6,0
+Clear,Clear,1.0,0
+Clear,Clear,2.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,4.0,0
+Low Risk,Clear,4.3,0
+Clear,Clear,2.5,0
+Low Risk,Clear,10.9,0
+Clear,Clear,0.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,0.2,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.5,0
+Clear,Clear,3.0,0
+Clear,Clear,4.0,0
+Clear,Clear,29.2,1
+Clear,Clear,0.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Clear,Clear,2.2,0
+Low Risk,Clear,1.5,0
+Clear,Clear,2.6,0
+Clear,Clear,3.5,0
+Low Risk,Clear,5.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Clear,2.6,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Low Risk,Clear,2.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Clear,Clear,2.9,0
+Clear,Clear,1.4,0
+Clear,Clear,2.2,0
+Clear,Clear,1.9,0
+Clear,Clear,3.1,0
+Low Risk,Clear,11.0,0
+Clear,Clear,0.4,0
+Clear,Clear,0.3,0
+Clear,Clear,0.3,0
+Clear,Clear,1.4,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,2.9,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.3,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,2.7,0
+Clear,Clear,0.5,0
+Clear,Clear,5.2,0
+Clear,Clear,5.4,0
+Clear,Clear,7.4,0
+Clear,Clear,5.5,0
+Clear,Clear,4.1,0
+Clear,Clear,5.0,0
+Low Risk,Clear,5.0,0
+Clear,Clear,6.9,0
+Clear,Clear,4.7,0
+Clear,Clear,7.5,0
+Low Risk,Clear,5.2,0
+Clear,Clear,6.6,0
+Clear,Clear,8.2,0
+Clear,Clear,10.9,0
+Clear,Clear,6.6,0
+Clear,Clear,5.7,0
+Clear,Clear,5.4,0
+Low Risk,Clear,11.8,0
+Clear,Clear,6.4,0
+Clear,Clear,6.5,0
+Clear,Clear,4.9,0
+Clear,Clear,5.9,0
+Low Risk,Clear,5.8,0
+Clear,Clear,5.5,0
+Clear,Clear,10.6,0
+Clear,Clear,4.7,0
+Low Risk,Clear,5.0,0
+Clear,Clear,5.4,0
+Low Risk,Clear,13.2,1
+Low Risk,Clear,6.3,0
+Critical,Critical,95.2,1
+Low Risk,Clear,6.0,0
+Clear,Clear,28.9,1
+Clear,Clear,4.8,0
+Clear,Clear,6.6,0
+Clear,Clear,5.6,0
+Clear,Clear,1.5,0
+Clear,Clear,26.1,1
+Clear,Clear,0.8,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Low Risk,Clear,2.2,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Low Risk,Clear,7.4,0
+Clear,Clear,0.5,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,2.1,0
+Clear,Clear,2.2,0
+Clear,Clear,5.8,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.0,0
+Clear,Clear,23.5,1
+Clear,Clear,2.7,0
+Clear,Clear,2.1,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Clear,Clear,3.0,0
+Low Risk,Clear,9.2,0
+Clear,Clear,1.3,0
+Clear,Clear,26.3,1
+Low Risk,Clear,22.9,1
+Clear,Clear,1.5,0
+Clear,Clear,2.8,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,2.5,0
+Clear,Clear,2.0,0
+Low Risk,Clear,12.4,0
+Clear,Clear,4.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.0,0
+Clear,Clear,2.3,0
+Clear,Clear,0.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,4.6,0
+Clear,Clear,24.1,1
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Low Risk,Clear,3.0,0
+Clear,Clear,4.0,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.4,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,2.4,0
+Clear,Clear,29.7,1
+Low Risk,Clear,8.8,0
+Clear,Clear,1.0,0
+Clear,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Low Risk,31.0,1
+Clear,Clear,0.8,0
+Clear,Clear,4.5,0
+Clear,Clear,5.4,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.5,0
+Low Risk,Clear,1.3,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,0.4,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,3.8,0
+Clear,Clear,0.4,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.5,0
+Clear,Clear,2.4,0
+Clear,Clear,28.4,1
+Clear,Clear,0.4,0
+Clear,Clear,3.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,22.8,1
+Clear,Clear,1.2,0
+Clear,Clear,2.8,0
+Clear,Clear,0.5,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.2,0
+Clear,Clear,7.0,0
+Clear,Clear,0.6,0
+Low Risk,Clear,11.3,0
+Low Risk,Clear,2.8,0
+Low Risk,Clear,5.7,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Low Risk,Clear,9.6,0
+Clear,Clear,0.4,0
+Clear,Clear,2.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.4,0
+Clear,Clear,2.1,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Clear,Clear,1.8,0
+Clear,Clear,0.2,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Clear,Clear,0.2,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,5.2,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.6,0
+Clear,Clear,3.9,0
+Clear,Clear,1.0,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Low Risk,Clear,11.0,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,4.3,0
+Low Risk,Clear,8.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,3.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.4,0
+Clear,Clear,4.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,5.5,0
+Clear,Clear,2.8,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,0.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.1,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,1.3,0
+Clear,Clear,2.0,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.4,0
+Low Risk,Clear,3.2,0
+Clear,Clear,2.1,0
+Clear,Clear,0.6,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.6,0
+Clear,Clear,27.5,1
+Clear,Clear,0.3,0
+Clear,Clear,2.5,0
+Clear,Clear,2.2,0
+Clear,Clear,1.5,0
+Clear,Clear,4.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.4,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Low Risk,Clear,12.5,0
+Clear,Clear,0.9,0
+Clear,Clear,6.7,0
+Clear,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,7.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.6,0
+Clear,Clear,0.3,0
+Clear,Clear,3.9,0
+Clear,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,3.2,0
+Clear,Clear,29.2,1
+Clear,Clear,1.8,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,5.1,0
+Clear,Clear,1.8,0
+Critical,Critical,94.2,1
+Clear,Clear,3.6,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,4.0,0
+Clear,Clear,1.6,0
+Clear,Clear,0.1,0
+Clear,Clear,24.8,1
+Clear,Clear,2.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.2,0
+Clear,Clear,0.7,0
+Clear,Clear,1.9,0
+Low Risk,Clear,4.2,0
+Clear,Clear,1.8,0
+Low Risk,Clear,3.1,0
+Clear,Clear,2.1,0
+Clear,Clear,3.3,0
+Clear,Clear,0.5,0
+Clear,Clear,5.8,0
+Clear,Clear,0.3,0
+Clear,Clear,2.8,0
+Clear,Clear,2.9,0
+Clear,Clear,1.4,0
+Clear,Clear,6.1,0
+Clear,Clear,0.6,0
+Clear,Clear,2.5,0
+Clear,Clear,0.6,0
+Clear,Clear,23.8,1
+Clear,Clear,2.6,0
+Low Risk,Clear,7.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.0,0
+Low Risk,Clear,1.9,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Clear,Clear,0.7,0
+Low Risk,Low Risk,33.3,1
+Clear,Clear,0.2,0
+Clear,Clear,1.3,0
+Clear,Clear,2.4,0
+Low Risk,Clear,6.2,0
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Clear,Clear,7.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,5.0,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.2,0
+Clear,Clear,1.3,0
+Clear,Clear,2.2,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,6.9,0
+Low Risk,Clear,1.7,0
+Low Risk,Clear,3.2,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,2.8,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Low Risk,Clear,8.9,0
+Clear,Clear,0.5,0
+Clear,Clear,3.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.1,0
+Clear,Clear,1.8,0
+Low Risk,Clear,8.5,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,2.2,0
+Clear,Clear,1.2,0
+Clear,Clear,23.8,1
+Clear,Clear,2.3,0
+Clear,Clear,22.6,1
+Clear,Clear,3.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.3,0
+Clear,Clear,23.8,1
+Clear,Clear,2.9,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.6,0
+Low Risk,Clear,1.2,0
+Clear,Clear,0.4,0
+Clear,Clear,3.1,0
+Clear,Clear,2.8,0
+Clear,Clear,0.2,0
+Low Risk,Clear,11.6,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.8,0
+Clear,Clear,5.5,0
+Clear,Clear,0.7,0
+Clear,Clear,23.8,1
+Clear,Clear,2.6,0
+Clear,Clear,1.9,0
+Low Risk,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,21.6,1
+Clear,Clear,1.1,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,2.7,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,5.6,0
+Clear,Clear,1.3,0
+Low Risk,Clear,3.1,0
+Clear,Clear,6.1,0
+Clear,Clear,0.7,0
+Clear,Clear,3.3,0
+Clear,Clear,1.3,0
+Clear,Clear,22.5,1
+Low Risk,Clear,1.8,0
+Low Risk,Clear,29.1,1
+Low Risk,Clear,5.6,0
+Clear,Clear,0.8,0
+Clear,Clear,1.5,0
+Clear,Clear,0.2,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.7,0
+Clear,Clear,1.5,0
+Clear,Clear,1.4,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,2.5,0
+Clear,Clear,1.7,0
+Low Risk,Clear,3.3,0
+Clear,Clear,27.8,1
+Clear,Clear,2.9,0
+Clear,Clear,0.3,0
+Clear,Clear,1.9,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,1.1,0
+Clear,Clear,2.2,0
+Clear,Clear,2.5,0
+Clear,Clear,3.9,0
+Clear,Clear,0.2,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,4.1,0
+Low Risk,Clear,7.6,0
+Clear,Clear,5.8,0
+Clear,Clear,0.3,0
+Low Risk,Clear,5.8,0
+Clear,Clear,1.5,0
+Low Risk,Clear,2.4,0
+Clear,Clear,3.4,0
+Clear,Clear,2.4,0
+Clear,Clear,2.6,0
+Low Risk,Clear,9.2,0
+Low Risk,Clear,4.6,0
+Clear,Clear,1.1,0
+Clear,Clear,1.4,0
+Clear,Clear,4.4,0
+Clear,Clear,3.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.1,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.7,0
+Low Risk,Clear,2.3,0
+Clear,Clear,3.0,0
+Clear,Clear,0.5,0
+Clear,Clear,1.7,0
+Clear,Low Risk,32.1,1
+Low Risk,Clear,3.2,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,6.6,0
+Clear,Clear,2.0,0
+Clear,Clear,24.0,1
+Low Risk,Clear,1.5,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,3.4,0
+Clear,Clear,2.6,0
+Clear,Clear,2.6,0
+Clear,Clear,0.5,0
+Clear,Clear,4.7,0
+Clear,Clear,6.7,0
+Low Risk,Clear,9.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,3.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.9,0
+Clear,Clear,3.3,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.2,0
+Clear,Clear,2.2,0
+Clear,Clear,0.3,0
+Clear,Clear,25.6,1
+Low Risk,Clear,5.2,0
+Clear,Clear,6.4,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.8,0
+Clear,Clear,4.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.2,0
+Low Risk,Clear,5.7,0
+Clear,Clear,1.0,0
+Clear,Clear,2.4,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.9,0
+Clear,Clear,2.2,0
+Clear,Clear,1.2,0
+Clear,Clear,3.1,0
+Low Risk,Clear,4.4,0
+Clear,Clear,2.7,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.3,0
+Low Risk,Clear,1.4,0
+Clear,Clear,3.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.8,0
+Clear,Clear,2.8,0
+Clear,Clear,2.1,0
+Low Risk,Clear,0.8,0
+Clear,Clear,3.1,0
+Clear,Clear,1.1,0
+Low Risk,Low Risk,30.7,1
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,2.6,0
+Clear,Clear,28.7,1
+Low Risk,Clear,1.7,0
+Clear,Clear,24.0,1
+Low Risk,Clear,5.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.7,0
+Clear,Clear,23.2,1
+Clear,Clear,2.5,0
+Clear,Clear,0.8,0
+Clear,Clear,1.0,0
+Clear,Clear,0.0,0
+Clear,Clear,0.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,0.3,0
+Clear,Clear,3.8,0
+Clear,Clear,1.8,0
+Clear,Clear,2.3,0
+Clear,Clear,3.5,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,1.6,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.4,0
+Low Risk,Clear,3.9,0
+Clear,Clear,4.6,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,3.2,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Critical,Critical,90.5,1
+Clear,Clear,2.0,0
+Clear,Clear,3.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.4,0
+Clear,Clear,3.4,0
+Clear,Clear,0.8,0
+Clear,Clear,2.3,0
+Clear,Clear,0.4,0
+Clear,Clear,0.4,0
+Clear,Clear,6.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.3,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.2,0
+Clear,Clear,4.5,0
+Clear,Clear,0.4,0
+Low Risk,Clear,10.9,0
+Clear,Clear,1.5,0
+Clear,Clear,2.2,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Low Risk,Clear,9.1,0
+Clear,Clear,4.9,0
+Clear,Clear,6.2,0
+Clear,Clear,5.5,0
+Clear,Clear,4.7,0
+Clear,Clear,4.2,0
+Low Risk,Clear,9.5,0
+Clear,Clear,6.3,0
+Clear,Clear,4.5,0
+Low Risk,Clear,7.6,0
+Clear,Clear,28.4,1
+Clear,Clear,6.1,0
+Clear,Clear,7.3,0
+Clear,Clear,4.7,0
+Clear,Clear,7.3,0
+Low Risk,Clear,6.1,0
+Clear,Clear,4.9,0
+Low Risk,Clear,4.7,0
+Clear,Clear,4.7,0
+Clear,Clear,6.2,0
+Clear,Clear,5.6,0
+Clear,Clear,4.4,0
+Clear,Clear,5.8,0
+Low Risk,Clear,6.6,0
+Clear,Clear,5.6,0
+Clear,Clear,5.7,0
+Clear,Clear,4.6,0
+Clear,Clear,27.7,1
+Clear,Clear,7.5,0
+Clear,Clear,4.9,0
+Clear,Clear,5.1,0
+Low Risk,Clear,9.7,0
+Low Risk,Clear,7.5,0
+Low Risk,Clear,5.1,0
+Clear,Clear,6.2,0
+Clear,Clear,7.0,0
+Clear,Clear,6.3,0
+Clear,Clear,5.6,0
+Clear,Clear,4.7,0
+Clear,Clear,5.9,0
+Clear,Clear,5.8,0
+Clear,Clear,5.4,0
+Clear,Clear,4.5,0
+Low Risk,Clear,8.6,0
+Clear,Clear,26.3,1
+Clear,Clear,0.3,0
+Clear,Clear,2.7,0
+Low Risk,Clear,1.9,0
+Clear,Clear,1.8,0
+Clear,Clear,26.5,1
+Clear,Clear,2.9,0
+Clear,Clear,2.6,0
+Clear,Clear,0.3,0
+Clear,Clear,0.4,0
+Clear,Clear,3.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,22.4,1
+Low Risk,Clear,5.3,0
+Low Risk,Clear,8.8,0
+Clear,Clear,6.2,0
+Clear,Clear,6.8,0
+Clear,Clear,2.8,0
+Clear,Clear,1.1,0
+Clear,Clear,2.9,0
+Low Risk,Clear,4.0,0
+Clear,Clear,5.5,0
+Clear,Clear,1.9,0
+Clear,Clear,3.2,0
+Clear,Clear,0.2,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.3,0
+Clear,Clear,1.9,0
+Clear,Clear,1.1,0
+Clear,Clear,1.6,0
+Clear,Clear,0.9,0
+Clear,Clear,7.4,0
+Clear,Clear,0.9,0
+Clear,Clear,1.9,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Clear,Clear,3.2,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.7,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,3.7,0
+Low Risk,Clear,0.5,0
+Clear,Clear,3.6,0
+Clear,Low Risk,30.3,1
+Clear,Clear,2.0,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.3,0
+Clear,Clear,22.3,1
+Clear,Clear,0.2,0
+Clear,Clear,0.7,0
+Clear,Clear,22.6,1
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.7,0
+Low Risk,Clear,3.7,0
+Clear,Clear,0.3,0
+Low Risk,Clear,3.7,0
+Clear,Clear,2.6,0
+Low Risk,Clear,1.8,0
+Low Risk,Clear,8.5,0
+Clear,Clear,1.0,0
+Clear,Clear,0.2,0
+Clear,Clear,0.3,0
+Clear,Clear,3.7,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.3,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.6,0
+Clear,Clear,1.1,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.3,0
+Low Risk,Clear,2.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Clear,Clear,0.5,0
+Low Risk,Clear,5.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,26.9,1
+Low Risk,Clear,4.0,0
+Low Risk,Clear,12.4,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.5,0
+Low Risk,Clear,11.0,0
+Clear,Clear,3.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,3.4,0
+Critical,Critical,97.8,1
+Clear,Clear,1.3,0
+Low Risk,Clear,4.9,0
+Clear,Clear,0.8,0
+Clear,Clear,4.2,0
+Clear,Clear,0.9,0
+Clear,Clear,28.5,1
+Low Risk,Clear,6.4,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.9,0
+Low Risk,Clear,1.8,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,0.8,0
+Clear,Clear,0.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,0.3,0
+Clear,Clear,0.2,0
+Clear,Clear,1.6,0
+Clear,Clear,3.1,0
+Clear,Clear,0.1,0
+Clear,Clear,2.7,0
+Low Risk,Clear,1.4,0
+Clear,Clear,2.3,0
+Clear,Clear,1.5,0
+Clear,Clear,2.2,0
+Clear,Clear,3.2,0
+Low Risk,Clear,8.0,0
+Clear,Clear,2.1,0
+Clear,Clear,6.3,0
+Clear,Clear,2.0,0
+Clear,Clear,1.5,0
+Clear,Clear,2.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Clear,Clear,1.6,0
+Clear,Clear,2.1,0
+Clear,Clear,1.6,0
+Low Risk,Clear,8.0,0
+Clear,Clear,1.3,0
+Low Risk,Clear,10.8,0
+Low Risk,Clear,1.9,0
+Clear,Clear,0.1,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.5,0
+Clear,Clear,2.9,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,1.4,0
+Clear,Clear,2.0,0
+Clear,Clear,1.4,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Low Risk,Clear,7.9,0
+Clear,Clear,26.6,1
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,2.4,0
+Clear,Low Risk,31.6,1
+Clear,Clear,1.6,0
+Low Risk,Clear,3.5,0
+Clear,Clear,0.8,0
+Clear,Clear,5.8,0
+Clear,Clear,1.6,0
+Clear,Clear,2.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,4.2,0
+Clear,Clear,0.9,0
+Clear,Clear,2.0,0
+Clear,Clear,1.1,0
+Clear,Clear,2.4,0
+Clear,Clear,2.2,0
+Clear,Clear,22.8,1
+Clear,Clear,2.0,0
+Clear,Clear,0.4,0
+Clear,Clear,3.5,0
+Low Risk,Clear,3.1,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Clear,Clear,3.8,0
+Clear,Clear,29.8,1
+Clear,Clear,1.9,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,1.4,0
+Clear,Clear,4.2,0
+Clear,Clear,2.3,0
+Low Risk,Clear,0.7,0
+Clear,Clear,1.5,0
+Low Risk,Clear,23.8,1
+Clear,Clear,2.9,0
+Clear,Clear,2.0,0
+Clear,Clear,3.5,0
+Clear,Clear,0.8,0
+Clear,Clear,2.5,0
+Clear,Clear,1.5,0
+Clear,Clear,2.9,0
+Clear,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.4,0
+Low Risk,Clear,7.2,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,5.2,0
+Clear,Clear,0.7,0
+Low Risk,Clear,1.3,0
+Clear,Clear,2.5,0
+Clear,Clear,0.2,0
+Clear,Clear,2.6,0
+Clear,Clear,0.3,0
+Clear,Clear,0.6,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Clear,Clear,24.0,1
+Clear,Clear,0.5,0
+Low Risk,Clear,3.6,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.6,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Low Risk,Clear,4.6,0
+Clear,Clear,0.5,0
+Clear,Clear,1.9,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.5,0
+Clear,Clear,1.2,0
+Clear,Clear,2.8,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Clear,Clear,3.1,0
+Clear,Clear,3.6,0
+Clear,Clear,2.0,0
+Clear,Clear,7.3,0
+Clear,Clear,0.4,0
+Clear,Clear,1.0,0
+Clear,Clear,24.9,1
+Clear,Clear,23.8,1
+Clear,Clear,0.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,2.9,0
+Clear,Clear,1.4,0
+Clear,Clear,3.1,0
+Clear,Clear,3.0,0
+Clear,Clear,1.3,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.6,0
+Low Risk,Clear,0.1,0
+Clear,Clear,2.2,0
+Clear,Clear,0.3,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Clear,Clear,5.7,0
+Clear,Clear,30.0,1
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Clear,Clear,0.2,0
+Clear,Clear,1.9,0
+Clear,Clear,1.3,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.9,0
+Clear,Clear,2.4,0
+Clear,Clear,1.4,0
+Low Risk,Clear,7.6,0
+Low Risk,Clear,0.8,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.7,0
+Clear,Clear,4.0,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,29.6,1
+Clear,Clear,1.0,0
+Low Risk,Clear,2.1,0
+Clear,Clear,2.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.6,0
+Clear,Clear,2.9,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.9,0
+Low Risk,Clear,6.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,0.3,0
+Clear,Clear,2.6,0
+Clear,Clear,1.7,0
+Clear,Clear,0.1,0
+Clear,Clear,0.8,0
+Clear,Clear,1.3,0
+Clear,Clear,0.2,0
+Clear,Clear,1.0,0
+Low Risk,Clear,2.8,0
+Clear,Clear,1.4,0
+Clear,Clear,2.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,0.4,0
+Low Risk,Clear,10.5,0
+Low Risk,Clear,3.8,0
+Critical,Clear,28.9,1
+Clear,Clear,3.5,0
+Clear,Clear,4.3,0
+Clear,Clear,2.4,0
+Clear,Clear,3.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.1,0
+Clear,Clear,3.9,0
+Low Risk,Clear,7.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,2.1,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,1.3,0
+Clear,Clear,4.1,0
+Clear,Clear,1.6,0
+Clear,Clear,5.6,0
+Clear,Clear,2.9,0
+Clear,Clear,3.1,0
+Clear,Clear,0.6,0
+Clear,Clear,2.2,0
+Clear,Clear,3.5,0
+Low Risk,Clear,7.2,0
+Clear,Clear,26.6,1
+Clear,Clear,0.3,0
+Clear,Clear,0.7,0
+Clear,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,27.5,1
+Clear,Clear,0.6,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.9,0
+Clear,Clear,1.2,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.2,0
+Low Risk,Clear,5.3,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.9,0
+Clear,Clear,22.1,1
+Clear,Clear,0.3,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,1.5,0
+Clear,Clear,23.0,1
+Clear,Clear,1.2,0
+Clear,Clear,2.2,0
+Low Risk,Low Risk,30.9,1
+Clear,Clear,0.6,0
+Clear,Clear,0.3,0
+Low Risk,Clear,7.8,0
+Clear,Clear,0.3,0
+Clear,Clear,6.7,0
+Clear,Clear,2.3,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.9,0
+Low Risk,Clear,6.3,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Low Risk,Clear,2.0,0
+Clear,Clear,4.9,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,0.5,0
+Clear,Clear,25.4,1
+Clear,Clear,0.8,0
+Clear,Clear,22.9,1
+Clear,Clear,26.1,1
+Clear,Clear,3.9,0
+Clear,Clear,2.6,0
+Clear,Clear,3.0,0
+Clear,Clear,0.5,0
+Low Risk,Clear,7.4,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Low Risk,Clear,10.9,0
+Clear,Clear,0.3,0
+Clear,Clear,1.9,0
+Low Risk,Clear,6.8,0
+Clear,Clear,2.9,0
+Clear,Clear,0.5,0
+Clear,Clear,4.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.9,0
+Clear,Clear,21.4,1
+Clear,Clear,0.6,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,2.3,0
+Clear,Clear,1.1,0
+Clear,Clear,2.2,0
+Clear,Clear,1.5,0
+Low Risk,Clear,1.0,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,4.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.7,0
+Clear,Clear,4.1,0
+Clear,Clear,4.0,0
+Clear,Clear,1.7,0
+Clear,Clear,0.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,0.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.5,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.3,0
+Clear,Clear,1.2,0
+Clear,Clear,3.3,0
+Clear,Clear,1.7,0
+Low Risk,Clear,2.9,0
+Clear,Clear,8.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.5,0
+Clear,Clear,1.2,0
+Clear,Clear,2.7,0
+Critical,Critical,97.9,1
+Clear,Clear,2.5,0
+Clear,Clear,0.9,0
+Clear,Clear,2.1,0
+Low Risk,Clear,8.5,0
+Clear,Clear,2.4,0
+Critical,Critical,63.3,0
+Clear,Clear,1.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Clear,Clear,0.1,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.6,0
+Clear,Clear,1.9,0
+Low Risk,Clear,7.8,0
+Clear,Clear,0.8,0
+Clear,Clear,4.3,0
+Clear,Clear,0.7,0
+Clear,Clear,0.2,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,1.3,0
+Clear,Clear,0.6,0
+Low Risk,Clear,2.5,0
+Clear,Clear,7.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.0,0
+Low Risk,Clear,2.6,0
+Clear,Clear,1.2,0
+Low Risk,Clear,8.0,0
+Clear,Clear,1.2,0
+Clear,Clear,1.7,0
+Clear,Clear,0.3,0
+Low Risk,Clear,6.7,0
+Clear,Clear,1.2,0
+Clear,Clear,2.3,0
+Low Risk,Clear,3.7,0
+Low Risk,Clear,1.6,0
+Clear,Clear,26.3,1
+Clear,Clear,1.6,0
+Clear,Clear,2.3,0
+Clear,Clear,0.6,0
+Clear,Clear,2.1,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Clear,Clear,1.1,0
+Clear,Clear,3.7,0
+Clear,Clear,0.8,0
+Clear,Clear,6.8,0
+Clear,Clear,1.3,0
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Low Risk,Clear,10.6,0
+Clear,Clear,4.8,0
+Clear,Low Risk,30.8,1
+Clear,Clear,3.1,0
+Clear,Clear,1.0,0
+Critical,Critical,97.7,1
+Clear,Clear,1.5,0
+Clear,Clear,0.5,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.6,0
+Clear,Clear,1.2,0
+Clear,Clear,3.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.7,0
+Clear,Clear,1.8,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,3.5,0
+Clear,Clear,1.3,0
+Clear,Clear,0.4,0
+Clear,Clear,4.6,0
+Clear,Clear,2.6,0
+Clear,Clear,2.2,0
+Clear,Clear,1.8,0
+Clear,Clear,2.7,0
+Clear,Clear,1.7,0
+Low Risk,Clear,1.0,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,1.9,0
+Low Risk,Clear,8.3,0
+Low Risk,Clear,1.3,0
+Clear,Clear,1.2,0
+Low Risk,Clear,1.6,0
+Clear,Clear,1.6,0
+Clear,Clear,0.8,0
+Clear,Clear,0.3,0
+Clear,Clear,2.7,0
+Clear,Clear,0.6,0
+Low Risk,Clear,5.4,0
+Critical,Critical,98.4,1
+Clear,Clear,0.2,0
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,1.1,0
+Low Risk,Clear,1.1,0
+Clear,Clear,4.1,0
+Clear,Clear,0.8,0
+Clear,Clear,1.3,0
+Clear,Clear,2.6,0
+Clear,Clear,1.6,0
+Clear,Clear,26.8,1
+Clear,Clear,1.0,0
+Low Risk,Clear,2.4,0
+Clear,Clear,1.4,0
+Clear,Clear,3.0,0
+Clear,Clear,4.1,0
+Clear,Clear,2.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.1,0
+Low Risk,Clear,2.7,0
+Clear,Clear,2.0,0
+Low Risk,Clear,9.2,0
+Clear,Clear,1.5,0
+Clear,Clear,2.5,0
+Clear,Clear,1.8,0
+Low Risk,Clear,3.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.3,0
+Clear,Clear,2.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,3.9,0
+Clear,Clear,5.7,0
+Low Risk,Clear,1.5,0
+Clear,Clear,0.3,0
+Clear,Clear,1.7,0
+Clear,Clear,2.3,0
+Clear,Clear,0.7,0
+Clear,Clear,1.7,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.2,0
+Clear,Clear,3.6,0
+Clear,Clear,8.1,0
+Low Risk,Clear,2.9,0
+Clear,Clear,2.5,0
+Clear,Clear,3.3,0
+Clear,Clear,0.4,0
+Clear,Clear,2.8,0
+Low Risk,Clear,1.7,0
+Low Risk,Clear,1.1,0
+Clear,Clear,0.2,0
+Clear,Clear,3.7,0
+Clear,Clear,1.1,0
+Clear,Clear,0.4,0
+Clear,Clear,2.3,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.3,0
+Clear,Clear,1.1,0
+Low Risk,Clear,6.2,0
+Clear,Clear,2.1,0
+Critical,Critical,98.2,1
+Clear,Clear,1.1,0
+Clear,Clear,1.2,0
+Clear,Clear,1.2,0
+Low Risk,Clear,11.9,0
+Clear,Clear,0.8,0
+Clear,Clear,0.1,0
+Low Risk,Clear,1.4,0
+Low Risk,Clear,2.8,0
+Clear,Clear,3.7,0
+Clear,Clear,21.8,1
+Clear,Clear,2.1,0
+Low Risk,Clear,2.4,0
+Low Risk,Clear,2.1,0
+Clear,Clear,1.5,0
+Clear,Clear,0.8,0
+Critical,Critical,98.4,1
+Clear,Clear,1.3,0
+Clear,Clear,0.9,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,3.8,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,1.2,0
+Low Risk,Clear,3.8,0
+Clear,Clear,1.7,0
+Clear,Clear,2.0,0
+Clear,Clear,0.3,0
+Clear,Clear,24.5,1
+Clear,Clear,1.4,0
+Clear,Clear,0.1,0
+Clear,Clear,0.3,0
+Clear,Clear,1.7,0
+Clear,Clear,1.6,0
+Low Risk,Clear,1.6,0
+Low Risk,Clear,9.8,0
+Clear,Clear,0.7,0
+Low Risk,Clear,3.2,0
+Clear,Clear,0.5,0
+Clear,Clear,2.5,0
+Clear,Clear,0.3,0
+Low Risk,Clear,2.3,0
+Clear,Clear,2.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.8,0
+Clear,Clear,0.1,0
+Clear,Clear,0.3,0
+Clear,Clear,1.4,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,8.4,0
+Clear,Clear,27.4,1
+Clear,Clear,1.9,0
+Clear,Clear,3.8,0
+Low Risk,Clear,1.4,0
+Clear,Clear,0.7,0
+Clear,Clear,6.1,0
+Clear,Clear,5.9,0
+Low Risk,Clear,3.6,0
+Clear,Clear,0.9,0
+Clear,Clear,5.1,0
+Clear,Clear,0.3,0
+Clear,Clear,1.1,0
+Clear,Clear,2.0,0
+Low Risk,Clear,1.5,0
+Clear,Clear,4.8,0
+Clear,Clear,4.4,0
+Clear,Clear,6.2,0
+Clear,Clear,6.1,0
+Clear,Clear,7.4,0
+Low Risk,Clear,10.3,0
+Clear,Clear,4.9,0
+Clear,Clear,4.5,0
+Clear,Clear,5.9,0
+Low Risk,Clear,6.3,0
+Clear,Clear,4.3,0
+Clear,Clear,4.6,0
+Clear,Low Risk,30.6,1
+Clear,Clear,6.5,0
+Clear,Clear,4.6,0
+Clear,Clear,4.7,0
+Low Risk,Clear,10.4,0
+Clear,Clear,5.8,0
+Clear,Clear,4.9,0
+Clear,Clear,4.6,0
+Clear,Clear,6.5,0
+Clear,Clear,5.6,0
+Clear,Low Risk,30.8,1
+Clear,Clear,7.4,0
+Clear,Clear,26.6,1
+Clear,Clear,6.1,0
+Clear,Clear,6.4,0
+Clear,Clear,9.4,0
+Clear,Clear,9.0,0
+Clear,Clear,5.2,0
+Clear,Clear,7.7,0
+Clear,Clear,10.6,0
+Clear,Clear,7.7,0
+Clear,Clear,5.3,0
+Low Risk,Low Risk,36.2,1
+Clear,Clear,5.9,0
+Clear,Clear,5.7,0
+Clear,Clear,7.1,0
+Clear,Clear,5.4,0
+Low Risk,Clear,5.8,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.1,0
+Clear,Clear,3.4,0
+Clear,Clear,0.3,0
+Clear,Clear,0.2,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.5,0
+Clear,Clear,1.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,29.7,1
+Clear,Clear,0.6,0
+Clear,Clear,5.6,0
+Clear,Clear,0.6,0
+Low Risk,Low Risk,30.1,1
+Low Risk,Clear,10.4,0
+Clear,Clear,1.8,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.0,0
+Clear,Clear,1.7,0
+Low Risk,Clear,5.4,0
+Clear,Clear,1.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,2.8,0
+Clear,Low Risk,31.4,1
+Clear,Clear,0.2,0
+Clear,Clear,0.5,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.0,0
+Clear,Clear,3.5,0
+Clear,Clear,0.9,0
+Clear,Clear,3.5,0
+Clear,Clear,2.1,0
+Low Risk,Clear,6.7,0
+Low Risk,Clear,3.1,0
+Low Risk,Clear,7.9,0
+Clear,Clear,8.0,0
+Clear,Clear,2.0,0
+Low Risk,Clear,10.3,0
+Clear,Clear,3.0,0
+Clear,Clear,0.0,0
+Clear,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,0.2,0
+Clear,Clear,0.7,0
+Clear,Clear,1.9,0
+Clear,Clear,1.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.4,0
+Clear,Clear,1.9,0
+Clear,Clear,0.4,0
+Clear,Clear,1.0,0
+Low Risk,Clear,3.2,0
+Clear,Clear,1.5,0
+Clear,Clear,0.4,0
+Clear,Clear,1.8,0
+Clear,Clear,2.1,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Low Risk,Clear,0.9,0
+Clear,Clear,0.3,0
+Low Risk,Clear,4.5,0
+Low Risk,Clear,2.8,0
+Clear,Clear,5.2,0
+Clear,Clear,2.8,0
+Clear,Clear,22.6,1
+Clear,Clear,2.0,0
+Clear,Clear,1.6,0
+Clear,Clear,1.7,0
+Clear,Clear,1.1,0
+Low Risk,Clear,3.0,0
+Low Risk,Clear,7.6,0
+Clear,Clear,0.9,0
+Clear,Clear,1.3,0
+Clear,Clear,1.9,0
+Low Risk,Clear,0.8,0
+Clear,Clear,26.1,1
+Clear,Clear,1.8,0
+Low Risk,Clear,4.0,0
+Clear,Clear,0.5,0
+Low Risk,Clear,9.5,0
+Clear,Clear,0.5,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.2,0
+Clear,Clear,1.4,0
+Clear,Clear,0.3,0
+Low Risk,Clear,10.1,0
+Low Risk,Clear,9.9,0
+Clear,Clear,3.2,0
+Clear,Clear,2.0,0
+Clear,Clear,1.2,0
+Low Risk,Clear,2.6,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Clear,Clear,0.5,0
+Clear,Clear,0.8,0
+Clear,Clear,3.2,0
+Clear,Clear,2.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.2,0
+Low Risk,Clear,5.7,0
+Clear,Clear,2.4,0
+Clear,Clear,2.5,0
+Low Risk,Clear,0.8,0
+Clear,Clear,0.5,0
+Clear,Clear,0.7,0
+Clear,Clear,0.4,0
+Low Risk,Clear,7.4,0
+Clear,Clear,1.8,0
+Low Risk,Clear,0.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,10.5,0
+Clear,Clear,23.1,1
+Clear,Clear,2.5,0
+Clear,Clear,1.5,0
+Clear,Clear,2.2,0
+Clear,Clear,6.2,0
+Low Risk,Clear,1.0,0
+Clear,Clear,2.3,0
+Clear,Clear,0.6,0
+Clear,Clear,0.2,0
+Clear,Clear,1.3,0
+Clear,Clear,0.5,0
+Clear,Clear,2.5,0
+Clear,Clear,1.2,0
+Clear,Clear,3.7,0
+Low Risk,Clear,27.3,1
+Clear,Clear,3.6,0
+Clear,Clear,0.8,0
+Clear,Clear,2.0,0
+Clear,Clear,2.8,0
+Clear,Clear,0.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.5,0
+Clear,Clear,1.7,0
+Clear,Clear,0.9,0
+Low Risk,Clear,2.9,0
+Clear,Clear,1.6,0
+Low Risk,Clear,7.3,0
+Clear,Clear,1.4,0
+Clear,Clear,0.2,0
+Clear,Clear,1.2,0
+Clear,Clear,2.1,0
+Clear,Clear,1.9,0
+Low Risk,Clear,1.1,0
+Clear,Clear,1.8,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.0,0
+Clear,Clear,23.8,1
+Clear,Clear,0.2,0
+Clear,Clear,1.9,0
+Clear,Clear,1.5,0
+Low Risk,Clear,13.1,0
+Clear,Clear,0.7,0
+Clear,Clear,2.3,0
+Clear,Clear,1.2,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,6.3,0
+Clear,Clear,1.3,0
+Low Risk,Clear,5.0,0
+Clear,Clear,1.0,0
+Clear,Clear,0.3,0
+Clear,Clear,2.1,0
+Clear,Clear,1.2,0
+Low Risk,Clear,8.1,0
+Clear,Clear,1.0,0
+Low Risk,Clear,6.8,0
+Clear,Clear,1.5,0
+Clear,Clear,3.0,0
+Low Risk,Clear,0.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.9,0
+Clear,Clear,27.2,1
+Low Risk,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,0.7,0
+Clear,Clear,1.4,0
+Clear,Clear,0.7,0
+Low Risk,Clear,7.3,0
+Clear,Clear,0.9,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.9,0
+Clear,Clear,3.6,0
+Clear,Clear,3.7,0
+Clear,Clear,1.6,0
+Clear,Clear,1.4,0
+Clear,Clear,0.4,0
+Clear,Clear,1.3,0
+Clear,Clear,26.3,1
+Clear,Clear,1.1,0
+Low Risk,Clear,2.5,0
+Clear,Clear,1.0,0
+Clear,Clear,2.0,0
+Clear,Clear,3.8,0
+Clear,Clear,26.4,1
+Clear,Clear,1.7,0
+Clear,Clear,2.6,0
+Clear,Clear,0.7,0
+Low Risk,Clear,10.2,0
+Clear,Clear,2.3,0
+Clear,Clear,1.6,0
+Low Risk,Clear,2.7,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.0,0
+Clear,Clear,3.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.8,0
+Clear,Clear,2.2,0
+Clear,Clear,4.3,0
+Clear,Clear,1.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,2.0,0
+Clear,Clear,1.0,0
+Clear,Clear,2.8,0
+Low Risk,Clear,2.6,0
+Clear,Clear,3.6,0
+Low Risk,Clear,1.7,0
+Clear,Clear,0.6,0
+Clear,Clear,4.6,0
+Low Risk,Clear,0.9,0
+Low Risk,Clear,11.0,0
+Clear,Clear,3.0,0
+Low Risk,Clear,11.4,0
+Clear,Clear,1.8,0
+Low Risk,Clear,2.2,0
+Clear,Clear,2.2,0
+Clear,Clear,0.2,0
+Clear,Clear,5.8,0
+Clear,Clear,1.8,0
+Clear,Clear,1.2,0
+Clear,Clear,0.6,0
+Clear,Clear,1.1,0
+Clear,Clear,2.1,0
+Clear,Clear,0.8,0
+Clear,Clear,0.4,0
+Clear,Clear,0.6,0
+Low Risk,Clear,1.7,0
+Low Risk,Clear,3.6,0
+Low Risk,Clear,2.1,0
+Low Risk,Clear,1.4,0
+Clear,Clear,1.6,0
+Critical,Critical,100.0,1
+Clear,Clear,2.7,0
+Clear,Clear,21.5,1
+Clear,Clear,0.8,0
+Clear,Clear,0.8,0
+Clear,Clear,1.4,0
+Clear,Clear,2.0,0
+Clear,Clear,1.7,0
+Clear,Clear,2.8,0
+Low Risk,Low Risk,34.0,1
+Clear,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,2.3,0
+Clear,Clear,2.8,0
+Clear,Clear,0.4,0
+Clear,Clear,1.2,0
+Low Risk,Clear,10.4,0
+Clear,Clear,1.4,0
+Clear,Clear,1.6,0
+Clear,Clear,0.5,0
+Clear,Clear,2.0,0
+Clear,Clear,0.6,0
+Clear,Clear,0.5,0
+Clear,Clear,1.1,0
+Clear,Clear,2.1,0
+Low Risk,Clear,1.5,0
+Clear,Clear,1.1,0
+Clear,Clear,1.1,0
+Clear,Clear,0.5,0
+Low Risk,Clear,2.1,0
+Clear,Clear,0.8,0
+Clear,Clear,3.3,0
+Clear,Clear,1.5,0
+Low Risk,Clear,11.0,0
+Clear,Clear,24.1,1
+Clear,Clear,2.2,0
+Clear,Clear,27.6,1
+Clear,Clear,1.3,0
+Clear,Clear,4.2,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,2.0,0
+Clear,Clear,1.0,0
+Clear,Clear,1.0,0
+Low Risk,Clear,12.6,0
+Clear,Clear,6.8,0
+Low Risk,Clear,3.8,0
+Clear,Clear,25.9,1
+Low Risk,Clear,1.3,0
+Clear,Clear,1.7,0
+Clear,Clear,0.8,0
+Low Risk,Clear,7.4,0
+Clear,Clear,5.5,0
+Clear,Clear,1.2,0
+Clear,Clear,0.7,0
+Clear,Clear,2.7,0
+Clear,Clear,1.1,0
+Clear,Clear,1.5,0
+Clear,Clear,1.4,0
+Low Risk,Clear,1.8,0
+Clear,Clear,1.1,0
+Clear,Clear,0.3,0
+Clear,Clear,8.2,0
+Clear,Clear,25.3,1
+Low Risk,Clear,6.3,0

@@ -117,7 +117,7 @@ def engineer_features(
     # 1. Weight discrepancy
     # ------------------------------------------------------------------
     weight_diff          = measured_weight - declared_weight
-    weight_diff_pct      = abs(weight_diff) / (declared_weight + 0.001) * 100.0
+    weight_diff_pct      = weight_diff / (declared_weight + 0.001)
     weight_underreported = int(measured_weight > declared_weight * 1.2)
     weight_overreported  = int(declared_weight > measured_weight * 1.2)
 
@@ -256,7 +256,7 @@ def engineer_features_batch(
     # ── 1. Weight discrepancy ─────────────────────────────────────────────
     df["weight_diff"]     = df["Measured_Weight"] - df["Declared_Weight"]
     df["weight_diff_pct"] = (
-        df["weight_diff"].abs() / (df["Declared_Weight"] + 0.001) * 100
+        (df["Measured_Weight"] - df["Declared_Weight"]) / (df["Declared_Weight"] + 0.001)
     )
     df["weight_underreported"] = (
         df["Measured_Weight"] > df["Declared_Weight"] * 1.2

@@ -93,7 +93,7 @@ def _get_rule_flag(ctx: RawContext, value_per_kg_99th: float) -> int:
     Each condition contributes 1; total is clipped to [0, 1].
     """
     flags = 0
-    flags += int(ctx.weight_diff_pct > 30)
+    flags += int(abs(ctx.weight_diff_pct) > 0.30)
     flags += ctx.dwell_flag_120
     flags += int(ctx.value_per_kg > value_per_kg_99th)
     flags += int(ctx.exporter_risk_score > 0.05)
@@ -115,10 +115,10 @@ def _generate_explanation(ctx: RawContext, risk_level: str, score: float) -> str
     """
     parts: list[str] = []
 
-    if ctx.weight_diff_pct > 30:
-        parts.append(f"Weight discrepancy of {ctx.weight_diff_pct:.1f}%")
-    elif ctx.weight_diff_pct > 15:
-        parts.append(f"Moderate weight difference of {ctx.weight_diff_pct:.1f}%")
+    if abs(ctx.weight_diff_pct) > 0.30:
+        parts.append(f"Large weight discrepancy detected ({ctx.weight_diff_pct:.1%})")
+    elif abs(ctx.weight_diff_pct) > 0.15:
+        parts.append(f"Moderate weight discrepancy ({ctx.weight_diff_pct:.1%})")
 
     if ctx.dwell_flag_120:
         parts.append("Extended dwell time (>120 hrs)")
@@ -260,7 +260,7 @@ class BatchResult:
 def _vectorised_rule_flags(df: pd.DataFrame, value_per_kg_99th: float) -> np.ndarray:
     """Mirrors get_rule_flags() from src/07_generate_predictions.py."""
     flags = np.zeros(len(df))
-    flags += (df["weight_diff_pct"] > 30).astype(int).values
+    flags += (df["weight_diff_pct"].abs() > 0.30).astype(int).values
     flags += df["dwell_flag_120"].values
     flags += (df["value_per_kg"] > value_per_kg_99th).astype(int).values
     flags += (df["exporter_risk_score"] > 0.05).astype(int).values
@@ -273,10 +273,10 @@ def _vectorised_explanations(df: pd.DataFrame) -> list[str]:
     for _, row in df.iterrows():
         parts: list[str] = []
 
-        if row["weight_diff_pct"] > 30:
-            parts.append(f"Weight discrepancy of {row['weight_diff_pct']:.1f}%")
-        elif row["weight_diff_pct"] > 15:
-            parts.append(f"Moderate weight difference of {row['weight_diff_pct']:.1f}%")
+        if abs(row["weight_diff_pct"]) > 0.30:
+            parts.append(f"Weight discrepancy of {abs(row['weight_diff_pct']):.1%}")
+        elif abs(row["weight_diff_pct"]) > 0.15:
+            parts.append(f"Moderate weight difference of {abs(row['weight_diff_pct']):.1%}")
 
         if row["dwell_flag_120"]:
             parts.append("Extended dwell time (>120 hrs)")
@@ -332,13 +332,16 @@ def predict_batch(df: pd.DataFrame, bundle: ModelBundle) -> BatchResult:
     xgb_proba = bundle.xgboost_model.predict_proba(X_scaled)[:, 1]
 
     # ── 5. Isolation Forest — normalised anomaly score ────────────────────
+    #   For batch predictions, use batch self-normalisation (min/max of the
+    #   current batch) to match the original pipeline (07_generate_predictions).
     iso_raw = bundle.iso_forest.score_samples(X_scaled)
-    span = bundle.iso_score_max - bundle.iso_score_min
+    batch_min = iso_raw.min()
+    batch_max = iso_raw.max()
+    span = batch_max - batch_min
     if span < 1e-9:
         iso_norm = np.full(n, 0.5)
     else:
-        iso_norm = 1.0 - (iso_raw - bundle.iso_score_min) / span
-        iso_norm = np.clip(iso_norm, 0.0, 1.0)
+        iso_norm = 1.0 - (iso_raw - batch_min) / span
 
     # ── 6. Rule flags ─────────────────────────────────────────────────────
     rule_flags = _vectorised_rule_flags(eng_df, bundle.value_per_kg_99th)

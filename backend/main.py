@@ -442,7 +442,7 @@ async def info():
         "risk level, anomaly flag, and explanation summary."
     ),
 )
-async def predict_endpoint(request: ContainerRequest):
+async def predict_endpoint(request: ContainerRequest, persist: bool = True):
     """
     Run the SmartContainer Risk Engine on a single shipment.
 
@@ -477,13 +477,14 @@ async def predict_endpoint(request: ContainerRequest):
         ) from exc
 
     # Persist the result so GET /containers and /flag-container can access it
-    db.upsert_container(
-        container_id = str(result.container_id),
-        risk_score   = result.risk_score,
-        risk_level   = result.risk_level,
-        anomaly_flag = result.anomaly_flag,
-        explanation  = result.explanation_summary,
-    )
+    if persist:
+        db.upsert_container(
+            container_id = str(result.container_id),
+            risk_score   = result.risk_score,
+            risk_level   = result.risk_level,
+            anomaly_flag = result.anomaly_flag,
+            explanation  = result.explanation_summary,
+        )
 
     return PredictionResponse(
         Container_ID        = result.container_id,

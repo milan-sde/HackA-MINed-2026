@@ -1,0 +1,12 @@
+SmartContainer Risk Engine — Classification Report
+============================================================
+
+              precision    recall  f1-score   support
+
+       Clear     0.7947    0.9937    0.8831      6646
+    Low Risk     0.5816    0.0323    0.0613      1762
+    Critical     0.9863    0.9863    0.9863        73
+
+    accuracy                         0.7939      8481
+   macro avg     0.7875    0.6708    0.6436      8481
+weighted avg     0.7521    0.7939    0.7133      8481

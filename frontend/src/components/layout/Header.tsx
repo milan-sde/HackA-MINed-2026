@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import {
-  Bell, RefreshCw, Sun, Moon, Download, ChevronDown,
+  Bell, RefreshCw, Sun, Moon, ChevronDown,
   User, LogOut, Settings, Clock, AlertTriangle, CheckCircle2,
   Info, Siren,
 } from "lucide-react";
@@ -118,10 +118,6 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
     toast.success("Data refreshed", { description: "All data has been updated." });
   }
 
-  function handleExport(format: string) {
-    toast.info(`Exporting as ${format}...`, { description: "Your download will start shortly." });
-  }
-
   const timeStr = lastUpdated.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 
   return (
@@ -150,30 +146,6 @@ export default function Header({ title, subtitle, onRefresh, isRefreshing }: Hea
 
       {/* Upload CSV */}
       <NavbarUploadButton />
-
-      {/* Export */}
-      <DropdownMenu>
-        <DropdownMenuTrigger asChild>
-          <Button variant="outline" size="sm" className="gap-1.5">
-            <Download className="h-3.5 w-3.5" />
-            <span className="hidden sm:inline">Export</span>
-            <ChevronDown className="h-3 w-3 opacity-60" />
-          </Button>
-        </DropdownMenuTrigger>
-        <DropdownMenuContent align="end">
-          <DropdownMenuLabel>Export Options</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem onClick={() => handleExport("CSV")}>
-            <Download className="h-4 w-4 mr-2" />Export as CSV
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => handleExport("PDF")}>
-            <Download className="h-4 w-4 mr-2" />Export as PDF
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => handleExport("Print")}>
-            <Download className="h-4 w-4 mr-2" />Print Dashboard
-          </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
 
       {/* Theme toggle */}
       <Tooltip>

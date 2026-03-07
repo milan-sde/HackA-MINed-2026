@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { ChevronUp, ChevronDown, ChevronsUpDown, Search, Filter, AlertCircle, Eye, Flag, BrainCircuit, Scale, Clock, DollarSign, UserX, CheckCircle2 } from "lucide-react";
+import { ChevronUp, ChevronDown, ChevronsUpDown, Search, AlertCircle, Eye, Flag, BrainCircuit, Scale, Clock, DollarSign, UserX, CheckCircle2, Download } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -8,13 +8,14 @@ import { Progress } from "@/components/ui/progress";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import {
   DropdownMenu, DropdownMenuContent, DropdownMenuCheckboxItem,
-  DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { cn, RISK_COLORS } from "@/lib/utils";
 import type { Container, RiskLevel } from "@/types";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { toast } from "sonner";
 import { flagContainer as apiFlagContainer, getAnomalyType, getRecommendedAction, ANOMALY_TYPE_META, type AnomalyType } from "@/services/api";
+import { exportContainersCSV } from "@/lib/export";
 
 const ANOMALY_ICONS: Record<AnomalyType, typeof Scale> = {
   weight_mismatch: Scale,
@@ -81,6 +82,12 @@ export default function ContainersTable({ containers, loading }: ContainersTable
     }
   }
 
+  function handleExportFiltered() {
+    const count = exportContainersCSV(filtered, { filenamePrefix: "containers_filtered" });
+    if (count > 0) toast.success(`Exported ${count.toLocaleString()} containers to CSV`);
+    else toast.warning("No containers to export");
+  }
+
   const filtered = useMemo(() => {
     let result = containers;
     if (search) {
@@ -130,34 +137,61 @@ export default function ContainersTable({ containers, loading }: ContainersTable
                 onChange={(e) => { setSearch(e.target.value); setPage(1); }}
               />
             </div>
-            {/* Risk filter */}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" size="sm" className="h-8 gap-1.5 text-xs">
-                  <Filter className="h-3 w-3" />
-                  Risk Level
-                  {riskFilter.length > 0 && (
-                    <Badge variant="secondary" className="ml-1 h-4 px-1 text-[10px]">{riskFilter.length}</Badge>
-                  )}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuLabel>Filter by Risk Level</DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                {(["Critical", "Low Risk", "Clear"] as RiskLevel[]).map((level) => (
-                  <DropdownMenuCheckboxItem
+
+            {/* Risk level pills */}
+            <div className="flex items-center gap-1.5 rounded-lg border border-border bg-muted/30 p-1">
+              {([
+                { level: "Critical" as RiskLevel, color: "#EF4444", activeBg: "bg-red-500/20", activeText: "text-red-400", activeBorder: "border-red-500/40" },
+                { level: "Low Risk" as RiskLevel, color: "#F59E0B", activeBg: "bg-amber-500/20", activeText: "text-amber-400", activeBorder: "border-amber-500/40" },
+                { level: "Clear" as RiskLevel, color: "#10B981", activeBg: "bg-emerald-500/20", activeText: "text-emerald-400", activeBorder: "border-emerald-500/40" },
+              ]).map(({ level, color, activeBg, activeText, activeBorder }) => {
+                const isActive = riskFilter.includes(level);
+                const count = containers.filter((c) => c.riskLevel === level).length;
+                return (
+                  <button
                     key={level}
-                    checked={riskFilter.includes(level)}
-                    onCheckedChange={() => toggleRiskFilter(level)}
+                    onClick={() => toggleRiskFilter(level)}
+                    className={cn(
+                      "flex items-center gap-1.5 rounded-md px-2.5 py-1.5 text-xs font-medium transition-all duration-150",
+                      isActive
+                        ? `${activeBg} ${activeText} ${activeBorder} border shadow-sm`
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/60 border border-transparent"
+                    )}
                   >
-                    <span className="flex items-center gap-2">
-                      <div className="h-2 w-2 rounded-full" style={{ background: RISK_COLORS[level] }} />
-                      {level}
+                    <div
+                      className={cn("h-2 w-2 rounded-full transition-all", isActive && "ring-2 ring-offset-1 ring-offset-background")}
+                      style={{ background: color, boxShadow: isActive ? `0 0 6px ${color}60` : undefined }}
+                    />
+                    {level}
+                    <span className={cn(
+                      "ml-0.5 min-w-[18px] rounded-full px-1.5 py-0.5 text-center text-[10px] font-bold leading-none",
+                      isActive ? `${activeBg} ${activeText}` : "bg-muted text-muted-foreground"
+                    )}>
+                      {count}
                     </span>
-                  </DropdownMenuCheckboxItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
+                  </button>
+                );
+              })}
+              {riskFilter.length > 0 && (
+                <button
+                  onClick={() => { setRiskFilter([]); setPage(1); }}
+                  className="ml-0.5 rounded-md px-2 py-1.5 text-[10px] font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
+                >
+                  Clear
+                </button>
+              )}
+            </div>
+
+            {/* Export filtered */}
+            <Button
+              size="sm"
+              className="h-8 gap-1.5 text-xs font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-500/20"
+              onClick={handleExportFiltered}
+              disabled={filtered.length === 0}
+            >
+              <Download className="h-3.5 w-3.5" />
+              Export CSV
+            </Button>
           </div>
         </div>
       </CardHeader>

@@ -1,7 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import { Progress } from "@/components/ui/progress";
 import { cn } from "@/lib/utils";
-import { ShieldCheck } from "lucide-react";
+import { Ship } from "lucide-react";
 
 const STAGES = [
   { pct: 15, label: "Connecting to server…" },
@@ -71,8 +71,8 @@ export default function LoadingScreen({ finished }: LoadingScreenProps) {
       <div className="flex flex-col items-center gap-6 w-80">
         {/* Logo / icon */}
         <div className="relative">
-          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-blue-400 shadow-lg shadow-blue-500/25">
-            <ShieldCheck className="h-8 w-8 text-white" />
+          <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-cyan-500/20 shadow-lg shadow-cyan-500/25">
+            <Ship className="h-8 w-8 text-white" />
           </div>
           {!finished && (
             <span className="absolute -bottom-1 -right-1 h-4 w-4 rounded-full border-2 border-background bg-amber-400 animate-pulse" />

@@ -3,9 +3,12 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Badge } from "@/components/ui/badge";
-import { Download, FileText, Table2, Printer } from "lucide-react";
+import { Table2, AlertTriangle as AlertTriangleIcon } from "lucide-react";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { deriveAnomalyPatterns } from "@/services/api";
+import { exportContainersCSV } from "@/lib/export";
+import { cn } from "@/lib/utils";
+import type { RiskLevel } from "@/types";
 import { toast } from "sonner";
 
 function StatRow({ label, value, highlight = false }: { label: string; value: string | number; highlight?: boolean }) {
@@ -20,6 +23,8 @@ function StatRow({ label, value, highlight = false }: { label: string; value: st
 export default function Reports() {
   const containers = useDashboardStore((s) => s.containers);
   const [exporting, setExporting] = useState(false);
+  const [exportRiskFilter, setExportRiskFilter] = useState<RiskLevel[]>([]);
+  const [exportAnomalyOnly, setExportAnomalyOnly] = useState(false);
 
   const total = containers.length;
   const critical = containers.filter(c => c.riskLevel === "Critical").length;
@@ -31,28 +36,33 @@ export default function Reports() {
 
   const anomalyPatterns = useMemo(() => deriveAnomalyPatterns(containers), [containers]);
 
-  function exportCSV() {
-    if (total === 0) {
-      toast.error("No data to export. Upload a CSV first.");
-      return;
-    }
+  const exportOpts = {
+    riskLevels: exportRiskFilter.length > 0 ? exportRiskFilter : undefined,
+    anomalyOnly: exportAnomalyOnly,
+    filenamePrefix: "smartcontainer_report",
+  };
+
+  // Preview how many containers match current filter
+  const exportPreviewCount = useMemo(() => {
+    let result = containers;
+    if (exportRiskFilter.length > 0) result = result.filter((c) => exportRiskFilter.includes(c.riskLevel));
+    if (exportAnomalyOnly) result = result.filter((c) => c.anomalyFlag);
+    return result.length;
+  }, [containers, exportRiskFilter, exportAnomalyOnly]);
+
+  function handleExportCSV() {
+    if (total === 0) { toast.error("No data to export. Upload a CSV first."); return; }
     setExporting(true);
-    const headers = ["ID", "Risk Score", "Risk Level", "Anomaly", "Origin", "Destination", "HS Code", "Declared Value", "Dwell Time"];
-    const rows = containers.map(c => [
-      c.id, c.riskScore, c.riskLevel, c.anomalyFlag ? "Yes" : "No",
-      c.originCountry, c.destinationCountry, c.hsCode,
-      c.declaredValue.toFixed(2), c.dwellTimeHours.toFixed(0),
-    ]);
-    const csv = [headers, ...rows].map(r => r.join(",")).join("\n");
-    const blob = new Blob([csv], { type: "text/csv" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = `smartcontainer_report_${new Date().toISOString().split("T")[0]}.csv`;
-    a.click();
-    URL.revokeObjectURL(url);
+    const count = exportContainersCSV(containers, exportOpts);
     setExporting(false);
-    toast.success("CSV exported successfully");
+    if (count > 0) toast.success(`CSV exported — ${count.toLocaleString()} containers`);
+    else toast.warning("No containers match the selected filters");
+  }
+
+  function toggleExportRisk(level: RiskLevel) {
+    setExportRiskFilter((prev) =>
+      prev.includes(level) ? prev.filter((x) => x !== level) : [...prev, level]
+    );
   }
 
   const safePct = (n: number) => total > 0 ? ((n / total) * 100).toFixed(1) : "0";
@@ -115,46 +125,93 @@ export default function Reports() {
         <CardHeader>
           <CardTitle>Export</CardTitle>
         </CardHeader>
-        <CardContent>
+        <CardContent className="space-y-4">
+          {/* Risk-level filter for export */}
+          {total > 0 && (
+            <div className="space-y-3">
+              <span className="text-xs text-muted-foreground font-medium">Filter export by risk level:</span>
+              <div className="flex flex-wrap items-center gap-2">
+                <div className="flex items-center gap-1.5 rounded-lg border border-border bg-muted/30 p-1">
+                  {([
+                    { level: "Critical" as RiskLevel, color: "#EF4444", activeBg: "bg-red-500/20", activeText: "text-red-400", activeBorder: "border-red-500/40", count: critical },
+                    { level: "Low Risk" as RiskLevel, color: "#F59E0B", activeBg: "bg-amber-500/20", activeText: "text-amber-400", activeBorder: "border-amber-500/40", count: lowRisk },
+                    { level: "Clear" as RiskLevel, color: "#10B981", activeBg: "bg-emerald-500/20", activeText: "text-emerald-400", activeBorder: "border-emerald-500/40", count: clear },
+                  ]).map(({ level, color, activeBg, activeText, activeBorder, count: levelCount }) => {
+                    const isActive = exportRiskFilter.includes(level);
+                    return (
+                      <button
+                        key={level}
+                        onClick={() => toggleExportRisk(level)}
+                        className={cn(
+                          "flex items-center gap-1.5 rounded-md px-3 py-2 text-xs font-medium transition-all duration-150",
+                          isActive
+                            ? `${activeBg} ${activeText} ${activeBorder} border shadow-sm`
+                            : "text-muted-foreground hover:text-foreground hover:bg-muted/60 border border-transparent"
+                        )}
+                      >
+                        <div
+                          className={cn("h-2.5 w-2.5 rounded-full transition-all", isActive && "ring-2 ring-offset-1 ring-offset-background")}
+                          style={{ background: color, boxShadow: isActive ? `0 0 6px ${color}60` : undefined }}
+                        />
+                        {level}
+                        <span className={cn(
+                          "ml-0.5 min-w-[20px] rounded-full px-1.5 py-0.5 text-center text-[10px] font-bold leading-none",
+                          isActive ? `${activeBg} ${activeText}` : "bg-muted text-muted-foreground"
+                        )}>
+                          {levelCount}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+
+                <button
+                  onClick={() => setExportAnomalyOnly((v) => !v)}
+                  className={cn(
+                    "flex items-center gap-1.5 rounded-md border px-3 py-2 text-xs font-medium transition-all duration-150",
+                    exportAnomalyOnly
+                      ? "bg-amber-500/20 text-amber-400 border-amber-500/40 shadow-sm"
+                      : "text-muted-foreground hover:text-foreground hover:bg-muted/60 border-border"
+                  )}
+                >
+                  <AlertTriangleIcon className="h-3 w-3" />
+                  Anomaly Only
+                  <span className={cn(
+                    "ml-0.5 min-w-[20px] rounded-full px-1.5 py-0.5 text-center text-[10px] font-bold leading-none",
+                    exportAnomalyOnly ? "bg-amber-500/20 text-amber-400" : "bg-muted text-muted-foreground"
+                  )}>
+                    {anomalies}
+                  </span>
+                </button>
+
+                {(exportRiskFilter.length > 0 || exportAnomalyOnly) && (
+                  <button
+                    onClick={() => { setExportRiskFilter([]); setExportAnomalyOnly(false); }}
+                    className="rounded-md px-2.5 py-2 text-xs font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 transition-colors"
+                  >
+                    Clear All
+                  </button>
+                )}
+              </div>
+            </div>
+          )}
+
           <div className="flex flex-wrap gap-3">
             <Button
               variant="default"
-              className="gap-2"
-              onClick={exportCSV}
+              size="lg"
+              className="gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-semibold shadow-md shadow-emerald-500/20 px-6"
+              onClick={handleExportCSV}
               disabled={exporting || total === 0}
             >
-              <Table2 className="h-4 w-4" />
+              <Table2 className="h-5 w-5" />
               {exporting ? "Exporting..." : "Export CSV"}
             </Button>
-            <Button
-              variant="outline"
-              className="gap-2"
-              onClick={() => { window.print(); toast.success("Print dialog opened"); }}
-            >
-              <Printer className="h-4 w-4" />
-              Print Report
-            </Button>
-            <Button
-              variant="outline"
-              className="gap-2"
-              onClick={() => toast.info("PDF export requires server-side rendering")}
-            >
-              <FileText className="h-4 w-4" />
-              Export PDF
-            </Button>
-            <Button
-              variant="outline"
-              className="gap-2"
-              onClick={() => toast.info("JSON download ready")}
-            >
-              <Download className="h-4 w-4" />
-              Export JSON
-            </Button>
           </div>
-          <Separator className="my-4" />
+          <Separator className="my-2" />
           <p className="text-xs text-muted-foreground">
             {total > 0
-              ? `CSV export includes all ${total.toLocaleString()} containers with risk scores, anomaly flags, and metadata.`
+              ? `${exportPreviewCount.toLocaleString()} of ${total.toLocaleString()} containers will be exported${exportRiskFilter.length > 0 ? ` (filtered: ${exportRiskFilter.join(", ")})` : ""}${exportAnomalyOnly ? " — anomaly only" : ""}.`
               : "Upload data to enable exports."}
           </p>
         </CardContent>

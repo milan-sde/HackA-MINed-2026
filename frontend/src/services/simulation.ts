@@ -104,7 +104,7 @@ function buildKeyRiskFactors(
 async function predictSingle(
   payload: ReturnType<typeof generateContainerPayload>,
 ): Promise<Container> {
-  const res = await fetch(`${API_BASE}/predict`, {
+  const res = await fetch(`${API_BASE}/predict?persist=false`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),
@@ -200,7 +200,7 @@ async function tick() {
     const payload = generateContainerPayload();
     const container = await predictSingle(payload);
 
-    useDashboardStore.getState().appendContainer(container);
+    useDashboardStore.getState().addRealtimeContainer(container);
 
     if (container.riskLevel === "Critical") {
       const alert: RiskAlert = {

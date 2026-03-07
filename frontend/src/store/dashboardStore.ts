@@ -118,6 +118,7 @@ export const useDashboardStore = create<DashboardState>()(
       addRealtimeContainer: (c) =>
         set((s) => ({
           realtimeContainers: [c, ...s.realtimeContainers].slice(0, 20),
+          simulatedCount: s.simulatedCount + 1,
           notificationCount: s.notificationCount + (c.riskLevel === "Critical" ? 1 : 0),
         })),
 

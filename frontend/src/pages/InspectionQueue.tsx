@@ -1,7 +1,7 @@
 import { useEffect, useState, useCallback } from "react";
 import {
   ShieldAlert, RefreshCw, Clock,
-  AlertTriangle, Eye, Loader2, CheckCircle, XCircle, Search,
+  AlertTriangle, Eye, Loader2, CheckCircle, XCircle, Search, Download,
 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -10,6 +10,7 @@ import { useDashboardStore } from "@/store/dashboardStore";
 import { fetchFlaggedContainers, markContainerUnderReview, markContainerInspected, unflagContainer, type FlaggedContainer } from "@/services/api";
 import { cn, formatNumber } from "@/lib/utils";
 import { toast } from "sonner";
+import { exportFlaggedCSV } from "@/lib/export";
 import ContainerDetailModal from "@/components/features/ContainerDetailModal";
 
 function riskBadge(score: number | null) {
@@ -154,16 +155,31 @@ export default function InspectionQueue() {
             Containers flagged for physical inspection by customs officers
           </p>
         </div>
-        <Button
-          variant="outline"
-          size="sm"
-          className="gap-2"
-          onClick={loadData}
-          disabled={loading}
-        >
-          <RefreshCw className={cn("h-3.5 w-3.5", loading && "animate-spin")} />
-          Refresh
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button
+            size="sm"
+            className="gap-2 font-semibold bg-emerald-600 hover:bg-emerald-700 text-white shadow-sm shadow-emerald-500/20"
+            onClick={() => {
+              const count = exportFlaggedCSV(flaggedContainers, "inspection_queue");
+              if (count > 0) toast.success(`Exported ${count} flagged containers to CSV`);
+              else toast.warning("No flagged containers to export");
+            }}
+            disabled={flaggedContainers.length === 0}
+          >
+            <Download className="h-4 w-4" />
+            Export CSV
+          </Button>
+          <Button
+            variant="outline"
+            size="sm"
+            className="gap-2"
+            onClick={loadData}
+            disabled={loading}
+          >
+            <RefreshCw className={cn("h-3.5 w-3.5", loading && "animate-spin")} />
+            Refresh
+          </Button>
+        </div>
       </div>
 
       {/* Summary cards */}

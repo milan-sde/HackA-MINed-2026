@@ -9,3 +9,7 @@ services:
         value: "3.11"
       - key: PYTHONUNBUFFERED
         value: "1"
+      - key: PIP_INDEX_URL
+        value: "https://pypi.org/simple"
+      - key: PIP_USER
+        value: "0"

@@ -40,6 +40,7 @@ SmartContainer Risk Engine is an end-to-end AI/ML system that predicts risk leve
 17. [Conclusion](#17-conclusion)
 18. [Run Locally](#18-run-locally)
 19. [Deploy on Render](#19-deploy-on-render)
+20. [Production Backend Layout](#20-production-backend-layout)
 
 ---
 
@@ -912,3 +913,54 @@ The frontend reads `VITE_API_BASE_URL` for API calls in production.
   - containers load
   - CSV upload works
   - flagging/notes persist after restart (if disk is mounted)
+
+---
+
+## 20. Production Backend Layout
+
+The backend is now organized for production deployment:
+
+```text
+backend/
+  app/
+    main.py
+    api/routes/prediction.py
+    core/config.py
+    dependencies.py
+    models/model_loader.py
+    services/predict_service.py
+    services/feature_engineering.py
+    schemas/prediction.py
+  models/
+  data/
+  requirements.txt
+  start.sh
+```
+
+### Runtime commands
+
+- Backend entrypoint:
+
+```bash
+uvicorn app.main:app --host 0.0.0.0 --port $PORT
+```
+
+- Render backend command:
+
+```bash
+cd backend && bash start.sh
+```
+
+### Render URLs
+
+- Backend URL: `https://smartcontainer-backend.onrender.com`
+- Frontend URL: `https://smartcontainer-frontend.onrender.com`
+
+### Environment variables
+
+```text
+VITE_API_BASE_URL=https://smartcontainer-backend.onrender.com
+PORT=8000
+DATABASE_PATH=/var/data/database.db
+PYTHON_VERSION=3.11
+```

@@ -1,27 +1,20 @@
 services:
-  # Backend API
   - type: web
-    name: smartcontainer-api
+    name: smartcontainer-backend
     env: python
-    rootDir: .
-    buildCommand: pip install -r requirements.txt
-    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    buildCommand: pip install -r backend/requirements.txt
+    startCommand: cd backend && bash start.sh
     envVars:
       - key: PYTHON_VERSION
         value: "3.11"
-      - key: PYTHONUNBUFFERED
-        value: "1"
-      - key: PIP_INDEX_URL
-        value: "https://pypi.org/simple"
-      - key: PIP_USER
-        value: "0"
+      - key: DATABASE_PATH
+        value: "/var/data/database.db"
 
-  # Frontend
-  - type: static
+  - type: web
     name: smartcontainer-frontend
-    rootDir: frontend
-    buildCommand: npm ci && npm run build
-    outputDir: dist
+    env: static
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/dist
     envVars:
-      - key: NODE_VERSION
-        value: "22.22.0"
+      - key: VITE_API_BASE_URL
+        value: https://smartcontainer-backend.onrender.com

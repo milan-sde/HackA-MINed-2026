@@ -39,6 +39,7 @@ SmartContainer Risk Engine is an end-to-end AI/ML system that predicts risk leve
 16. [Future Improvements](#16-future-improvements)
 17. [Conclusion](#17-conclusion)
 18. [Run Locally](#18-run-locally)
+19. [Deploy on Render](#19-deploy-on-render)
 
 ---
 
@@ -836,3 +837,78 @@ npm run preview
 # Lint source files
 npm run lint
 ```
+
+---
+
+## 19. Deploy on Render
+
+Deploy as two services:
+
+- **Backend**: Render Web Service (FastAPI)
+- **Frontend**: Render Static Site (Vite)
+
+### A) Backend (Web Service)
+
+Create a new **Web Service** from this repository.
+
+- **Root Directory**: project root (`HackA-MINed-2026`)
+- **Build Command**:
+
+```bash
+pip install -r requirements.txt
+```
+
+- **Start Command**:
+
+```bash
+cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+```
+
+- **Environment Variables**:
+
+```text
+PYTHON_VERSION=3.11.9
+DATABASE_PATH=/var/data/database.db
+```
+
+Notes:
+
+- `DATABASE_PATH` is supported by the backend to allow persistent storage.
+- Attach a **Persistent Disk** in Render and mount it to `/var/data`.
+- Ensure these folders/files exist in your repo before deploy:
+  - `models/*.pkl`
+  - `data/processed/full_predictions.csv` (optional but recommended for initial dashboard data)
+
+### B) Frontend (Static Site)
+
+Create a new **Static Site** from the same repository.
+
+- **Root Directory**: `frontend`
+- **Build Command**:
+
+```bash
+npm ci && npm run build
+```
+
+- **Publish Directory**:
+
+```text
+dist
+```
+
+- **Environment Variables**:
+
+```text
+VITE_API_BASE_URL=https://<your-backend-service>.onrender.com
+```
+
+The frontend reads `VITE_API_BASE_URL` for API calls in production.
+
+### C) Post-deploy checks
+
+1. Open backend health endpoint:
+  - `https://<your-backend-service>.onrender.com/health`
+2. Open frontend URL and confirm:
+  - containers load
+  - CSV upload works
+  - flagging/notes persist after restart (if disk is mounted)

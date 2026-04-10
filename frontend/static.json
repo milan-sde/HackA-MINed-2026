@@ -1,0 +1,5 @@
+{
+  "root": "dist",
+  "cleanUrls": true,
+  "error_page": "index.html"
+}

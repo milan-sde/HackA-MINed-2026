@@ -91,7 +91,7 @@ interface FeatureImpact {
 
 function buildFeatureImpacts(c: Container): FeatureImpact[] {
   const s = c.featureScores;
-  return [
+  const impacts: FeatureImpact[] = [
     {
       name: "Weight Discrepancy",
       label: "Weight Disc.",
@@ -127,7 +127,9 @@ function buildFeatureImpacts(c: Container): FeatureImpact[] {
       rawMetric: c.exporterId,
       direction: s.entityHistory > 0.3 ? "up" : s.entityHistory > 0.1 ? "neutral" : "down",
     },
-  ].sort((a, b) => b.value - a.value);
+  ];
+
+  return impacts.sort((a, b) => b.value - a.value);
 }
 
 function impactColor(value: number) {
@@ -603,7 +605,7 @@ export default function ContainerDetailModal() {
                         y += 4;
 
                         // Thin accent line
-                        doc.setDrawColor(...riskColor);
+                        doc.setDrawColor(riskColor[0], riskColor[1], riskColor[2]);
                         doc.setLineWidth(0.8);
                         doc.line(lm, y, lm + 60, y);
                         y += 8;
@@ -655,7 +657,7 @@ export default function ContainerDetailModal() {
                             const valColor = (rightCol[i][0] === "Weight Diff" && container.weightDiscrepancyPct > 20)
                               ? red
                               : (rightCol[i][0] === "Anomaly Flag" && container.anomalyFlag) ? red : dark;
-                            doc.setTextColor(...valColor);
+                            doc.setTextColor(valColor[0], valColor[1], valColor[2]);
                             doc.text(rightCol[i][1], colX2 + 36, ry);
                           }
                           ry += rowH;

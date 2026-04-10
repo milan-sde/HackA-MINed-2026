@@ -20,6 +20,7 @@ Usage:
 """
 
 import logging
+import os
 import sqlite3
 from contextlib import contextmanager
 from datetime import datetime
@@ -28,8 +29,11 @@ from typing import Generator
 
 logger = logging.getLogger(__name__)
 
-# database.db lives at the project root (one level above backend/)
-DB_PATH = Path(__file__).resolve().parent.parent / "database.db"
+# database.db lives at the project root (one level above backend/) unless
+# DATABASE_PATH is provided (recommended for Render persistent disks).
+DB_PATH = Path(
+    os.getenv("DATABASE_PATH", str(Path(__file__).resolve().parent.parent / "database.db"))
+)
 
 
 # ---------------------------------------------------------------------------

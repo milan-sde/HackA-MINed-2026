@@ -155,7 +155,7 @@ export function NavbarUploadButton() {
 
 /* ── Status banner (shown inline on the dashboard page) ───────────────── */
 
-export default function CSVUploader() {
+export default function CSVUploader({ compact }: { compact?: boolean } = {}) {
   const {
     containers,
     batchSummary,
@@ -169,7 +169,7 @@ export default function CSVUploader() {
   // ── Uploading state ─────────────────────────────────────────────────
   if (isUploading && !hasData) {
     return (
-      <Card className="border-blue-500/30 bg-blue-500/5">
+      <Card className={compact ? "border-blue-500/30 bg-blue-500/5" : "border-blue-500/30 bg-blue-500/5"}>
         <CardContent className="py-3">
           <div className="flex items-center gap-3">
             <Loader2 className="h-4 w-4 text-blue-400 animate-spin shrink-0" />

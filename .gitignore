@@ -68,10 +68,11 @@ outputs/*.svg
 # Node.js / React dashboard
 # ───────────────────────────────────────────────
 node_modules/
-dashboard/node_modules/
-dashboard/dist/
-dashboard/dist-ssr/
-dashboard/.vite/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+frontend/.cache/
 *.local
 npm-debug.log*
 yarn-debug.log*
@@ -129,6 +130,11 @@ coverage.xml
 # ───────────────────────────────────────────────
 logs/
 *.log
+
+# Tooling caches
+.mypy_cache/
+.ruff_cache/
+.eslintcache
 
 
 database.db

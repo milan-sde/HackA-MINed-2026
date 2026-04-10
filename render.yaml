@@ -3,6 +3,7 @@ services:
   - type: web
     name: smartcontainer-api
     env: python
+    rootDir: .
     buildCommand: pip install -r requirements.txt
     startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
@@ -18,8 +19,9 @@ services:
   # Frontend
   - type: static
     name: smartcontainer-frontend
-    buildCommand: cd frontend && npm install && npm run build
-    outputDir: frontend/dist
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    outputDir: dist
     envVars:
       - key: NODE_VERSION
         value: "18"

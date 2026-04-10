@@ -38,6 +38,7 @@ SmartContainer Risk Engine is an end-to-end AI/ML system that predicts risk leve
 15. [Key Achievements](#15-key-achievements)
 16. [Future Improvements](#16-future-improvements)
 17. [Conclusion](#17-conclusion)
+18. [Run Locally](#18-run-locally)
 
 ---
 
@@ -754,3 +755,84 @@ For customs authorities, this means **fewer unnecessary inspections, faster proc
 *SmartContainer Risk Engine — Making Global Trade Safer with AI*
 
 </div>
+
+---
+
+## 18. Run Locally
+
+Use two terminals: one for backend, one for frontend.
+
+### Prerequisites
+
+- Python 3.10+
+- Node.js 20+
+
+### 1) Create Python environment and install backend dependencies
+
+From project root:
+
+```powershell
+cd C:\Users\hp5cd\Desktop\RiskContainer\HackA-MINed-2026
+py -m venv .venv
+.\.venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
+
+### 2) (Optional first-time setup) Generate model artifacts and predictions
+
+Run this once if you do not already have `models/` and `data/` artifacts:
+
+```powershell
+cd C:\Users\hp5cd\Desktop\RiskContainer\HackA-MINed-2026
+.\.venv\Scripts\Activate.ps1
+python run_pipeline.py
+```
+
+### 3) Start backend API
+
+In Terminal A:
+
+```powershell
+cd C:\Users\hp5cd\Desktop\RiskContainer\HackA-MINed-2026
+.\.venv\Scripts\Activate.ps1
+cd backend
+uvicorn main:app --reload --host 0.0.0.0 --port 8000
+```
+
+Health check:
+
+```text
+http://localhost:8000/health
+```
+
+### 4) Install frontend dependencies and start Vite
+
+In Terminal B:
+
+```powershell
+cd C:\Users\hp5cd\Desktop\RiskContainer\HackA-MINed-2026\frontend
+npm install
+npm run dev
+```
+
+Open the app:
+
+```text
+http://localhost:5173
+```
+
+### Frontend npm scripts
+
+```powershell
+# Run dev server
+npm run dev
+
+# Production build
+npm run build
+
+# Preview production build
+npm run preview
+
+# Lint source files
+npm run lint
+```

@@ -3,7 +3,7 @@ services:
     name: smartcontainer-frontend
     env: static
     buildCommand: npm install && npm run build
-    outputDir: dist
+    staticPublishPath: dist
     envVars:
       - key: NODE_VERSION
-        value: "18"
+        value: "20"

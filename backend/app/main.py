@@ -19,7 +19,68 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def _seed_from_default_realtime_csv(app: FastAPI) -> None:
+def _candidate_roots() -> list[Path]:
+    """Return likely project roots across local and Render runtime layouts."""
+    file_root = Path(__file__).resolve().parents[2]
+    cwd = Path.cwd().resolve()
+    roots = [file_root, cwd, cwd.parent, file_root.parent]
+    seen: set[str] = set()
+    unique: list[Path] = []
+    for p in roots:
+        key = str(p)
+        if key in seen:
+            continue
+        seen.add(key)
+        unique.append(p)
+    return unique
+
+
+def _seed_from_precomputed_predictions() -> bool:
+    """Seed from full_predictions.csv when present (fastest startup path)."""
+    required = {
+        "Container_ID",
+        "Risk_Score",
+        "Risk_Level",
+        "Anomaly_Flag",
+        "Explanation_Summary",
+    }
+
+    csv_candidates = [
+        root / "data" / "processed" / "full_predictions.csv"
+        for root in _candidate_roots()
+    ]
+
+    csv_path = next((p for p in csv_candidates if p.exists()), None)
+    if csv_path is None:
+        return False
+
+    try:
+        df = pd.read_csv(csv_path)
+        missing = required - set(df.columns)
+        if missing:
+            logger.warning("Precomputed predictions missing columns %s", sorted(missing))
+            return False
+
+        db.bulk_upsert_containers(
+            [
+                {
+                    "container_id": str(row["Container_ID"]),
+                    "risk_score": float(row["Risk_Score"]),
+                    "risk_level": str(row["Risk_Level"]),
+                    "anomaly_flag": int(row["Anomaly_Flag"]),
+                    "explanation": str(row.get("Explanation_Summary", "")),
+                }
+                for _, row in df.iterrows()
+            ]
+        )
+        logger.info("Seeded %d containers from %s", len(df), csv_path)
+        return True
+    except Exception:
+        logger.exception("Failed to seed from precomputed predictions CSV")
+        return False
+
+
+def _seed_from_default_realtime_csv(app: FastAPI) -> bool:
     """
     Seed the containers table once from the repository's Real-Time Data CSV.
     This gives first-time users immediate data without requiring a manual upload.
@@ -28,16 +89,20 @@ def _seed_from_default_realtime_csv(app: FastAPI) -> None:
         logger.info("Containers already present in DB; skipping default CSV seed")
         return
 
-    project_root = Path(__file__).resolve().parents[2]
-    csv_candidates = [
-        project_root / "data" / "Real-Time Data.csv",
-        project_root / "data" / "raw" / "Real_Time_Data.csv",
-    ]
+    csv_candidates = []
+    for root in _candidate_roots():
+        csv_candidates.extend(
+            [
+                root / "data" / "Real-Time Data.csv",
+                root / "data" / "raw" / "Real_Time_Data.csv",
+            ]
+        )
+
     csv_path = next((p for p in csv_candidates if p.exists()), None)
 
     if csv_path is None:
         logger.warning("Default realtime CSV not found; skipping initial seed")
-        return
+        return False
 
     try:
         df = pd.read_csv(csv_path)
@@ -59,8 +124,22 @@ def _seed_from_default_realtime_csv(app: FastAPI) -> None:
             result.total,
             csv_path.name,
         )
+        return True
     except Exception:
         logger.exception("Failed to seed containers from default realtime CSV")
+        return False
+
+
+def _seed_initial_data(app: FastAPI) -> None:
+    """Populate DB once on first boot, with robust fallbacks for deployment envs."""
+    if db.count_containers() > 0:
+        logger.info("Containers already present in DB; skipping initial seed")
+        return
+
+    if _seed_from_precomputed_predictions():
+        return
+
+    _seed_from_default_realtime_csv(app)
 
 
 @asynccontextmanager
@@ -72,7 +151,7 @@ async def lifespan(app: FastAPI):
     app.state.model_bundle = load_models()
 
     logger.info("Ensuring initial container data is loaded")
-    _seed_from_default_realtime_csv(app)
+    _seed_initial_data(app)
 
     logger.info("Startup complete")
 

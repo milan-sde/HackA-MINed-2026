@@ -10,7 +10,7 @@ import { useDashboardStore } from "@/store/dashboardStore";
 import { fetchFlaggedContainers, markContainerUnderReview, markContainerInspected, unflagContainer, type FlaggedContainer } from "@/services/api";
 import { cn, formatNumber } from "@/lib/utils";
 import { toast } from "sonner";
-import { exportFlaggedCSV } from "@/lib/export";
+import { exportFlaggedCSV } from "@/lib/export.ts";
 import ContainerDetailModal from "@/components/features/ContainerDetailModal";
 
 function riskBadge(score: number | null) {

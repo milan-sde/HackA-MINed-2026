@@ -15,7 +15,7 @@ import type { Container, RiskLevel } from "@/types";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { toast } from "sonner";
 import { flagContainer as apiFlagContainer, getAnomalyType, getRecommendedAction, ANOMALY_TYPE_META, type AnomalyType } from "@/services/api";
-import { exportContainersCSV } from "@/lib/export";
+import { exportContainersCSV } from "@/lib/export.ts";
 
 const ANOMALY_ICONS: Record<AnomalyType, typeof Scale> = {
   weight_mismatch: Scale,

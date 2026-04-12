@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Table2, AlertTriangle as AlertTriangleIcon } from "lucide-react";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { deriveAnomalyPatterns } from "@/services/api";
-import { exportContainersCSV } from "@/lib/export";
+import { exportContainersCSV } from "@/lib/export.ts";
 import { cn } from "@/lib/utils";
 import type { RiskLevel } from "@/types";
 import { toast } from "sonner";

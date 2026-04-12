@@ -9,7 +9,7 @@ import { Download } from "lucide-react";
 import type { TimelinePoint } from "@/types";
 import { useDashboardStore } from "@/store/dashboardStore";
 import { deriveTimeline } from "@/services/api";
-import { exportContainersCSV } from "@/lib/export";
+import { exportContainersCSV } from "@/lib/export.ts";
 import { toast } from "sonner";
 
 export default function Analytics() {

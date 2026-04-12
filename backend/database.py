@@ -20,6 +20,7 @@ Usage:
 """
 
 import logging
+import json
 import os
 import sqlite3
 from contextlib import contextmanager
@@ -28,6 +29,14 @@ from pathlib import Path
 from typing import Generator
 
 logger = logging.getLogger(__name__)
+
+
+def _json_default(value):
+    if isinstance(value, datetime):
+        return value.isoformat()
+    if hasattr(value, "item"):
+        return value.item()
+    return str(value)
 
 # database.db lives at the project root (one level above backend/) unless
 # DATABASE_PATH is provided (recommended for Render persistent disks).
@@ -82,6 +91,7 @@ def init_db() -> None:
                 risk_level    TEXT    NOT NULL,
                 anomaly_flag  INTEGER NOT NULL DEFAULT 0,
                 explanation   TEXT    DEFAULT '',
+                raw_payload   TEXT    DEFAULT NULL,
                 created_at    TEXT    DEFAULT (strftime('%Y-%m-%dT%H:%M:%S', 'now'))
             );
 
@@ -118,6 +128,11 @@ def init_db() -> None:
         if "status" not in cols:
             conn.execute("ALTER TABLE flagged_containers ADD COLUMN status TEXT NOT NULL DEFAULT 'flagged'")
             logger.info("Migrated flagged_containers: added 'status' column")
+
+        container_cols = [row[1] for row in conn.execute("PRAGMA table_info(containers)").fetchall()]
+        if "raw_payload" not in container_cols:
+            conn.execute("ALTER TABLE containers ADD COLUMN raw_payload TEXT DEFAULT NULL")
+            logger.info("Migrated containers: added 'raw_payload' column")
     logger.info("Database ready → %s", DB_PATH)
 
 
@@ -132,24 +147,27 @@ def upsert_container(
     risk_level: str,
     anomaly_flag: int,
     explanation: str,
+    raw_data: dict | None = None,
     created_at: datetime | None = None,
 ) -> None:
     """Insert or update a single container prediction record."""
     ts = (created_at or datetime.utcnow()).isoformat()
+    payload = json.dumps(raw_data, ensure_ascii=True, default=_json_default) if raw_data is not None else None
     with _db() as conn:
         conn.execute(
             """
             INSERT INTO containers
-                (container_id, risk_score, risk_level, anomaly_flag, explanation, created_at)
-            VALUES (?, ?, ?, ?, ?, ?)
+                (container_id, risk_score, risk_level, anomaly_flag, explanation, raw_payload, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(container_id) DO UPDATE SET
                 risk_score   = excluded.risk_score,
                 risk_level   = excluded.risk_level,
                 anomaly_flag = excluded.anomaly_flag,
                 explanation  = excluded.explanation,
+                raw_payload  = excluded.raw_payload,
                 created_at   = excluded.created_at
             """,
-            (str(container_id), risk_score, risk_level, anomaly_flag, explanation, ts),
+            (str(container_id), risk_score, risk_level, anomaly_flag, explanation, payload, ts),
         )
 
 
@@ -158,7 +176,8 @@ def bulk_upsert_containers(rows: list[dict]) -> int:
     Insert or update many container prediction records in a single transaction.
 
     Each dict must have keys: container_id, risk_score, risk_level,
-    anomaly_flag, explanation.  'created_at' (ISO string or datetime) is optional.
+    anomaly_flag, explanation.  'raw_data' (dict) and 'created_at' (ISO string or datetime)
+    are optional.
 
     Returns the number of rows processed.
     """
@@ -168,12 +187,15 @@ def bulk_upsert_containers(rows: list[dict]) -> int:
         ts = r.get("created_at")
         if isinstance(ts, datetime):
             ts = ts.isoformat()
+        raw_data = r.get("raw_data")
+        payload = json.dumps(raw_data, ensure_ascii=True, default=_json_default) if raw_data is not None else None
         params.append((
             str(r["container_id"]),
             float(r["risk_score"]),
             str(r["risk_level"]),
             int(r["anomaly_flag"]),
             str(r.get("explanation", "")),
+            payload,
             ts or now_iso,
         ))
 
@@ -181,13 +203,14 @@ def bulk_upsert_containers(rows: list[dict]) -> int:
         conn.executemany(
             """
             INSERT INTO containers
-                (container_id, risk_score, risk_level, anomaly_flag, explanation, created_at)
-            VALUES (?, ?, ?, ?, ?, ?)
+                (container_id, risk_score, risk_level, anomaly_flag, explanation, raw_payload, created_at)
+            VALUES (?, ?, ?, ?, ?, ?, ?)
             ON CONFLICT(container_id) DO UPDATE SET
                 risk_score   = excluded.risk_score,
                 risk_level   = excluded.risk_level,
                 anomaly_flag = excluded.anomaly_flag,
                 explanation  = excluded.explanation,
+                raw_payload  = excluded.raw_payload,
                 created_at   = excluded.created_at
             """,
             params,
@@ -212,7 +235,19 @@ def get_all_containers(limit: int = 10_000) -> list[dict]:
             "SELECT * FROM containers ORDER BY risk_score DESC LIMIT ?",
             (limit,),
         ).fetchall()
-        return [dict(r) for r in rows]
+        result = []
+        for row in rows:
+            item = dict(row)
+            raw_payload = item.pop("raw_payload", None)
+            if raw_payload:
+                try:
+                    raw_data = json.loads(raw_payload)
+                    if isinstance(raw_data, dict):
+                        item.update(raw_data)
+                except Exception:
+                    logger.warning("Could not decode raw_payload for container %s", item.get("container_id"))
+            result.append(item)
+        return result
     finally:
         conn.close()
 

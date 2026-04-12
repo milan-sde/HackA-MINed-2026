@@ -10,7 +10,6 @@ import database as db
 from app.api.routes.prediction import router as prediction_router
 from app.core.config import settings
 from app.models.model_loader import load_models
-from app.services.predict_service import predict_batch
 
 logging.basicConfig(
     level=logging.INFO,
@@ -69,6 +68,7 @@ def _seed_from_precomputed_predictions() -> bool:
                     "risk_level": str(row["Risk_Level"]),
                     "anomaly_flag": int(row["Anomaly_Flag"]),
                     "explanation": str(row.get("Explanation_Summary", "")),
+                    "raw_data": row.to_dict(),
                 }
                 for _, row in df.iterrows()
             ]
@@ -77,56 +77,6 @@ def _seed_from_precomputed_predictions() -> bool:
         return True
     except Exception:
         logger.exception("Failed to seed from precomputed predictions CSV")
-        return False
-
-
-def _seed_from_default_realtime_csv(app: FastAPI) -> bool:
-    """
-    Seed the containers table once from the repository's Real-Time Data CSV.
-    This gives first-time users immediate data without requiring a manual upload.
-    """
-    if db.count_containers() > 0:
-        logger.info("Containers already present in DB; skipping default CSV seed")
-        return
-
-    csv_candidates = []
-    for root in _candidate_roots():
-        csv_candidates.extend(
-            [
-                root / "data" / "Real-Time Data.csv",
-                root / "data" / "raw" / "Real_Time_Data.csv",
-            ]
-        )
-
-    csv_path = next((p for p in csv_candidates if p.exists()), None)
-
-    if csv_path is None:
-        logger.warning("Default realtime CSV not found; skipping initial seed")
-        return False
-
-    try:
-        df = pd.read_csv(csv_path)
-        result = predict_batch(df, app.state.model_bundle)
-        db.bulk_upsert_containers(
-            [
-                {
-                    "container_id": str(item.container_id),
-                    "risk_score": item.risk_score,
-                    "risk_level": item.risk_level,
-                    "anomaly_flag": item.anomaly_flag,
-                    "explanation": item.explanation_summary,
-                }
-                for item in result.predictions
-            ]
-        )
-        logger.info(
-            "Seeded %d containers from %s",
-            result.total,
-            csv_path.name,
-        )
-        return True
-    except Exception:
-        logger.exception("Failed to seed containers from default realtime CSV")
         return False
 
 
@@ -139,7 +89,7 @@ def _seed_initial_data(app: FastAPI) -> None:
     if _seed_from_precomputed_predictions():
         return
 
-    _seed_from_default_realtime_csv(app)
+    logger.warning("No precomputed predictions found; initial data load skipped")
 
 
 @asynccontextmanager

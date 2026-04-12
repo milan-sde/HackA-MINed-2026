@@ -63,6 +63,20 @@ async def predict_single(
         risk_level=result.risk_level,
         anomaly_flag=result.anomaly_flag,
         explanation=result.explanation_summary,
+        raw_data={
+            "Container_ID": request.Container_ID,
+            "Declaration_Date (YYYY-MM-DD)": request.Declaration_DateTime.date().isoformat() if request.Declaration_DateTime else None,
+            "Declaration_Time": request.Declaration_DateTime.time().isoformat() if request.Declaration_DateTime else None,
+            "Origin_Country": request.Origin_Country,
+            "Destination_Country": request.Destination_Country,
+            "HS_Code": request.HS_Code,
+            "Importer_ID": request.Importer_ID,
+            "Exporter_ID": request.Exporter_ID,
+            "Declared_Value": request.Declared_Value,
+            "Declared_Weight": request.Declared_Weight,
+            "Measured_Weight": request.Measured_Weight,
+            "Dwell_Time_Hours": request.Dwell_Time_Hours,
+        },
     )
 
     return PredictionResponse(
@@ -92,6 +106,8 @@ async def predict_batch_endpoint(
         logger.exception("Batch prediction failed")
         raise HTTPException(status_code=500, detail=f"Batch prediction failed: {exc}") from exc
 
+    source_rows = df.to_dict(orient="records")
+
     db.bulk_upsert_containers(
         [
             {
@@ -100,8 +116,9 @@ async def predict_batch_endpoint(
                 "risk_level": item.risk_level,
                 "anomaly_flag": item.anomaly_flag,
                 "explanation": item.explanation_summary,
+                "raw_data": {**source_rows[index], "Container_ID": item.container_id},
             }
-            for item in result.predictions
+            for index, item in enumerate(result.predictions)
         ]
     )
 
@@ -130,16 +147,18 @@ async def get_containers():
     rows = db.get_all_containers(limit=10000)
     normalized = []
     for r in rows:
-        normalized.append(
-            {
-                "Container_ID": r.get("container_id", ""),
-                "Risk_Score": r.get("risk_score", 0),
-                "Risk_Level": r.get("risk_level", "Clear"),
-                "Anomaly_Flag": r.get("anomaly_flag", 0),
-                "Explanation_Summary": r.get("explanation", ""),
-                "created_at": r.get("created_at", ""),
-            }
-        )
+        item = {
+            "Container_ID": r.get("Container_ID", r.get("container_id", "")),
+            "Risk_Score": r.get("Risk_Score", r.get("risk_score", 0)),
+            "Risk_Level": r.get("Risk_Level", r.get("risk_level", "Clear")),
+            "Anomaly_Flag": r.get("Anomaly_Flag", r.get("anomaly_flag", 0)),
+            "Explanation_Summary": r.get("Explanation_Summary", r.get("explanation", "")),
+            "created_at": r.get("created_at", ""),
+        }
+        for key, value in r.items():
+            if key not in item:
+                item[key] = value
+        normalized.append(item)
     return normalized
 
 

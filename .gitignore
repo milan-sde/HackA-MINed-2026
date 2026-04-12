@@ -18,6 +18,9 @@ downloads/
 eggs/
 .eggs/
 lib/
+# Keep frontend source utility modules tracked (needed for Vite builds on Render)
+!frontend/src/lib/
+!frontend/src/lib/*.ts
 lib64/
 parts/
 sdist/
